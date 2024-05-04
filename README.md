@@ -19,6 +19,7 @@
 ・MySQL　 8.2.0
 
 ##ER図
+/ability-test/src/resources/css/ability-test.drawio.png
 <img src="ability-test.drawio.png" alt="ER Diagram">
 
 ##URL

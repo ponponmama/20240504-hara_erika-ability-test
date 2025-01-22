@@ -141,7 +141,15 @@ php artisan config:clear
 - ストレージディレクトリの所有権を適切に設定します。これにより、ログファイルやキャッシュファイルへの書き込み権限の問題を防ぎます。
 
 ```bash
-docker-compose exec php chown -R www-data:www-data /var/www/storage
+docker-compose exec php bash
+```
+
+```bash
+cd storage
+```
+
+```bash
+chown -R www-data:www-data /var/www/storage
 ```
 
 この手順は、特に環境変数が更新された後や、`.env` ファイルに重要な変更を加えた場合に重要です。設定キャッシュをクリアすることで、古い設定が引き続き使用されることを防ぎます。

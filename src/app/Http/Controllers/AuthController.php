@@ -3,36 +3,33 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Category;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
+use App\Http\Requests\RegisterRequest;
+use App\Http\Requests\LoginRequest;
 
 
 
     class AuthController extends Controller
     {
-        public function index()
-        {
-            $categories=Category::all();
+        public function register(RegisterRequest $request) {
 
-            return view('register',compact('categories'));
-        }
-
-        public function register(Request $request) {
-
-            $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            $user = new User([
+                'name' => $request->name,
+                'email' => $request->email,
+                'password' => bcrypt($request->password),
             ]);
-
-
-
+            $user->save();
             return redirect()->route('login');
         }
 
-        public function login()
+        public function login(LoginRequest $request)
         {
-            return view('login');
+            $credentials = $request->only('email', 'password');
+            if (Auth::attempt($credentials)) {
+            // 認証に成功した場合、ユーザーを登録ページにリダイレクト
+                return redirect()->intended('admin');
+            }
         }
 
         public function logout(Request $request)

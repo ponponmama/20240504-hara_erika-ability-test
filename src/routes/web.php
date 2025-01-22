@@ -18,8 +18,8 @@ use App\Http\Controllers\ExportController;
 |
 */
 
-Route::get('/register', [AuthController::class,'index']);
-Route::get('/login', [AuthController::class,'login'])->name('login');
+Route::post('/register', [AuthController::class,'register']);
+Route::post('/login', [AuthController::class,'login'])->name('login');
 
 Route::middleware(['auth'])->group(function () {
 Route::get('/admin',[AdminController::class,'index'])->name('admin.index');

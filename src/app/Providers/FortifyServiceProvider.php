@@ -60,8 +60,8 @@ class FortifyServiceProvider extends ServiceProvider
 
             $email = (string) $request->email;
 
-         return Limit::perMinute(10)->by($email .   $request->ip());
-         });
+            return Limit::perMinute(10)->by($email .   $request->ip());
+        });
 
         Validator::extend('starts_with_john', function ($attribute, $value, $parameters, $validator) {
         return strpos($value, 'John') === 0;

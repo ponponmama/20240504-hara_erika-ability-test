@@ -8,7 +8,7 @@
 <div class="contact-form__content">
     <div class="contact-form__heading">
         <h3 class="cf-heading">
-            Contactc
+            Contact
         </h3>
     </div>
     <div class="contact-form">
@@ -98,15 +98,13 @@
                         <input type="tel" name="tell3" value="{{ $contact['tell3'] ?? old('tell3') }}" placeholder="5678" />
                     </div>
                     <div class="form__error">
-                        @error('tell1')
-                        {{ $message }}
-                        @enderror
-                        @error('tell2')
-                        {{ $message }}
-                        @enderror
-                        @error('tell3')
-                        {{ $message }}
-                        @enderror
+                        @if ($errors->has('tell1'))
+                            {{ $errors->first('tell1') }}
+                        @elseif ($errors->has('tell2'))
+                            {{ $errors->first('tell2') }}
+                        @elseif ($errors->has('tell3'))
+                            {{ $errors->first('tell3') }}
+                        @endif
                     </div>
                 </div>
             </div>

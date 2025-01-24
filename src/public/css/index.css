@@ -1,138 +1,179 @@
-.contact-form__content {
-    max-width: 1230px;
-    background-color: white;
-    margin: 0 auto;
-    padding: 5px 15px;
-}
-
-.contact-form__heading {
-    height: 10%;
-}
-
-.cf-heading {
+/*contact文字style*/
+.contact-logo {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     padding: 2px;
     text-align: center;
-    color: rgb(61,45,11,0.863);
+    color: rgba(116, 104, 80, 0.863);
     font-size: 1.5rem;
-    margin: 1%;
+    margin: 2%;
 }
 
+/*contact以下の画面全体のstyle*/
+.contact-section {
+    width: 100%;
+    margin: 1% auto;
+}
+
+/*formのstyle*/
 .contact-form {
-    margin: 4% 7%;
-}
-
-.form {
-    width: 80%;
+    width: 70%;
     font-weight: bold;
     text-align: center;
-    color: rgb(61, 45, 11, 0.863);
-    font-size: small;
-    margin: 0 10px 0 10px;
+    color: rgba(116, 104, 80, 0.863);
+    font-size: 1rem;
+    margin: 0 auto;
     padding: 3px;
 }
 
-.form__group {
+/*項目名＆入力フィールドのstyle*/
+.form-group {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    text-align: center;
     padding: 4px;
 }
 
-.form__group-title {
+/*項目名の全体のstyle*/
+.form-group-title {
     width: 30%;
+    height: 60px;
     text-align: left;
+    font-size: 1rem;
 }
 
-.form__group-content {
+/*入力フィールド＆errormessageのstyle*/
+.form-group-content {
     width: 70%;
-    /*margin-top: 3%;*/
-    right: 2px;
+    height: 60px;
 }
 
-.form__label--required {
+/*＊のstyle*/
+.form-label-required {
     margin-left: 5px;
     color: #ff0000;
     padding: 2px 4px;
     border-radius: 3px;
 }
 
-.form__error {
+/*バリデーションメッセージ*/
+.form-error {
+    width: 100%;
     height: 20px;
     color: #ff0000;
     text-align: left;
+    font-size: 0.8rem;
 }
 
-.name__input--text {
+/*苗字＆名前全体のstyle*/
+.name-input-text {
+    width: 100%;
+    height: 40px;
     display: flex;
     gap: 10px;
 }
 
-.name__input--text input {
+/*苗字＆名前フィールド*/
+.contact-item-name {
     padding: 10px;
     width: 48%;
     border: 1px solid rgba(224, 224, 222, 0.904);
     background-color: rgba(248, 248, 234, 0.76);
     border-radius: 3px;
+    color: rgba(116, 104, 80, 0.863);
 }
 
-.form__input--radio {
+/*radio全体のstyle*/
+.form-input-radio {
     width: 100%;
-    margin-right: 10%;
+    height: 60px;
+    text-align: left;
 }
 
+/*radioボタン*/
 .gender-radio {
-    accent-color:rgb(61, 45, 11, 0.863);
+    accent-color:rgba(116, 104, 80, 0.863);
+    margin-right: 10px;
 }
-
-.form__input--text input {
-    width: 90%;
+/*radioボタン横の文字*/
+.gender-radio-label {
+    margin-right: 10px;
+}
+/*inputのstyle*/
+.contact-item {
+    width: 100%;
     padding: 10px;
     border: 1px solid rgba(224, 224, 222, 0.904);
     background-color: rgba(248, 248, 234, 0.76);
+    color: rgba(116, 104, 80, 0.863);
     appearance: none;
     border-radius: 1px;
+    box-sizing: border-box;
 }
-
-.form__input--tel {
+/*tellのstyle*/
+.form-input-tell {
     display: flex;
     gap: 3px;
     align-items: center;
 }
-
-.form__input--tel input {
+/*tellフィールド*/
+.contact-item-tell {
     padding: 10px;
     width: 28%;
     border: 1px solid rgba(224, 224, 222, 0.904);
     background-color: rgba(248, 248, 234, 0.76);
+    color: rgba(116, 104, 80, 0.863);
     border-radius: 3px;
 }
+/*お問い合わせの種類全体のstyle*/
+.form-group-content-select {
+    width: 70%;
+    text-align: left;
+}
+/*お問い合わせの種類style*/
+.create-form-item-select {
+    width: 50%;
+    border: 1px solid rgba(224, 224, 222, 0.904);
+    background-color: rgba(248, 248, 234, 0.76);
+    color: rgba(116, 104, 80, 0.863);
+}
 
-.form__input--textarea textarea {
+.form-group-detail {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 4px;
+}
+
+/*お問い合わせ内容全体のstyle*/
+.form-group-content-detail {
+    width: 70%;
+}
+/*お問い合わせフィールド*/
+.contact-item-detail {
     height: 200px;
     width: 100%;
+    text-align: left;
     padding: 10px;
     border: 1px solid rgba(224, 224, 222, 0.904);
     background-color: rgba(248, 248, 234, 0.76);
+    color: rgba(116, 104, 80, 0.863);
     border-radius: 3px;
     appearance: none;
+    text-align: left;
 }
-
-
-.form__input--text input {
-    height: 40px;
-}
-
-.form__button {
+/*お問い合わせボタン全体のstyle*/
+.form-button {
     margin-top: 20px;
     text-align: center;
 }
-
-.form__button-submit {
+/*お問い合わせボタン*/
+.form-button-submit {
     padding: 10px;
     width: 34%;
     height: 55px;
-    background: rgba(61,45,11,0.863);
+    background: rgba(116, 104, 80, 0.863);
     border: 3px solid rgba(248, 248, 234, 0.76);
     color: #fff;
     border-radius: 6px;
@@ -142,4 +183,9 @@
 .f-button {
     text-decoration: none;
     color: #fff;
+}
+
+.hn-button {
+    width: 15%;
+    text-align: center;
 }

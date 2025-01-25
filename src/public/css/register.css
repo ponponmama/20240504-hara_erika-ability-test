@@ -1,87 +1,89 @@
-.register__content {
-    max-width: 1230px;
-    background-color: rgb(253, 253, 214);
-    height: 700px;
-    position: relative;
-    top: 3%;
+.main-section {
+    width: 100%;
+    background-color: rgb(245, 241, 239);
+    margin: 0;
+    padding: 0;
 }
 
-.register-form__heading {
-    height: 16%;
+.page-logo {
+    font-family:serif;
+    padding: 2px;
     text-align: center;
-}
-
-.rf-heading {
-    margin-top: 0.5%;
-    padding-top: 0.5%;
-    padding-bottom: 1%;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: rgb(105, 90, 70);
+    color: rgb(138, 121, 108);
     font-size: 1.5rem;
+    margin: 1%;
 }
 
-.register-form {
-    width: 70%;
-    height: 65%;
-    background-color: white;
-    position: absolute;
-    top: 25%;
-    left: 14%;
+.page-section {
+    padding: 20px 20px 50px 20px;
+    box-sizing: border-box;
 }
 
 .form {
-    font-weight: bold;
+    width: 50%;
     margin: 0 auto;
-    padding-top: 40px;
-    padding-bottom: 20px;
-    width: 75%;
+    padding: 40px;
     text-align: center;
-    color: rgb(105, 90, 70);
-    font-size: 0.9em;
+    color: rgb(138, 121, 108);
+    font-size: 0.8rem;
     align-content: center;
+    background-color: white;
+    border-radius: 6px;
 }
 
-.form__label--item {
-    font-weight: bold;
-    color: rgb(105, 90, 70);
+.form-group {
+    width: 70%;
+    margin: 0 auto;
+    padding: 2px;
 }
 
-.form__group {
+.form-group-title {
+    width: 100%;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.form-label-item {
+    color: rgb(138, 121, 108);
+}
+
+.form-group-content {
+    padding: 4px;
     margin-bottom: 5px;
 }
 
-.form__group-title {
-    text-align: left;
-    padding-bottom: 1%;
+.contact-item {
+    color: rgb(138, 121, 108);
 }
 
-.form__error {
+.form-error {
+    width: 100%;
     height: 20px;
     color: #ff0000;
     text-align: left;
 }
 
-.form__input--text input {
-    padding: 1px;
+.contact-item {
+    padding-left: 10px;
     width: 100%;
-    height: 40px;
-    border: 1px solid rgb(253, 253, 214);
+    height: 30px;
+    color: rgb(138, 121, 108);
+    border: 1px solid rgb(245, 241, 239);
     border-radius: 3px;
-    background-color: rgb(253, 253, 214);
+    background-color: rgb(245, 241, 239);
     appearance: none;
 }
 
-.form__button {
+
+.form-button {
     margin-bottom: 20px;
 }
 
-.form__button-submit1 {
-    padding: 1px;
-    width: 34%;
-    height: 55px;
-    background: rgb(105, 90, 70);
-    border: 3px solid rgb(253, 253, 214);
+.form-button-submit1 {
+    padding: 8px 32px;
+    background: rgb(138, 121, 108);
+    border: none;
     color: #fff;
-    border-radius: 6px;
+    font-size: 1rem;
     cursor: pointer;
 }

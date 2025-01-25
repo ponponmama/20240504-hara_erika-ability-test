@@ -10,11 +10,14 @@
     @yield('css')
 </head>
 
-<body class="contact-body">
+<body class="app-body">
     <header class="header-section">
-        <a class="top-logo-link">
-            FashionablyLate
-        </a>
+        <div class="header-utilities">
+            <h1 class="header-logo">
+                FashionablyLate
+            </h1>
+            @yield('heading__link')
+        </div>
     </header>
     <main class="main-section">
         @yield('content')

@@ -12,14 +12,16 @@
         </a>
     </div>
     @endsection
+
     @section('content')
     <div class="admin-form__heading">
-        <h3 class="af-heading">
+        <h2 class="af-heading">
             Admin
-        </h3>
-        <div class="admin-form">
-            <form class="search-form" action="{{ route('admin.search') }}" method="get">
-                @csrf
+        </h2>
+    </div>
+    <div class="admin-form">
+        <form class="search-form" action="{{ route('admin.search') }}" method="get">
+            @csrf
                 @php
                     $searchConditions = session('search_conditions');
                 @endphp
@@ -107,7 +109,7 @@
                         </table>
                     </div>
                 </div>
-            </form>
+        </form>
             @foreach($contacts as $contact)
             <div class="modal-wrapper" id="modal-{{ $contact->id }}">
                 <a href="#!" class="modal-overlay"></a>
@@ -158,10 +160,9 @@
                             ×
                         </a>
                     </div>
-                </div>    
+                </div>
             </div>
-            @endforeach        
+            @endforeach
         </div>
     </div>
     @endsection
-</div>

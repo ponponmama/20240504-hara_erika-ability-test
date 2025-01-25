@@ -5,10 +5,10 @@
 @endsection
 
 @section('content')
-<h1 class="contact-logo">
+<h2 class="page-logo">
     Contact
-</h1>
-<div class="contact-section">
+</h2>
+<div class="page-section">
     <form class="contact-form" action="/contacts/confirm" method="post">
         @csrf
             @php

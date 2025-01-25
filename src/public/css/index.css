@@ -1,15 +1,15 @@
 /*contact文字style*/
-.contact-logo {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+.page-logo {
+    font-family:serif;
     padding: 2px;
     text-align: center;
-    color: rgba(116, 104, 80, 0.863);
+    color: rgb(138, 121, 108);
     font-size: 1.5rem;
     margin: 2%;
 }
 
 /*contact以下の画面全体のstyle*/
-.contact-section {
+.page-section {
     width: 100%;
     margin: 1% auto;
 }
@@ -19,7 +19,7 @@
     width: 70%;
     font-weight: bold;
     text-align: center;
-    color: rgba(116, 104, 80, 0.863);
+    color: rgb(138, 121, 108);
     font-size: 1rem;
     margin: 0 auto;
     padding: 3px;

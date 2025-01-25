@@ -1,6 +1,7 @@
 /*confirm文字style*/
 .confirm-logo {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
     padding: 2px;
     text-align: center;
     color: rgba(116, 104, 80, 0.863);
@@ -10,17 +11,18 @@
 /*confirmフォームのstyle*/
 .confirm-form {
     width: 70%;
-    font-weight: bold;
     text-align: center;
     color: rgba(116, 104, 80, 0.863);
     font-size: 1rem;
     margin: 1% auto;
     padding: 3px;
+
 }
 /*テーブル全体のstyle*/
 .confirm-table {
     width: 100%;
     margin: 10px;
+    font-size: 0.8rem;
 }
 /*テーブルのstyle*/
 .confirm-table-inner {
@@ -35,14 +37,15 @@
 }
 
 .confirm-table-header {
-    padding: 3px;
+    width: 25%;
+    padding: 3px 20px;
     border: 1px solid rgba(46, 34, 9, 0.863);
     background-color: rgba(116, 104, 80, 0.863);
     color: white;
 }
 
 .confirm-table-text {
-    padding: 3px;
+    padding: 3px 20px;
     border: 1px solid rgba(224,224,222,0.904);
     border-radius: 3px;
     background-color: white(248, 248, 205);
@@ -50,12 +53,20 @@
 
 .input-hidden {
     background-color: white(248, 248, 205);
+    padding: 2px;
+    width: 94%;
+    color: rgba(116, 104, 80, 0.863);
+    font-size: 0.8rem;
+    outline: none;
+    border: none;
+}
+
+.input-detail-hidden {
+    background-color: white(248, 248, 205);
     padding: 3px;
     width: 94%;
     color: rgba(116, 104, 80, 0.863);
-    font-size: 1rem;
-    outline: none;
-    border: none;
+    font-size: 0.8rem;
 }
 
 .confirm-table-row-detail {

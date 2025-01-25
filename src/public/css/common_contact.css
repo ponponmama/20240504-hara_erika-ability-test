@@ -1,35 +1,71 @@
+html,
+body {
+    height: 100%;
+}
 /*画面全体のstyle*/
-.contact-body {
-    width: 90%;
-    padding: 4px;
-    margin: 2% auto;
+.app-body {
+    max-width: 1230px;
+    width: 100%;
+    margin: 0;
+    color: rgb(138, 121, 108);
 }
 /*headerのstyle*/
 .header-section {
-    max-width: 1230px;
     width: 100%;
-    height: 60px;
+    height: auto;
     background: white;
-    padding: 2px;
-    margin: 2px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family:serif;
     text-align: center;
-    border-bottom: 1px solid rgba(224, 224, 222, 0.904);
 }
+
+.header-utilities {
+    width: 100%;
+    display: grid;
+    grid-template-columns:  repeat(3,1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+    height: 60px;
+
+}
+
 /*FashionablyLateのロゴのstyle*/
-.top-logo-link {
+.header-logo {
     display: block;
     width: 100%;
-    color: rgba(116, 104, 80, 0.863);
+    height: auto;
+    color: rgb(138, 121, 108);
     text-decoration: none;
-    font-weight: bold;
-    line-height: 2.2rem;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    grid-column: 2;
+    margin: 0 auto;
 }
+
+.header__button {
+    grid-column: 3;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.header-nav__button {
+    border: 1px solid rgb(138, 121, 108);
+    background-color: rgb(245, 241, 239);
+    cursor: pointer;
+    color: rgb(138, 121, 108);
+    font-size: 0.8rem;
+    text-decoration: none;
+    padding: 6px 28px;
+    border-radius: 3px;
+    margin-right: 20px;
+}
+
+.header-nav__link {
+    text-decoration: none;
+}
+
 /*header以下の画面のstyle*/
 .main-section {
-    max-width: 1230px;
+    border-top: 1px solid rgb(245, 241, 239);
     width: 100%;
-    padding: 10px;
+    /*padding: 10px;*/
     background-color: white;
 }

@@ -1,3 +1,14 @@
+.header-utilities {
+    width: 96%;
+    padding: 2px;
+    height: 60px;
+    display: flex;
+    padding: 1px;
+    margin: 1% 2%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 .admin__content {
     max-width: 1230px;
     background-color: white;
@@ -82,7 +93,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 }
 
-                
+
 .arrow__enquiry::after {
     content: '';
     position: absolute;

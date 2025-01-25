@@ -1,47 +1,32 @@
-.login__content {
-    max-width: 1230px;
-    background-color: rgba(238, 238, 208, 0.781);;
-    height: 700px;
-    position: relative;
-    top: 3%;
+.main-section {
+    width: 100%;
+    background-color: #F1ECE7;
 }
-                                
-.login-form__heading {
-    padding: 3px;
-    height: 15%;
+
+.page-logo {
+    font-family:serif;
+    padding: 2px;
     text-align: center;
-}
-
-
-.lf-heading {
-    margin-top: 1%;
-    padding-top: 0.5%;
-    padding-bottom: 0.5%;
-    padding-bottom: 1%;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: rgb(105, 90, 70);
+    color: rgb(138, 121, 108);
     font-size: 1.5rem;
+    margin: 1%;
 }
 
-.login-form {
-    width: 70%;
-    height: 50%;
-    background-color: white;
-    position: absolute;
-    top: 25%;
-    right: 14%;
+.page-section {
+    padding: 20px 20px 40px 20px;
+    width: 100%;
+    height: auto;
 }
 
 .form {
-    font-weight: bold;
+    width: 50%;
     margin: 0 auto;
-    padding-top: 40px;
-    padding-bottom: 20px;
-    width: 75%;
+    padding: 40px;
     text-align: center;
     color: rgb(105, 90, 70);
-    font-size: 0.9em;
+    font-size: 0.8rem;
     align-content: center;
+    background-color: white;
 }
 
 .form__label--item {

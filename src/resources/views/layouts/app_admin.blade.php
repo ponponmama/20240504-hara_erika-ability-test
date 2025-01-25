@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FashionablyLate</title>
     <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}">
@@ -12,20 +11,16 @@
 
 </head>
 
-<body>
-    <header class="header">
-        <div class="header__inner">
-            <div class="header-utilities">
-                <div class="header__logo__box">
-                    <a class="header__logo" href="/register">
-                        FashionablyLate
-                    </a>
-                </div>
-                @yield('heading__link')
-            </div>
+<body class="app-body">
+    <header class="header-section">
+        <div class="header-utilities">
+            <h1 class="header__logo">
+                FashionablyLate
+            </h1>
+            @yield('heading__link')
         </div>
     </header>
-    <main>
+    <main class="main-section">
         @yield('content')
     </main>
 </body>

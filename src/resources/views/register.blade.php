@@ -6,11 +6,9 @@
 
 
 @section('heading__link')
-<div class="header__button">
-    <a href="/login">
-        <button class="header-nav__button">
-            login
-        </button>
+<div class="header-button-section">
+    <a class="header-nav-button" href="/login">
+        login
     </a>
 </div>
 @endsection
@@ -20,7 +18,7 @@
     register
 </h2>
 <div class="page-section">
-    <form class="form" action="/register" method="post">
+    <form class="page-main-form" action="/register" method="post">
         @csrf
         <div class="form-group">
             <div class="form-group-title">
@@ -72,11 +70,12 @@
                         @enderror
                     </div>
                 </div>
-                <div class="form-button">
-                    <button class="form-button-submit1" type="submit">
-                        登録
-                    </button>
-                </div>
+            </div>
+            <div class="form-button">
+                <button class="form-button-submit" type="submit">
+                    登録
+                </button>
+            </div>
         </form>
     </div>
 </div>

@@ -9,7 +9,7 @@
     Contact
 </h2>
 <div class="page-section">
-    <form class="contact-form" action="/contacts/confirm" method="post">
+    <form class="page-main-form" action="/contacts/confirm" method="post">
         @csrf
             @php
                 $contact = session('contact');

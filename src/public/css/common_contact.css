@@ -2,6 +2,7 @@ html,
 body {
     height: 100%;
 }
+
 /*画面全体のstyle*/
 .app-body {
     max-width: 1230px;
@@ -9,6 +10,7 @@ body {
     margin: 0;
     color: rgb(138, 121, 108);
 }
+
 /*headerのstyle*/
 .header-section {
     width: 100%;
@@ -18,13 +20,14 @@ body {
     text-align: center;
 }
 
+/*headerボタン有*/
 .header-utilities {
     width: 100%;
     display: grid;
     grid-template-columns:  repeat(3,1fr);
     grid-template-rows: 1fr;
     align-items: center;
-    height: 60px;
+    height: 80px;
 
 }
 
@@ -40,32 +43,57 @@ body {
     margin: 0 auto;
 }
 
-.header__button {
+/*headerボタン全体のstyle*/
+.header-button-section {
     grid-column: 3;
-    text-align: right;
-    padding-right: 20px;
+    display: flex;
+    justify-content: right;
+    height: 60px;
+    align-items: center;
 }
 
-.header-nav__button {
+/*headerボタンのstyle*/
+.header-nav-button {
     border: 1px solid rgb(138, 121, 108);
     background-color: rgb(245, 241, 239);
     cursor: pointer;
     color: rgb(138, 121, 108);
     font-size: 0.8rem;
     text-decoration: none;
-    padding: 6px 28px;
+    padding: 2px 30px;
     border-radius: 3px;
-    margin-right: 20px;
-}
-
-.header-nav__link {
-    text-decoration: none;
+    margin: 0 40px;
 }
 
 /*header以下の画面のstyle*/
 .main-section {
     border-top: 1px solid rgb(245, 241, 239);
     width: 100%;
-    /*padding: 10px;*/
     background-color: white;
 }
+
+/*各共通部分のlogo*/
+.page-logo {
+    font-family: serif;
+    padding: 2px;
+    text-align: center;
+    color: rgb(138, 121, 108);
+    font-size: 1.3rem;
+    margin: 1%;
+}
+
+/*ボタン全体のstyle*/
+.form-button {
+    margin: 1% auto;
+}
+
+/*ボタンのstyle*/
+.form-button-submit {
+    padding: 6px 32px;
+    background: rgb(138, 121, 108);
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+}
+

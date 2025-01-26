@@ -1,76 +1,64 @@
+/*バックグランド用のstyle*/
 .main-section {
-    width: 100%;
     background-color: #F1ECE7;
 }
 
-.page-logo {
-    font-family:serif;
-    padding: 2px;
-    text-align: center;
-    color: rgb(138, 121, 108);
-    font-size: 1.5rem;
-    margin: 1%;
-}
-
 .page-section {
-    padding: 20px 20px 40px 20px;
-    width: 100%;
-    height: auto;
+    padding: 20px 20px 60px 20px;
+    box-sizing: border-box;
 }
 
-.form {
+.page-main-form {
     width: 50%;
     margin: 0 auto;
-    padding: 40px;
+    padding: 60px 40px;
     text-align: center;
-    color: rgb(105, 90, 70);
+    color: rgb(138, 121, 108);
     font-size: 0.8rem;
     align-content: center;
     background-color: white;
+    border-radius: 6px;
 }
 
-.form__label--item {
-    font-weight: bold;
-    color: rgb(105, 90, 70);
+.form-group {
+    width: 70%;
+    margin: 0 auto;
+    padding: 2px;
 }
 
-.form__group {
+.form-group-title {
+    width: 100%;
+    text-align: left;
+    padding-left: 10px;
+}
+
+.form-label-item {
+    color: rgb(138, 121, 108);
+}
+
+.form-group-content {
+    padding: 4px;
     margin-bottom: 5px;
 }
 
-.form__group-title {
-    text-align: left;
-    padding: 1%;
+.contact-item {
+    color: rgb(138, 121, 108);
 }
 
-.form__error {
+.form-error {
+    width: 100%;
     height: 20px;
     color: #ff0000;
     text-align: left;
 }
 
-.form__input--text input {
-    padding: 10px;
+.contact-item {
+    padding-left: 10px;
     width: 100%;
-    height: 40px;
-    border: 2px solid rgba(231, 231, 203, 0.87);
+    height: 30px;
+    color: rgb(138, 121, 108);
+    border: 1px solid rgb(245, 241, 239);
     border-radius: 3px;
-    background-color: rgba(238, 238, 208, 0.781);
+    background-color: rgb(245, 241, 239);
     appearance: none;
 }
-
-.form__button {
-    margin-top: 20px;
-}
-
-.form__button-submit {
-    padding: 5px;
-    width: 34%;
-    height: 40px;
-    background: rgb(105, 90, 70);
-    border: 1px solid rgba(231, 231, 203, 0.87);
-    color: #fff;
-    border-radius: 3px;
-    cursor: pointer;
-}
-

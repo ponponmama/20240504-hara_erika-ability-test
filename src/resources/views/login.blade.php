@@ -5,11 +5,9 @@
 @endsection
 
 @section('heading__link')
-<div class="header__button">
-    <a href="/register">
-        <button class="header-nav__button">
-            register
-        </button>
+<div class="header-button-section">
+    <a class="header-nav-button" href="/register">
+        register
     </a>
 </div>
 @endsection
@@ -19,44 +17,44 @@
     Login
 </h2>
 <div class="page-section">
-    <form class="form" action="/login" method="post">
+    <form class="page-main-form" action="/login" method="post">
         @csrf
-        <div class="form__group">
-            <div class="form__group-title">
-                <span class="form__label--item">
+        <div class="form-group">
+            <div class="form-group-title">
+                <span class="form-label--item">
                     メールアドレス
                 </span>
             </div>
-            <div class="form__group-content">
-                <div class="form__input--text">
-                    <input type="email" name="email" placeholder="test@example.com" value="{{ old('email') }}" >
+            <div class="form-group-content">
+                <div class="form-input-text">
+                    <input class="contact-item" type="email" name="email" placeholder="test@example.com" value="{{ old('email') }}" >
                 </div>
-                <div class="form__error">
+                <div class="form-error">
                     @error('email')
                         {{ $message }}
                     @enderror
                 </div>
             </div>
         </div>
-        <div class="form__group">
-            <div class="form__group-title">
-                <span class="form__label--item">
+        <div class="form-group">
+            <div class="form-group-title">
+                <span class="form-label-item">
                     パスワード
                 </span>
             </div>
-            <div class="form__group-content">
-                <div class="form__input--text">
-                    <input type="password" name="password" placeholder="coachtech1106" >
+            <div class="form-group-content">
+                <div class="form-input-text">
+                    <input class="contact-item" type="password" name="password" placeholder="coachtech1106" >
                 </div>
-                <div class="form__error">
+                <div class="form-error">
                     @error('password')
                         {{ $message }}
                     @enderror
                 </div>
             </div>
         </div>
-        <div class="form__button">
-            <button class="form__button-submit" type="submit">
+        <div class="form-button">
+            <button class="form-button-submit" type="submit">
                 ログイン
             </button>
         </div>

@@ -1,17 +1,5 @@
 .main-section {
-    width: 100%;
-    background-color: rgb(245, 241, 239);
-    margin: 0;
-    padding: 0;
-}
-
-.page-logo {
-    font-family:serif;
-    padding: 2px;
-    text-align: center;
-    color: rgb(138, 121, 108);
-    font-size: 1.5rem;
-    margin: 1%;
+    background-color: #F1ECE7;
 }
 
 .page-section {
@@ -19,7 +7,7 @@
     box-sizing: border-box;
 }
 
-.form {
+.page-main-form {
     width: 50%;
     margin: 0 auto;
     padding: 40px;
@@ -72,18 +60,4 @@
     border-radius: 3px;
     background-color: rgb(245, 241, 239);
     appearance: none;
-}
-
-
-.form-button {
-    margin-bottom: 20px;
-}
-
-.form-button-submit1 {
-    padding: 8px 32px;
-    background: rgb(138, 121, 108);
-    border: none;
-    color: #fff;
-    font-size: 1rem;
-    cursor: pointer;
 }

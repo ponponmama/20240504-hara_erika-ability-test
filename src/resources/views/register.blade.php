@@ -32,7 +32,7 @@
                     </div>
                     <div class="form-error">
                         @error('name')
-                        {{ $message }}
+                            {{ $message }}
                         @enderror
                     </div>
                 </div>

@@ -152,7 +152,7 @@
 }
 /*お問い合わせフィールド*/
 .contact-item-detail {
-    height: 200px;
+    height: 150px;
     width: 100%;
     text-align: left;
     padding: 10px;
@@ -162,30 +162,5 @@
     border-radius: 3px;
     appearance: none;
     text-align: left;
-}
-/*お問い合わせボタン全体のstyle*/
-.form-button {
-    margin-top: 20px;
-    text-align: center;
-}
-/*お問い合わせボタン*/
-.form-button-submit {
-    padding: 10px;
-    width: 34%;
-    height: 55px;
-    background: rgba(116, 104, 80, 0.863);
-    border: 3px solid rgba(248, 248, 234, 0.76);
-    color: #fff;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
-.f-button {
-    text-decoration: none;
-    color: #fff;
-}
-
-.hn-button {
-    width: 15%;
-    text-align: center;
+    font-size: 1rem;
 }

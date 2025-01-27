@@ -7,146 +7,105 @@ use App\Models\Category;
 use App\Models\Contact;
 use Illuminate\Support\Facades\Session;
 use Symfony\Component\HttpFoundation\StreamedResponse;
+use Illuminate\Support\Facades\Date;
 
 
 class AdminController extends Controller
 {
-
+    //adminページ表示
     public function index()
     {
+        $contacts = Contact::with('category')->paginate(7);
         $categories = Category::all();
-        $contacts = Contact::paginate(7);
-
-        return view('admin', compact('contacts','categories'));
-
+        $csvData = Contact::all();
+        return view('admin', compact('contacts','categories', 'csvData'));
     }
 
     public function search(Request $request)
     {
+        if ($request->has('reset')) {
+            return redirect('/admin')->withInput();
+        }
+
+        $query = $this->searchQuery($request);
+
+        session()->put('search_conditions', $request->all());
+
+        $contacts = $query->paginate(7);
+        $csvData = $query->get();
         $categories = Category::all();
 
-        $searchConditions = $request->only(['keyword', 'gender', 'category_id', 'date']);
-        session(['search_conditions' => $searchConditions]);
+        return view('admin', compact('contacts', 'categories', 'csvData'));
+    }
 
-        $conditions = session('search_conditions');
+    private function searchQuery(Request $request)
+    {
+        $query = Contact::query();
 
-        $keyword = $request->keyword;
-        $contacts= Contact::query()->nameOrEmailSearch($keyword);
-
-
-        $gender = $request->input('gender');
-        if ($gender && $gender !== 'all' ) {
-        $contacts=$contacts->genderSearch($gender);
+        if ($request->filled('keyword')) {
+            $keyword = '%' . $request->keyword . '%';
+            $query->where(function($q) use ($keyword) {
+                $q->where('first_name', 'like', $keyword)
+                ->orWhere('last_name', 'like', $keyword)
+                ->orWhere('email', 'like', $keyword);
+            });
+        }
+        if ($request->filled('gender') && $request->gender !== 'all') {
+            $query->where('gender', $request->gender);
+        }
+        if ($request->filled('category_id')) {
+            $query->where('category_id', $request->category_id);
+        }
+        if ($request->filled('date')) {
+            $query->whereDate('created_at', $request->date);
         }
 
-
-        $category_id = $request->input('category_id');
-        if ($category_id) {
-        $contacts=$contacts->categorySearch($category_id);
-        }
-
-        $date = $request->input('date');
-        if ($date) {
-        $contacts=$contacts->dateSearch($date);
-        }
-
-
-        Session::put('search_results', [
-        'keyword' => $keyword,
-        'gender' => $gender,
-        'category_id' => $category_id,
-        'date' => $date,
-        ]);
-
-
-        $search_results = Session::get('search_results', []);
-        $keyword = $search_results['keyword'] ?? null;
-        $gender = $search_results['gender'] ?? null;
-        $category_id = $search_results['category_id'] ?? null;
-        $date = $search_results['date'] ?? null;
-
-        $contacts = $contacts->paginate(7)->withQueryString();
-        
-
-        return view('admin', compact('contacts', 'categories', 'searchConditions','search_results'));
+        return $query;
     }
 
     public function exportCsv(Request $request) {
-           
-        $search_results = Session::get('search_results', []);
-        $keyword = $search_results['keyword'] ?? null;
-        $gender = $search_results['gender'] ?? null;
-        $category_id = $search_results['category_id'] ?? null;
-        $date = $search_results['date'] ?? null;
-        
-        $contacts = Contact::query()
-            ->nameOrEmailSearch($keyword)
-            ->genderSearch($gender)
-            ->categorySearch($category_id)
-            ->dateSearch($date)
-            ->get();
+        $searchConditions = session('search_conditions');
+        $request->merge($searchConditions);
 
-         $headers = [
-            "Content-type" => "text/csv",
-            "Content-Disposition" => "attachment; filename=contacts.csv"
+        $query = $this->searchQuery($request);
+        $csvData = $query->get()->toArray();
+        $csvHeader = [
+            'id', 'category_id', 'first_name', 'last_name', 'gender', 'email', 'tell', 'address', 'building', 'detail', 'created_at', 'updated_at'
         ];
 
-        $callback = function() use ($contacts) {
-            $handle = fopen('php://output', 'w');
+        $response = new StreamedResponse(function () use ($csvHeader, $csvData) {
+            $createCsvFile = fopen('php://output', 'w');
 
-            $columns = ['id','category_id','first_name', 'last_name', 'gender', 'email', 'tell', 'address', 'building', 'detail','created_at','updated_at'];
+            mb_convert_variables('SJIS-win', 'UTF-8', $csvHeader);
+            fputcsv($createCsvFile, $csvHeader);
 
-             mb_convert_variables('SJIS-win', 'UTF-8', $columns);
-            fputcsv($handle, $columns);
-
-            foreach ($contacts as $contact) {
-                $genderText = '';
-                switch ($contact->gender) {
-                    case 1:
-                    $genderText = '男性';
-                        break;
-                    case 2:
-                    $genderText = '女性';
-                        break;
-                    case 3:
-                    $genderText = 'その他';
-                        break;
-                }
-
-                $csv = [
-                    $contact->id,
-                    $contact->category->content ?? '',
-                    $contact->first_name,
-                    $contact->last_name,
-                    $genderText,
-                    $contact->email,
-                    $contact->tell,
-                    $contact->address,
-                    $contact->building,
-                    $contact->detail,
-                    $contact->created_at->format('Y-m-d'),
-                    $contact->updated_at->format('Y-m-d')
-                ];
+            foreach ($csvData as $csv) {
+                $csv['created_at'] = Date::make($csv['created_at'])->setTimezone('Asia/Tokyo')->format('Y/m/d H:i:s');
+                $csv['updated_at'] = Date::make($csv['updated_at'])->setTimezone('Asia/Tokyo')->format('Y/m/d H:i:s');
                 mb_convert_variables('SJIS-win', 'UTF-8', $csv);
-                fputcsv($handle, $csv);
+                fputcsv($createCsvFile, $csv);
             }
-            fclose($handle);
-        };
 
-        return response()->stream($callback, 200, $headers);
+            fclose($createCsvFile);
+        }, 200, [
+            'Content-Type' => 'text/csv',
+            'Content-Disposition' => 'attachment; filename="contacts.csv"',
+        ]);
+
+        return $response;
     }
 
-public function resetSearch()
-   {
-       session()->forget('search_conditions');
+    public function resetSearch()
+    {
+        session()->forget('search_conditions');
 
-       return redirect()->route('admin.index');
-   }
+        return redirect()->route('admin.index');
+    }
 
-     public function destroy($id)
+    public function destroy($id)
     {
         $contact = Contact::findOrFail($id);
-        
+
         $contact->delete();
 
         session()->flash('success', '連絡先が正常に削除されました。');

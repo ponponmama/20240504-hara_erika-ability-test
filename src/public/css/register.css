@@ -1,5 +1,5 @@
 .main-section {
-    background-color: #F1ECE7;
+    background-color: rgb(231, 226, 222);
 }
 
 .page-section {
@@ -56,8 +56,8 @@
     width: 100%;
     height: 30px;
     color: rgb(138, 121, 108);
-    border: 1px solid rgb(245, 241, 239);
+    border: 1px solid rgb(231, 226, 222);
     border-radius: 3px;
-    background-color: rgb(245, 241, 239);
+    background-color: rgb(231, 226, 222);
     appearance: none;
 }

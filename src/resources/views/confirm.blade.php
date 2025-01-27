@@ -1,12 +1,12 @@
-@extends('layouts/app_contact')
+@extends('layouts/app')
 
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/confirm.css') }}" />
 @endsection
 
 @section('content')
-<h1 class="confirm-logo">Confirm</h1>
-<form class="confirm-form" action="{{ route('contacts.submit') }}" method="post">
+<h2 class="page-logo">Confirm</h2>
+<form class="page-main-form" action="{{ route('contact.submit') }}" method="post">
     @csrf
     <div class="confirm-table">
         <table class="confirm-table-inner">

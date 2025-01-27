@@ -1,7 +1,7 @@
-@extends('layouts.app_contact')
+@extends('layouts.app')
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('css/index.css') }}">
+<link rel="stylesheet" href="{{ asset('css/contact.css') }}">
 @endsection
 
 @section('content')
@@ -9,7 +9,7 @@
     Contact
 </h2>
 <div class="page-section">
-    <form class="page-main-form" action="/contacts/confirm" method="post">
+    <form class="page-main-form" action="/contact/confirm" method="post">
         @csrf
         @php
             $contact = session('contact');

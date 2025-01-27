@@ -31,8 +31,8 @@ Route::match(['get', 'post'], '/logout', [AuthController::class, 'logout'])->nam
 Route::delete('/admin/{id}', [AdminController::class, 'destroy'])->name('admin.destroy');
 });
 
-Route::get('/', [ContactController::class,'index'])->name('contacts.index');
-Route::post('/contacts/edit', [ContactController::class,'edit'])->name('contacts.edit');
-Route::post('/contacts/submit', [ContactController::class,'submit'])->name('contacts.submit');
-Route::post('/contacts/confirm', [ContactController::class,'confirm'])->name('contacts.confirm');
+Route::get('/', [ContactController::class,'index'])->name('contact.index');
+Route::post('/contact/edit', [ContactController::class,'edit'])->name('contact.edit');
+Route::post('/contact/submit', [ContactController::class,'submit'])->name('contact.submit');
+Route::post('/contact/confirm', [ContactController::class,'confirm'])->name('contact.confirm');
 Route::get('thanks',[ContactController::class,'thanks'])->name('thanks');

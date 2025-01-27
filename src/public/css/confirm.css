@@ -1,5 +1,5 @@
 /*confirm文字style*/
-.confirm-logo {
+.page-logo {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: bold;
     padding: 2px;
@@ -9,7 +9,7 @@
     margin: 2%;
 }
 /*confirmフォームのstyle*/
-.confirm-form {
+.page-main-form {
     width: 70%;
     text-align: center;
     color: rgba(116, 104, 80, 0.863);
@@ -83,25 +83,11 @@
     margin: 5% auto;
 }
 
-.form-button-submit {
-    padding: 10px;
-    width: 30%;
-    height: 45px;
-    background: rgba(116, 104, 80, 0.863);
-    border: 3px solid rgb(247, 247, 205, 0.89);
-    color: #fff;
-    border-radius: 6px;
-    cursor: pointer;
-}
-
 .form-button-edit {
-    padding: 2px;
-    width: 30%;
-    height: 45px;
+    padding: 6px 32px;
     background: white;
     border: 3px solid white;
     color: rgba(116, 104, 80, 0.863);
-    border-radius: 6px;
     cursor: pointer;
-    margin: 2px;
+    font-size: 1rem;
 }

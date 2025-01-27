@@ -1,121 +1,97 @@
-.header-utilities {
-    width: 96%;
-    padding: 2px;
-    height: 60px;
-    display: flex;
-    padding: 1px;
-    margin: 1% 2%;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.admin__content {
-    max-width: 1230px;
-    background-color: white;
-    text-align: center;
-}
-
-.admin-form__heading {
-    height: 6.2%;
-    text-align: center;
-}
-
-.af-heading {
-    margin: 3%;
-    padding-top: 0.5%;
-    padding-top: 0.5%;
-    padding-bottom: 0.5%;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: rgba(61,45,11,0.863);
-    font-size: 1.5rem;
-}
-
 .admin-form {
     width: 90%;
     height: 700px;
     margin: 0% 5%;
 }
 
-.input__search {
-    width: 30%;
+.search-form-container {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
 }
 
-.arrow__gender {
+.keyword-search {
+    padding: 8px 10px;
+    min-width: 300px;
+    border: 1px solid rgb(138, 121, 108);
+    background-color: white;
+}
+
+.arrow-gender-section,
+.arrow-enquiry-section {
     position: relative;
-    width: 10%;
 }
 
-.arrow__enquiry {
+.arrow-gender-section::after
+.arrow-enquiry-section::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 8%;
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid rgb(231, 226, 222);
+    content: "";
+    transform: translateY(-50%);
+}
+
+.gender-select,
+.category-select {
+    padding: 8px 14px;
+    height: 100%;
+    background-color: rgb(231, 226, 222);
+}
+
+.gender-select {
+    min-width: 100px;
+}
+
+.category-select {
+    min-width: 210px;
+}
+
+.input__date {
     position: relative;
-    width: 20%;
+    padding: 8px 14px;
+    min-width: 150px;
+    border: 1px solid rgb(231, 226, 222);
+    background-color: rgb(231, 226, 222);
+    color: rgb(138, 121, 108);
 }
 
-.arrow__date {
-    position: relative;
-    width: 14%;
-}
-
-input[type="date"]::-webkit-calendar-picker-indicator {
+.input__date::-webkit-calendar-picker-indicator {
     position: absolute;
     left: 0;
     top: 0;
+    right: 0;
     bottom: 0;
-    margin: auto;
-    padding: 0;
+    z-index: 1;
     background: transparent;
-    color: transparent;
-    cursor: pointer;
-    height: 30px;
-    width: 100%;
+    height: auto;
+    width: auto;
+    background: transparent;
 }
 
-.search-form {
-    height: 80%;
-}
-
-.admin__item {
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 2px;
-}
-
-.arrow__gender::after {
+.input__date::after {
     content: '';
-    position: absolute;
-    top: 45%;
-    right: 4px;
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 5px solid rgba(224,224,222,0.904);
-
+        position: absolute;
+        top: 50%;
+        right: 12px;
+        width: 0;
+        height: 0;
+        border-left: 12px solid transparent;
+        border-right: 8px solid transparent;
+        border-top: 8px solid rgb(231, 226, 222);
+        content: "";
+        transform: translateY(-50%);
 }
 
-
-.arrow__enquiry::after {
-    content: '';
-    position: absolute;
-    top: 45%;
-    right: 2px;
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 5px solid rgba(224, 224, 222, 0.904);
-}
-
-.arrow__date::after {
-    content: '';
-    position: absolute;
-    top: 45%;
-    right: 2px;
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 5px solid rgba(224, 224, 222, 0.904);
+.arrow-date-section {
+    position: relative;
+    width: 14%;
 }
 
 .admin__item input {
@@ -134,10 +110,10 @@ select {
     text-align: center;
     padding: 1px;
     height: 30px;
-    border: 1px solid rgba(224, 224, 222, 0.904);
-    background-color: rgba(248,248,234,0.76);
+    border: 1px solid rgb(231, 226, 222);
+    background-color: rgb(231, 226, 222);
     font-size: 0.6rem;
-    color: rgba(61,45,11,0.863);
+    color: rgb(138, 121, 108);
     cursor: pointer;
 }
 
@@ -147,14 +123,14 @@ select {
 
 input::placeholder {
     font-size: 0.6rem;
-    color: rgba(61, 45, 11, 0.863);
+    color: rgb(138, 121, 108);
 }
 
 .search__button {
     width: 11%;
     height: 30px;
-    border: 1px solid rgba(224, 224, 222, 0.904);
-    background-color: rgba(61, 45, 11, 0.863);
+    border: 1px solid rgb(231, 226, 222);
+    background-color: rgb(138, 121, 108);
     color: white;
     cursor: pointer;
     font-size: 0.6rem;
@@ -163,7 +139,7 @@ input::placeholder {
 
 .search__button:hover {
     color: white;
-    background-color: rgba(61, 45, 11, 0.863);
+    background-color: rgb(138, 121, 108);
     transition: .6s;
 }
 
@@ -173,8 +149,8 @@ input::placeholder {
     align-items: center;
     width: 11%;
     height: 28px;
-    border: 1px solid rgba(201, 201, 198, 0.904);
-    background-color: rgba(196, 196, 185, 0.925);
+    border: 1px solid rgb(231, 226, 222);
+    background-color: rgb(231, 226, 222);
     color: white;
     cursor: pointer;
     font-size: 0.6rem;
@@ -183,8 +159,8 @@ input::placeholder {
 }
 
 .reset__button:hover {
-    color: rgba(168, 168, 164, 0.904);
-    background-color: rgba(61,45,11,0.863);
+    color: rgb(231, 226, 222);
+    background-color: rgb(138, 121, 108);
     transition: .6s;
 }
 
@@ -200,17 +176,17 @@ input::placeholder {
     width: 100%;
     height: 30px;
     font-size: 0.6rem;
-    border: 1px solid rgba(224, 224, 222, 0.904);
-    background-color: rgba(248, 248, 234, 0.76);
-    color: rgba(61, 45, 11, 0.863);
+    border: 1px solid rgb(231, 226, 222);
+    background-color: rgb(231, 226, 222);
+    color: rgb(138, 121, 108);
     padding: 5px 10px;
     cursor: pointer;
     text-decoration: none;
 }
 
 .contact__export:hover {
-    color: rgba(61, 45, 11, 0.863);
-    background-color: rgba(61, 45, 11, 0.384);
+    color: rgb(138, 121, 108);
+    background-color: rgb(138, 121, 108);
     transition: .6s;
 }
 
@@ -223,18 +199,18 @@ input::placeholder {
 
 .pagination li {
     display: inline-block;
-    border: 1px solid rgba(224, 224, 222, 0.904);
+    border: 1px solid rgb(231, 226, 222);
     padding: 2px 6px;
     text-align: center;
 }
 
 .pagination a {
     text-decoration: none;
-    color: rgba(61,45,11,0.863);
+    color: rgb(138, 121, 108);
 }
 
 .pagination .active {
-    background-color:rgba(61, 45, 11, 0.863);
+    background-color:rgb(138, 121, 108);
     color: white;
 }
 
@@ -242,14 +218,14 @@ table {
     width: 100%;
     margin-top: 3%;
     border-collapse: collapse;
-    border: 1px solid rgba(224, 224, 222, 0.904);
+    border: 1px solid rgb(231, 226, 222);
     font-size: 0.8rem;
 }
 
 th {
     height: 35px;
     color: white;
-    background-color: rgba(61, 45, 11, 0.863);
+    background-color: rgb(138, 121, 108);
 }
 
 td {
@@ -260,8 +236,8 @@ td {
 
 th,
 td {
-    border-top: 1px rgba(248, 248, 234, 0.76);
-    border-bottom: 1px solid rgba(224, 224, 222, 0.904);
+    border-top: 1px rgb(231, 226, 222);
+    border-bottom: 1px solid rgb(231, 226, 222);
 }
 
 td+td {
@@ -273,17 +249,17 @@ td+td {
     width: 40%;
     height: 22px;
     font-size: 0.8rem;
-    border: 1px solid rgba(248, 248, 234, 0.76);
-    background-color: rgba(224, 224, 222, 0.904);
-    color: rgba(61,45,11,0.863);
+    border: 1px solid rgb(231, 226, 222);
+    background-color: rgb(231, 226, 222);
+    color: rgb(138, 121, 108);
     padding: 1px 2px;
     cursor: pointer;
     text-decoration: none;
 }
 
 .modal_admin:hover {
-    color: rgba(61, 45, 11, 0.863);
-    background-color:rgba(61, 45, 11, 0.438);
+    color: rgb(138, 121, 108);
+    background-color:rgb(138, 121, 108);
     transition: .6s;
 }
 
@@ -330,8 +306,8 @@ td+td {
     max-width: 600px;
     padding: 20px;
     border-radius: 1px;
-    background: #fff;
-    box-shadow: 0 0 10px rgba(48, 26, 5, 0.384);
+    background: white;
+    box-shadow: 0 0 10px rgb(138, 121, 108);
     vertical-align: middle
 }
 
@@ -357,21 +333,21 @@ td+td {
     top: 0;
     right: 0;
     width: 20px;
-    color: rgba(61,45,11,0.863);
+    color: rgb(138, 121, 108);
     font-weight: 700;
     line-height: 20px;
     text-align: center;
     text-decoration: none;
     text-indent: 0;
     font-size: 0.6rem;
-    border: 1px solid rgba(61, 45, 11, 0.904);
+    border: 1px solid rgb(138, 121, 108);
     border-radius: 50%;
     margin: 7px;
 }
 
 
 .modal-wrapper .modal-close:hover {
-    color: rgba(61, 45, 11, 0.863);
+    color: rgb(138, 121, 108);
 }
 
 .delete-btn {
@@ -408,6 +384,7 @@ td+td {
 }
 
 .modal_table th {
-    background-color: rgba(61, 45, 11, 0.863);
+    background-color: rgb(138, 121, 108);
     color: white;
 }
+

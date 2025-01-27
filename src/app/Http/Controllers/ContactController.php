@@ -9,12 +9,11 @@ use Illuminate\Http\Request;
 
 class ContactController extends Controller
 {
-   public function index(Request $request)
+    //お問い合わせフォーム表示
+    public function index()
     {
         $categories = Category::all();
-
-        
-        return view('index',compact('categories'));
+        return view('contact',compact('categories'));
     }
 
     public function confirm(ContactRequest $request)
@@ -35,11 +34,11 @@ class ContactController extends Controller
         'category_id' => $request->input('category_id'),
         'detail' => $request->input('detail'),
         ];
-            
+
         $categories = Category::all();
         $request->session()->put('contact', $contact);
 
-        
+
         return view('confirm',compact( 'categories','contact'));
     }
 
@@ -48,7 +47,7 @@ class ContactController extends Controller
         $contact = $request->session()->get('contact');
         $request->session()->put('contact', $contact);
 
-        return redirect()->route('contacts.index')->with('contact', $contact);
+        return redirect()->route('contact.index')->with('contact', $contact);
     }
 
 
@@ -77,18 +76,18 @@ class ContactController extends Controller
         'detail' => $request->input('detail'),
         'tell' => $tell,
         ];
-        
-        
+
+
         Contact::create($contact);
 
         $request->session()->forget('contact');
-        
+
         return redirect()->route('thanks');
     }
 
     public function thanks()
     {
-        $url = route('contacts.index');
+        $url = route('contact.index');
         return view('thanks', compact('url'));
     }
 }

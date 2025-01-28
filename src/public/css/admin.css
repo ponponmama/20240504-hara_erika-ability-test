@@ -1,21 +1,35 @@
-.admin-form {
-    width: 90%;
-    height: 700px;
-    margin: 0% 5%;
+.page-section {
+    width: 84%;
+    margin: 2% auto 0;
+    font-size: 0.8rem;
 }
 
-.search-form-container {
-    width: 100%;
+.page-main-form {
     display: flex;
-    align-items: stretch;
-    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    width: 100%;
 }
 
 .keyword-search {
-    padding: 8px 10px;
-    min-width: 300px;
-    border: 1px solid rgb(138, 121, 108);
+    flex-grow: 1;
+    min-width: 150px;
+    padding: 8px 15px;
+    border: 1px solid rgb(170, 167, 165);
     background-color: white;
+}
+
+.gender-select,
+.category-select,
+.input__date {
+    flex-grow: 1;
+}
+
+.search__button,
+.reset__button {
+    flex: 1 1 auto;
+    max-width: 120px;
 }
 
 .arrow-gender-section,
@@ -23,41 +37,46 @@
     position: relative;
 }
 
-.arrow-gender-section::after
+.arrow-gender-section::after,
 .arrow-enquiry-section::after {
     content: '';
     position: absolute;
     top: 50%;
-    right: 8%;
+    right: 7%;
     width: 0;
     height: 0;
-    border-left: 12px solid transparent;
+    border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-top: 8px solid rgb(231, 226, 222);
+    border-top: 12px solid rgb(170, 167, 165);
     content: "";
     transform: translateY(-50%);
 }
 
 .gender-select,
 .category-select {
-    padding: 8px 14px;
+    padding: 8px 15px;
     height: 100%;
     background-color: rgb(231, 226, 222);
+    color: rgb(138, 121, 108);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
 }
 
 .gender-select {
-    min-width: 100px;
+    min-width: 80px;
 }
 
 .category-select {
-    min-width: 210px;
+    min-width: 150px;
 }
 
 .input__date {
     position: relative;
     padding: 8px 14px;
-    min-width: 150px;
-    border: 1px solid rgb(231, 226, 222);
+    min-width: 100px;
+    border: 1px solid rgb(170, 167, 165);
     background-color: rgb(231, 226, 222);
     color: rgb(138, 121, 108);
 }
@@ -73,6 +92,7 @@
     height: auto;
     width: auto;
     background: transparent;
+    cursor: pointer;
 }
 
 .input__date::after {
@@ -82,112 +102,63 @@
         right: 12px;
         width: 0;
         height: 0;
-        border-left: 12px solid transparent;
+        border-left: 8px solid transparent;
         border-right: 8px solid transparent;
-        border-top: 8px solid rgb(231, 226, 222);
+        border-top: 12px solid rgb(170, 167, 165);
         content: "";
         transform: translateY(-50%);
 }
 
-.arrow-date-section {
-    position: relative;
-    width: 14%;
-}
-
-.admin__item input {
-    width: 100%;
-}
-
-.admin__item select {
-    width: 100%;
-    padding: 1px;
-    -webkit-appearance: none;
-    appearance: none;
-}
-
-.admin__item input,
-select {
-    text-align: center;
-    padding: 1px;
-    height: 30px;
-    border: 1px solid rgb(231, 226, 222);
-    background-color: rgb(231, 226, 222);
-    font-size: 0.6rem;
-    color: rgb(138, 121, 108);
-    cursor: pointer;
-}
-
-.search-form__item {
-    width: 30%;
-}
-
-input::placeholder {
-    font-size: 0.6rem;
-    color: rgb(138, 121, 108);
-}
-
 .search__button {
-    width: 11%;
-    height: 30px;
-    border: 1px solid rgb(231, 226, 222);
+    padding: 6px 20px;
+    border: 1px solid rgb(170, 167, 165);
     background-color: rgb(138, 121, 108);
     color: white;
     cursor: pointer;
-    font-size: 0.6rem;
+    text-align: center;
 }
-
 
 .search__button:hover {
     color: white;
-    background-color: rgb(138, 121, 108);
-    transition: .6s;
+    background-color: rgb(170, 167, 165);
 }
 
 .reset__button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 11%;
-    height: 28px;
-    border: 1px solid rgb(231, 226, 222);
-    background-color: rgb(231, 226, 222);
+    padding: 6px 8px;
+    border: 1px solid rgb(170, 167, 165);
+    background-color: rgb(199, 175, 156);
     color: white;
     cursor: pointer;
-    font-size: 0.6rem;
-    font-weight: bold;
+    text-align: center;
     text-decoration: none;
 }
 
 .reset__button:hover {
-    color: rgb(231, 226, 222);
-    background-color: rgb(138, 121, 108);
-    transition: .6s;
+    color: white;
+    background-color: rgb(170, 167, 165);
 }
 
 .middle__admin {
-    height: 30px;
-    margin: 1.5% 0;
+    margin-top: 30px;
     display: flex;
     justify-content: space-between;
-    font-size: 0.6rem;
+    align-items: center;
+    font-size: 0.8rem;
 }
 
 .contact__export {
-    width: 100%;
-    height: 30px;
-    font-size: 0.6rem;
-    border: 1px solid rgb(231, 226, 222);
+    border: 1px solid rgb(170, 167, 165);
     background-color: rgb(231, 226, 222);
     color: rgb(138, 121, 108);
-    padding: 5px 10px;
+    padding: 6px 15px;
     cursor: pointer;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .contact__export:hover {
     color: rgb(138, 121, 108);
-    background-color: rgb(138, 121, 108);
-    transition: .6s;
+    background-color: rgb(170, 167, 165);
 }
 
 .pagination {
@@ -199,7 +170,7 @@ input::placeholder {
 
 .pagination li {
     display: inline-block;
-    border: 1px solid rgb(231, 226, 222);
+    border: 1px solid rgb(170, 167, 165);
     padding: 2px 6px;
     text-align: center;
 }
@@ -214,33 +185,33 @@ input::placeholder {
     color: white;
 }
 
-table {
+.contact-table-inner {
     width: 100%;
-    margin-top: 3%;
+    margin-top: 2%;
     border-collapse: collapse;
-    border: 1px solid rgb(231, 226, 222);
+    border: 1px solid rgb(170, 167, 165);
     font-size: 0.8rem;
 }
 
-th {
-    height: 35px;
+.contact-table-header {
     color: white;
     background-color: rgb(138, 121, 108);
+    padding: 10px 16px;
 }
 
-td {
+.contact-cell {
     height: 40px;
     padding: 8px;
     text-align: center;
 }
 
-th,
-td {
-    border-top: 1px rgb(231, 226, 222);
-    border-bottom: 1px solid rgb(231, 226, 222);
+.contact-table-header,
+.contact-cell {
+    border-top: 1px rgb(170, 167, 165);
+    border-bottom: 1px solid rgb(170, 167, 165);
 }
 
-td+td {
+.contact-cell+.contact-cell {
     border-left: none;
 }
 
@@ -249,7 +220,7 @@ td+td {
     width: 40%;
     height: 22px;
     font-size: 0.8rem;
-    border: 1px solid rgb(231, 226, 222);
+    border: 1px solid rgb(170, 167, 165);
     background-color: rgb(231, 226, 222);
     color: rgb(138, 121, 108);
     padding: 1px 2px;
@@ -350,6 +321,7 @@ td+td {
     color: rgb(138, 121, 108);
 }
 
+
 .delete-btn {
     display: inline-block;
     width: 18%;
@@ -368,6 +340,7 @@ td+td {
 .modal_table {
     border: none;
     border-collapse: collapse;
+    margin: 20px auto;
 }
 
 .modal_table tr {

@@ -22,7 +22,8 @@ class CreateContactsTable extends Migration
             $table->string('email');
             $table->string('tell');
             $table->string('address');
-            $table->string('building')->nullable();            $table->text('detail');
+            $table->string('building')->nullable();
+            $table->text('detail');
             $table->timestamps();
 
             $table->foreign('category_id')->references('id')->on('categories');

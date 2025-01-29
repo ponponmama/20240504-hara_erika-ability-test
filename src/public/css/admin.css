@@ -234,9 +234,7 @@
     transition: .6s;
 }
 
-
 /*ここからモーダル*/
-
 .modal-wrapper {
     z-index: 999;
     position: fixed;
@@ -316,11 +314,9 @@
     margin: 7px;
 }
 
-
 .modal-wrapper .modal-close:hover {
     color: rgb(138, 121, 108);
 }
-
 
 .delete-btn {
     display: inline-block;
@@ -360,4 +356,3 @@
     background-color: rgb(138, 121, 108);
     color: white;
 }
-

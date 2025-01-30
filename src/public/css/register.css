@@ -61,3 +61,11 @@
     background-color: rgb(231, 226, 222);
     appearance: none;
 }
+
+@media screen and (max-width: 1200px) {
+    .page-main-form {
+        width: 70vw;
+        margin: 0 auto;
+        padding: 60px 10px;
+    }
+}

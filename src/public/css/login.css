@@ -8,7 +8,7 @@
 }
 
 .page-main-form {
-    width: 50vw;
+    width: 40vw;
     margin: 0 auto;
     padding: 60px 40px;
     text-align: center;
@@ -64,8 +64,8 @@
 
 @media screen and (max-width: 1200px) {
     .page-main-form{
-        width: 70vw;
+        width: 60vw;
         margin: 0 auto;
-        padding: 60px 10px;
+        padding: 30px 10px;
     }
 }

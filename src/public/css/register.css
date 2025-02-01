@@ -18,9 +18,11 @@
 }
 
 .form-group {
-    width: 70%;
-    margin: 0 auto;
-    padding: 2px;
+    margin-top: 34px;
+}
+
+.form-group:first-of-type {
+    margin-top: 0;
 }
 
 .form-group-title {

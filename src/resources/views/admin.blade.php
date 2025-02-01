@@ -51,7 +51,7 @@
                     @endforeach
                 </select>
             </div>
-            <input class="input__date" name="date" type="date" value="{{ $searchConditions['date'] ?? ' ' }}" placeholder="年/月/日" />
+            <input class="input__date" name="date" type="date" value="{{ $searchConditions['date'] ?? '' }}" placeholder="年/月/日" />
             <button class="search__button" type="submit">
                 検索
             </button>

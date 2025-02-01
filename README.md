@@ -123,6 +123,10 @@ composer install
 - .env.example ファイルを .env としてコピーし、必要に応じてデータベースなどの設定を行います。
 
 ```bash
+docker-compose exec php bash
+```
+
+```bash
 cp .env.example .env
 ```
 

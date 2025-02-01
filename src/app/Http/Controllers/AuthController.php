@@ -46,5 +46,15 @@ use App\Http\Requests\LoginRequest;
             return redirect()->route('login');
         }
 
+        public function showLoginForm(Request $request)
+        {
+            // ユーザーが既にログインしている場合は、セッションを無効化してログインページを表示
+            if (Auth::check()) {
+                Auth::logout();
+                $request->session()->invalidate();
+                $request->session()->regenerateToken();
+            }
 
+            return view('login');
+        }
     }

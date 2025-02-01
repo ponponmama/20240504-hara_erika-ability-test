@@ -4,8 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AdminController;
-use App\Http\Controllers\ExportController;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -18,11 +16,11 @@ use App\Http\Controllers\ExportController;
 |
 */
 
-Route::post('/register', [AuthController::class,'register']);
-Route::post('/login', [AuthController::class,'login'])->name('login');
+Route::post('/register', [AuthController::class, 'register']);
+Route::get('/login', [AuthController::class, 'showLoginForm'])->name('showLoginForm');
+Route::post('/login', [AuthController::class, 'login'])->name('login');
 
 Route::middleware(['auth'])->group(function () {
-Route::get('/admin',[AdminController::class,'index'])->name('admin.index');
 Route::get('/admin/search', [AdminController::class, 'search'])->name('admin.search');
 Route::get('/admin/reset_search', [AdminController::class, 'resetSearch'])->name('admin.reset_search');
 Route::get('/admin/contacts/export_csv', [AdminController::class, 'exportCsv'])->name('admin.contacts.export_csv');

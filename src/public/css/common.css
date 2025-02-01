@@ -5,64 +5,45 @@ body {
 
 /*画面全体のstyle*/
 .app-body {
-    width: 100%;
-    margin: 0;
-    color: rgb(138, 121, 108);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 /*headerのstyle*/
 .header-section {
-    width: 100%;
-    height: auto;
+    height: 80px;
     background: white;
     font-family:serif;
     text-align: center;
-    border: 2px solid rgb(245, 241, 239);
-    border-bottom: none;
-}
-
-/*headerボタン有*/
-.header-utilities {
-    width: 100%;
+    align-items: center;
+    border: 1px solid rgb(245, 241, 239);
+    padding: 14px 0;
     display: grid;
     grid-template-columns:  repeat(3,1fr);
     grid-template-rows: 1fr;
     align-items: center;
-    height: 80px;
 }
 
 /*FashionablyLateのロゴのstyle*/
 .header-logo {
-    display: block;
-    width: 100%;
-    height: auto;
     color: rgb(138, 121, 108);
-    text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    margin: 14px auto;
     grid-column: 2;
-    margin: 0 auto;
-}
-
-/*headerボタン全体のstyle*/
-.header-button-section {
-    grid-column: 3;
-    display: flex;
-    justify-content: right;
-    height: 60px;
-    align-items: center;
 }
 
 /*headerボタンのstyle*/
-.header-nav-button {
+.header-nav-link {
+    width: 90px;
     border: 1px solid rgb(138, 121, 108);
     background-color: rgb(245, 241, 239);
     cursor: pointer;
     color: rgb(138, 121, 108);
-    font-size: 0.8rem;
     text-decoration: none;
-    padding: 2px 30px;
-    border-radius: 3px;
-    margin: 0 40px;
+    margin: 2px auto;
+    text-align: center;
+    grid-column: 3;
 }
 
 /*header以下の画面のstyle*/
@@ -78,13 +59,14 @@ body {
     padding: 2px;
     text-align: center;
     color: rgb(138, 121, 108);
-    font-size: 1.3rem;
-    margin: 1%;
+    font-size: 1.8rem;
+    margin: 14px auto;
 }
 
 /*ボタン全体のstyle*/
 .form-button {
     margin: 1% auto;
+    text-align: center;
 }
 
 /*ボタンのstyle*/

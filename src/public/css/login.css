@@ -3,27 +3,29 @@
 }
 
 .page-section {
-    padding: 20px 20px 60px 20px;
-    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 70px 0;
 }
 
 .page-main-form {
+    display: block;
     width: 40vw;
-    margin: 0 auto;
-    padding: 60px 40px;
-    text-align: center;
+    padding: 60px 90px;
     color: rgb(138, 121, 108);
-    font-size: 0.8rem;
-    align-content: center;
     background-color: white;
     border-radius: 6px;
+    border: 1px solid rgb(231, 226, 222);
 }
 
 .form-group {
-    width: 70%;
-    margin: 0 auto;
-    padding: 2px;
+    margin-top: 34px;
 }
+
+.form-group:first-of-type {
+    margin-top: 0;
+}
+
 
 .form-group-title {
     width: 100%;
@@ -62,10 +64,14 @@
     appearance: none;
 }
 
+.form-button {
+    margin: 58px auto 0;
+}
+
 @media screen and (max-width: 1200px) {
     .page-main-form{
         width: 60vw;
-        margin: 0 auto;
+        margin: auto;
         padding: 30px 10px;
     }
 }

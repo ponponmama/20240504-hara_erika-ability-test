@@ -5,10 +5,9 @@
 @endsection
 
 @section('heading__link')
-<div class="header-button-section">
-    <a class="header-nav-button" href="/register">
-        register
-    </a>
+<a class="header-nav-link" href="/register">
+    register
+</a>
 </div>
 @endsection
 

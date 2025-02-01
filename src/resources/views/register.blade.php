@@ -6,16 +6,14 @@
 
 
 @section('heading__link')
-<div class="header-button-section">
-    <a class="header-nav-button" href="/login">
-        login
-    </a>
-</div>
+<a class="header-nav-link" href="/login">
+    login
+</a>
 @endsection
 
 @section('content')
 <h2 class="page-logo">
-    register
+    Register
 </h2>
 <div class="page-section">
     <form class="page-main-form" action="/register" method="post">

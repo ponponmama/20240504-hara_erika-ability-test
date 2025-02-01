@@ -12,12 +12,10 @@
 
 <body class="app-body">
     <header class="header-section">
-        <div class="header-utilities">
-            <h1 class="header-logo">
-                FashionablyLate
-            </h1>
-            @yield('heading__link')
-        </div>
+        <h1 class="header-logo">
+            FashionablyLate
+        </h1>
+        @yield('heading__link')
     </header>
     <main class="main-section">
         @yield('content')

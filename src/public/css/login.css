@@ -2,6 +2,10 @@
     background-color: #F1ECE7;
 }
 
+.alert-danger {
+    color: red;
+}
+
 .page-section {
     display: flex;
     justify-content: center;

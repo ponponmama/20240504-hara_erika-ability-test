@@ -32,7 +32,7 @@ use App\Http\Requests\LoginRequest;
             } else {
                 // 認証に失敗した場合、ログインページにリダイレクトし、エラーメッセージを表示
                 return redirect()->route('login')->withErrors([
-                    'error' => 'メールアドレスまたはパスワードが間違っています。'
+                    'miss-error' => 'メールアドレスまたはパスワードが間違っています。'
                 ]);
             }
         }

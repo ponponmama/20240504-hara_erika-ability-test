@@ -35,7 +35,6 @@
     margin-top: 0;
 }
 
-
 .form-group-title {
     width: 100%;
     text-align: left;
@@ -80,7 +79,5 @@
 @media screen and (max-width: 1200px) {
     .page-main-form{
         width: 60vw;
-        margin: auto;
-        padding: 30px 10px;
     }
 }

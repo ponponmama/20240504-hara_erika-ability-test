@@ -18,7 +18,7 @@
 }
 
 .form-group {
-    margin-top: 34px;
+    margin-top: 20px;
 }
 
 .form-group:first-of-type {
@@ -65,7 +65,5 @@
 @media screen and (max-width: 1200px) {
     .page-main-form {
         width: 60vw;
-        margin: auto;
-        padding: 30px 10px;
     }
 }

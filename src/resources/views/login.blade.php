@@ -18,9 +18,9 @@
 @if ($errors->any())
 <div class="alert alert-danger">
     <ul class="alert-error">
-        @foreach ($errors->all() as $error)
-        <li>{{ $error }}</li>
-        @endforeach
+        @if ($errors->has('miss-error'))
+            <li>{{ $errors->first('miss-error') }}</li>
+        @endif
     </ul>
 </div>
 @endif

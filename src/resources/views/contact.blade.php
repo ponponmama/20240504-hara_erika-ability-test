@@ -22,8 +22,8 @@
                 </span>
             </label>
             <div class="form-group-content name-inputs">
-                <input class="contact-item input-name" type="text" name="first_name" placeholder="例）山田" value="{{ old('first_name') }}" >
-                <input class="contact-item input-name" type="text" name="last_name" placeholder="例）太郎" value="{{ old('last_name') }}" >
+                <input class="contact-item input-name" type="text" name="first_name" placeholder="例）山田" value="{{ old('first_name',$contact['first_name'] ?? null) }}" >
+                <input class="contact-item input-name" type="text" name="last_name" placeholder="例）太郎" value="{{ old('last_name',$contact['last_name'] ?? null) }}" >
             </div>
             <div class="form-error">
                 @if($errors->has('first_name'))
@@ -44,7 +44,7 @@
             <div class="form-group-content gender-options">
                 <div class="form-radio-option">
                     <label class="gender-radio-label" for="male">
-                        <input id="male" class="gender-radio" type="radio" name="gender" value="1" {{ old('gender')==1  ? 'checked' : '' }} >
+                        <input id="male" class="gender-radio" type="radio" name="gender" value="1" {{ old('gender', $contact['gender'] ?? null)==1  ? 'checked' : '' }} >
                         <span class="gender-text">
                             男性
                         </span>
@@ -52,7 +52,7 @@
                 </div>
                 <div class="form-radio-option">
                     <label class="gender-radio-label" for="female">
-                        <input id="female" class="gender-radio" type="radio" name="gender" value="2" {{ old('gender')=='2' ? 'checked' : '' }} >
+                        <input id="female" class="gender-radio" type="radio" name="gender" value="2" {{ old('gender', $contact['gender'] ?? null)=='2' ? 'checked' : '' }} >
                         <span class="gender-text">
                             女性
                         </span>
@@ -60,7 +60,7 @@
                 </div>
                 <div class="form-radio-option">
                     <label class="gender-radio-label" for="other">
-                        <input id="other" class="gender-radio" type="radio" name="gender" value="3" {{ old('gender')=='3' ? 'checked' : '' }} >
+                        <input id="other" class="gender-radio" type="radio" name="gender" value="3" {{ old('gender', $contact['gender'] ?? null)=='3' ? 'checked' : '' }} >
                         <span class="gender-text">
                             その他
                         </span>
@@ -80,7 +80,7 @@
                     ※
                 </span>
             </label>
-            <input class="contact-item" id="email" type="email" name="email" value="{{ old('email')}}" placeholder="test@example.com" >
+            <input class="contact-item" id="email" type="email" name="email" value="{{ old('email', $contact['email'] ?? null)}}" placeholder="test@example.com" >
             <div class="form-error">
                 @error('email')
                     {{ $message }}
@@ -95,11 +95,11 @@
                 </span>
             </label>
             <div class="form-group-content tell-inputs">
-                <input class="contact-item input-tell" id="tel" type="tel" name="tell1" value="{{ old('tell1') }}" placeholder="090" >
+                <input class="contact-item input-tell" id="tel" type="tel" name="tell1" value="{{ old('tell1',$contact['tell1'] ?? null) }}" placeholder="090" >
                 <span class="tel">-</span>
-                <input class="contact-item input-tell" id="tel" type="tel" name="tell2" value="{{ old('tell2') }}" placeholder="1234" >
+                <input class="contact-item input-tell" id="tel" type="tel" name="tell2" value="{{ old('tell2',$contact['tell2'] ?? null) }}" placeholder="1234" >
                 <span class="tel">-</span>
-                <input class="contact-item input-tell" id="tel" type="tel" name="tell3" value="{{ old('tell3') }}" placeholder="5678" >
+                <input class="contact-item input-tell" id="tel" type="tel" name="tell3" value="{{ old('tell3',$contact['tell3'] ?? null) }}" placeholder="5678" >
             </div>
             <div class="form-error">
                 @if ($errors->has('tell1'))
@@ -118,7 +118,7 @@
                     ※
                 </span>
             </label>
-            <input class="contact-item" id="address" type="text" name="address" value="{{ old('address')}}" placeholder="東京都渋谷区千駄ヶ谷1-2-3" >
+            <input class="contact-item" id="address" type="text" name="address" value="{{ old('address',$contact['address'] ?? null)}}" placeholder="東京都渋谷区千駄ヶ谷1-2-3" >
             <div class="form-error">
                 @error('address')
                     {{ $message }}
@@ -129,7 +129,7 @@
             <label class="form-label-item" for="building">
                 建物名
             </label>
-            <input  class="contact-item" id="building" type="text" name="building" value="{{ old('building')}}" placeholder="千駄ヶ谷マンション101" >
+            <input  class="contact-item" id="building" type="text" name="building" value="{{ old('building',$contact['building'] ?? null)}}" placeholder="千駄ヶ谷マンション101" >
         </div>
         <div class="form-group">
             <label class="form-label-item">
@@ -144,7 +144,7 @@
                         選択してください
                     </option>
                     @foreach($categories as $category)
-                        <option value="{{ $category->id }}" {{ old('category_id')==$category->id ? 'selected' : '' }}>
+                        <option value="{{ $category->id }}" {{ old('category_id',$contact['category_id'] ?? null)==$category->id ? 'selected' : '' }}>
                             {{ $category->content }}
                         </option>
                     @endforeach
@@ -163,9 +163,7 @@
                     ※
                 </span>
             </label>
-            <textarea class="contact-item-detail" name="detail" id="detail" cols="30" rows="10" placeholder="お問い合わせの内容をご記載ください">
-                {{ old('detail')}}
-            </textarea>
+            <textarea class="contact-item-detail" name="detail" id="detail" cols="30" rows="10" placeholder="お問い合わせの内容をご記載ください">{{ old('detail',$contact['detail'] ?? null) }}</textarea>
             <div class="form-error">
                 @error('detail')
                     {{ $message }}

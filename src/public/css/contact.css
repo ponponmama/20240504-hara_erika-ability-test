@@ -104,15 +104,15 @@
 }
 
 .create-form-item-select {
-    padding: 8px 16px;
+    padding: 6px 14px;
     width: 50%;
     background-color: rgb(247, 243, 243);
     color: rgb(202, 189, 178);
 }
 
 .contact-item-detail {
-    padding: 8px 16px;
-    height: 144px;
+    padding: 6px 14px;
+    height: 150px;
     background-color: rgb(247, 243, 243);
     color: rgb(202, 189, 178);
 }

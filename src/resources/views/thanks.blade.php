@@ -13,9 +13,7 @@
         <h2 class="thanks">
                 Thank you
         </h2>
-        <div class="thanks__button">
-            <a href="{{ $url }}" class="thanks__button-submit">HOME</a>
-        </div>
+        <a href="{{ $url }}" class="thanks__link">HOME</a>
     </div>
 </div>
 @endsection

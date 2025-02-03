@@ -43,9 +43,9 @@
             <tr class="confirm-table-row">
                 <th class="confirm-table-header">電話番号</th>
                 <td class="confirm-table-text">
-                    <span>{{ $contact['tell1'] }}{{ $contact['tell2'] }}{{ $contact['tell3'] }}</span>
-                    <input type="hidden" name="tell" value="{{ $contact['tell1']}}{{ $contact['tell2'] }}{{ $contact['tell3'] }}" class="input-hidden" />
+                    {{ $contact['tell1'] }}{{ $contact['tell2'] }}{{ $contact['tell3'] }}
                 </td>
+                <input type="hidden" name="tell" value="{{ $contact['tell1']}}{{ $contact['tell2'] }}{{ $contact['tell3'] }}" class="input-hidden" />
             </tr>
             <tr class="confirm-table-row">
                 <th class="confirm-table-header">住所</th>
@@ -83,10 +83,10 @@
         </table>
     </div>
     <div class="form-button">
-        <button type="submit" class="form-button-submit" name="submit_action" value="submit">
+        <button type="submit" class="form-button-submit confirm-button" name="submit_action" value="submit">
             送信
         </button>
-        <button type="submit" class="form-button-edit" name="submit_action" value="edit">
+        <button type="submit" class="form-button-submit edit-button" name="submit_action" value="edit">
             修正
         </button>
     </div>

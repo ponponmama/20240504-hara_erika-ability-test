@@ -1,166 +1,143 @@
-/*contact文字style*/
-.page-logo {
-    font-family:serif;
-    padding: 2px;
-    text-align: center;
-    color: rgb(138, 121, 108);
-    font-size: 1.5rem;
-    margin: 2%;
-}
-
-/*contact以下の画面全体のstyle*/
 .page-section {
-    width: 100%;
-    margin: 1% auto;
-}
-
-/*formのstyle*/
-.page-main-form {
+    margin: 20px auto 0;
     width: 70%;
-    font-weight: bold;
-    text-align: center;
-    color: rgb(138, 121, 108);
     font-size: 1rem;
-    margin: 0 auto;
-    padding: 3px;
 }
 
-/*項目名＆入力フィールドのstyle*/
 .form-group {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    padding: 4px;
+    display: grid;
+    align-items: center;
+    margin-top: 30px;
+    grid-template-columns: 1fr 2fr;
 }
 
-/*項目名の全体のstyle*/
-.form-group-title {
-    width: 30%;
-    height: 60px;
-    text-align: left;
-    font-size: 1rem;
+.form-group:first-of-type {
+    margin-top: 0;
 }
 
-/*入力フィールド＆errormessageのstyle*/
-.form-group-content {
-    width: 70%;
-    height: 60px;
+.form-group:last-of-type {
+    align-items: flex-start;
 }
 
-/*＊のstyle*/
 .form-label-required {
-    margin-left: 5px;
-    color: #ff0000;
-    padding: 2px 4px;
-    border-radius: 3px;
+    color: red;
 }
 
-/*バリデーションメッセージ*/
-.form-error {
-    width: 100%;
-    height: 20px;
-    color: #ff0000;
-    text-align: left;
-    font-size: 0.8rem;
-}
-
-/*苗字＆名前全体のstyle*/
-.name-input-text {
-    width: 100%;
-    height: 40px;
-    display: flex;
-    gap: 10px;
-}
-
-/*苗字＆名前フィールド*/
-.contact-item-name {
-    padding: 10px;
-    width: 48%;
-    border: 1px solid rgba(224, 224, 222, 0.904);
-    background-color: rgba(248, 248, 234, 0.76);
-    border-radius: 3px;
-    color: rgba(116, 104, 80, 0.863);
-}
-
-/*radio全体のstyle*/
-.form-input-radio {
-    width: 100%;
-    height: 60px;
-    text-align: left;
-}
-
-/*radioボタン*/
-.gender-radio {
-    accent-color:rgba(116, 104, 80, 0.863);
-    margin-right: 10px;
-}
-/*radioボタン横の文字*/
-.gender-radio-label {
-    margin-right: 10px;
-}
-/*inputのstyle*/
 .contact-item {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid rgba(224, 224, 222, 0.904);
-    background-color: rgba(248, 248, 234, 0.76);
-    color: rgba(116, 104, 80, 0.863);
-    appearance: none;
-    border-radius: 1px;
-    box-sizing: border-box;
+    padding: 6px 14px;
+    color: rgb(202, 189, 178);
+    background-color: rgb(247, 243, 243);
 }
-/*tellのstyle*/
-.form-input-tell {
+
+.name-inputs,
+.tell-inputs {
     display: flex;
-    gap: 3px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.name-inputs {
+    width: 100%;
+}
+
+.contact-item,
+.contact-item-name {
+    width: 100%;
+}
+
+.gender-options {
+    display: flex;
+    justify-content: left;
+}
+
+.form-radio-option {
+    margin-right: 65px;
+}
+
+.gender-radio {
+    position: absolute;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.gender-text{
+    display: flex;
     align-items: center;
 }
-/*tellフィールド*/
+
+.gender-text::before {
+    display: block;
+    margin-right: 8px;
+    width: 24px;
+    height: 24px;
+    border: 1px solid rgb(134, 116, 100);
+    border-radius: 50%;
+    content: '';
+}
+
+.gender-radio:checked+.gender-text::before {
+    background: rgb(134, 116, 100);
+}
+
 .contact-item-tell {
-    padding: 10px;
-    width: 28%;
-    border: 1px solid rgba(224, 224, 222, 0.904);
-    background-color: rgba(248, 248, 234, 0.76);
-    color: rgba(116, 104, 80, 0.863);
-    border-radius: 3px;
-}
-/*お問い合わせの種類全体のstyle*/
-.form-group-content-select {
-    width: 70%;
-    text-align: left;
-}
-/*お問い合わせの種類style*/
-.create-form-item-select {
-    width: 50%;
-    border: 1px solid rgba(224, 224, 222, 0.904);
-    background-color: rgba(248, 248, 234, 0.76);
-    color: rgba(116, 104, 80, 0.863);
-}
-
-.form-group-detail {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+    width: calc(100%/3);
     text-align: center;
-    padding: 4px;
 }
 
-/*お問い合わせ内容全体のstyle*/
-.form-group-content-detail {
-    width: 70%;
+.form-group-content-select {
+    position: relative;
 }
-/*お問い合わせフィールド*/
+
+.form-group-content-select::after {
+    position: absolute;
+    top: 30%;
+    left: 42%;
+    width: 0;
+    height: 0;
+    border-top: 12px solid rgb(202, 189, 178);
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    content: "";
+    transform: translateY(-50%);
+}
+
+.create-form-item-select {
+    padding: 8px 16px;
+    width: 50%;
+    background-color: rgb(247, 243, 243);
+    color: rgb(202, 189, 178);
+}
+
 .contact-item-detail {
-    height: 150px;
-    width: 100%;
-    text-align: left;
-    padding: 10px;
-    border: 1px solid rgba(224, 224, 222, 0.904);
-    background-color: rgba(248, 248, 234, 0.76);
-    color: rgba(116, 104, 80, 0.863);
-    border-radius: 3px;
-    appearance: none;
-    text-align: left;
-    font-size: 1rem;
+    padding: 8px 16px;
+    height: 144px;
+    background-color: rgb(247, 243, 243);
+    color: rgb(202, 189, 178);
 }
+
+/* 送信ボタン */
+.form-button-submit {
+    margin: 30px auto 0;
+}
+
+/* エラーメッセージ */
+.form-error {
+    margin-top: 8px;
+    color: red;
+    grid-column: 2;
+}
+
+.form-group-name .form-error {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.error-message-first-name,
+.error-message-last-name {
+    width: 100%;
+}
+

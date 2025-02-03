@@ -61,11 +61,9 @@
                 </div>
             </div>
         </div>
-        <div class="form-button">
-            <button class="form-button-submit" type="submit">
-                ログイン
-            </button>
-        </div>
+        <button class="form-button-submit login-btn" type="submit">
+            ログイン
+        </button>
     </form>
 </div>
 @endsection

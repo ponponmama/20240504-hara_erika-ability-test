@@ -70,7 +70,7 @@
                 </div>
             </div>
             <div class="form-button">
-                <button class="form-button-submit" type="submit">
+                <button class="form-button-submit register-button" type="submit">
                     登録
                 </button>
             </div>

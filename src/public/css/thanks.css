@@ -34,16 +34,8 @@
     font-size: 10rem;
 }
 
-.thanks__button {
-    position: absolute;
-    bottom: 38%;
-    text-align: center;
-    font-size: 1rem;
-}
-
-.thanks__button-submit {
-    display: inline-block;
-    padding: 4px 30px;
+.thanks__link {
+    padding: 6px 34px;
     background: rgb(138, 121, 108);
     border: none;
     color: white;

@@ -35,7 +35,7 @@ class ContactRequest extends FormRequest
             'tell2' => ['required', 'regex:/^[0-9]+$/', 'not_regex:/-/','digits_between:1,5'],
             'tell3' => ['required', 'regex:/^[0-9]+$/','not_regex:/-/', 'digits_between:1,5'],
             'address' => ['required'],
-            'building' => ['string'],
+            'building' => ['nullable','string'],
             'category_id' => ['required'],
             'detail' => ['required', 'max:120'],
         ];
@@ -62,7 +62,7 @@ class ContactRequest extends FormRequest
             'category_id.required' => 'お問い合わせの種類を選択してください',
             'detail.required' => 'お問い合わせ内容を入力してください',
             'detail.max' => 'お問い合わせの内容は120文字以内で入力してください',
+            'building.string' => '建物名は文字列で入力してください。',
         ];
     }
-
 }

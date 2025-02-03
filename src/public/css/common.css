@@ -3,6 +3,15 @@ body {
     height: 100%;
 }
 
+body,textarea,input {
+    color: rgb(138, 121, 108);
+}
+
+textarea::placeholder,
+input::placeholder {
+    color: rgb(194, 178, 167);
+}
+
 /*画面全体のstyle*/
 .app-body {
     display: flex;
@@ -16,61 +25,53 @@ body {
     background: white;
     font-family:serif;
     text-align: center;
-    align-items: center;
-    border: 1px solid rgb(245, 241, 239);
+    border: 1px solid rgb(247, 243, 243);
     padding: 14px 0;
     display: grid;
     grid-template-columns:  repeat(3,1fr);
     grid-template-rows: 1fr;
-    align-items: center;
 }
 
 /*FashionablyLateのロゴのstyle*/
 .header-logo {
-    color: rgb(138, 121, 108);
     font-size: 2rem;
-    margin: 14px auto;
     grid-column: 2;
 }
 
 /*headerボタンのstyle*/
 .header-nav-link {
-    width: 90px;
-    border: 1px solid rgb(138, 121, 108);
-    background-color: rgb(245, 241, 239);
+    width: 98px;
+    border: 1px solid rgb(214, 191, 175);
+    background-color: rgb(236, 234, 234);
+    color: rgb(214, 191, 175);
     cursor: pointer;
-    color: rgb(138, 121, 108);
     text-decoration: none;
-    margin: 2px auto;
-    text-align: center;
+    margin: 0 auto;
+    font-family: serif;
     grid-column: 3;
 }
 
 /*header以下の画面のstyle*/
 .main-section {
-    width: 100%;
-    background-color: white;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    padding: 20px;
 }
 
 /*各共通部分のlogo*/
 .page-logo {
     font-family: serif;
-    padding: 2px;
     text-align: center;
-    color: rgb(138, 121, 108);
-    font-size: 1.8rem;
-    margin: 14px auto;
-}
-
-/*ボタン全体のstyle*/
-.form-button {
-    margin: 1% auto;
-    text-align: center;
+    font-size: 1.7rem;
+    margin: 10px auto;
 }
 
 /*ボタンのstyle*/
 .form-button-submit {
-    padding: 4px 30px;
+    display: block;
+    padding: 6px 34px;
     background: rgb(138, 121, 108);
     border: none;
     color: white;
@@ -78,4 +79,11 @@ body {
     cursor: pointer;
 }
 
+/*バリデーションメッセージ*/
+.form-error {
+    width: 100%;
+    height: 20px;
+    color: #ff0000;
+    text-align: left;
+}
 

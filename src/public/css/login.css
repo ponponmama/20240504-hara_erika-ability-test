@@ -2,15 +2,6 @@
     background-color: #F1ECE7;
 }
 
-.alert-danger {
-    text-align: center;
-    color: red;
-}
-
-.alert-error {
-    list-style-type: none;
-}
-
 .page-section {
     display: flex;
     justify-content: center;

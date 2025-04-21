@@ -25,22 +25,10 @@
     margin-top: 0;
 }
 
-.form-group-title {
+.form-label-item {
     width: 100%;
     text-align: left;
     padding-left: 10px;
-}
-
-.form-label-item {
-    color: rgb(138, 121, 108);
-}
-
-.form-group-content {
-    padding: 4px;
-    margin-bottom: 5px;
-}
-
-.contact-item {
     color: rgb(138, 121, 108);
 }
 
@@ -53,6 +41,16 @@
     border-radius: 3px;
     background-color: rgb(231, 226, 222);
     appearance: none;
+    padding: 4px;
+    margin-bottom: 5px;
+}
+
+@media (width <=767px) {}
+
+@media (min-width: 768px) and (max-width: 912px) {
+    .page-main-form {
+        width: 60vw;
+    }
 }
 
 @media screen and (max-width: 1200px) {

@@ -15,15 +15,6 @@
 <h2 class="page-logo">
     Login
 </h2>
-@if ($errors->any())
-<div class="alert alert-danger">
-    <ul class="alert-error">
-        @if ($errors->has('miss-error'))
-            <li>{{ $errors->first('miss-error') }}</li>
-        @endif
-    </ul>
-</div>
-@endif
 <div class="page-section">
     <form class="page-main-form" action="/login" method="post">
         @csrf
@@ -61,7 +52,7 @@
                 </div>
             </div>
         </div>
-        <button class="form-button-submit login-btn" type="submit">
+        <button class="button login-btn" type="submit">
             ログイン
         </button>
     </form>

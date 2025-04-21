@@ -27,13 +27,9 @@ use App\Http\Requests\LoginRequest;
         {
             $credentials = $request->only('email', 'password');
             if (Auth::attempt($credentials)) {
-                // 認証に成功した場合、ユーザーを登録ページにリダイレクト
                 return redirect()->intended('admin');
             } else {
-                // 認証に失敗した場合、ログインページにリダイレクトし、エラーメッセージを表示
-                return redirect()->route('login')->withErrors([
-                    'miss-error' => 'メールアドレスまたはパスワードが間違っています。'
-                ]);
+                return redirect()->route('login');
             }
         }
 

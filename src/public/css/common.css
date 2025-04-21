@@ -1,6 +1,7 @@
 html,
 body {
     height: 100%;
+    font-family: serif;
 }
 
 body,textarea,input {
@@ -12,6 +13,11 @@ input::placeholder {
     color: rgb(194, 178, 167);
 }
 
+.link
+.button {
+    cursor: pointer;
+}
+
 /*画面全体のstyle*/
 .app-body {
     display: flex;
@@ -21,12 +27,12 @@ input::placeholder {
 
 /*headerのstyle*/
 .header-section {
-    height: 80px;
+    margin-top: 2%;
     background: white;
     font-family:serif;
     text-align: center;
-    border: 1px solid rgb(247, 243, 243);
-    padding: 14px 0;
+    border-bottom: 1px solid rgb(247, 243, 243);
+    padding: 10px;
     display: grid;
     grid-template-columns:  repeat(3,1fr);
     grid-template-rows: 1fr;
@@ -40,13 +46,13 @@ input::placeholder {
 
 /*headerボタンのstyle*/
 .header-nav-link {
-    width: 98px;
+    width: auto;
+    padding: 4px 20px;
     border: 1px solid rgb(214, 191, 175);
     background-color: rgb(236, 234, 234);
     color: rgb(214, 191, 175);
-    cursor: pointer;
     text-decoration: none;
-    margin: 0 auto;
+    margin: 10px auto;
     font-family: serif;
     grid-column: 3;
 }
@@ -69,14 +75,14 @@ input::placeholder {
 }
 
 /*ボタンのstyle*/
-.form-button-submit {
+.button {
     display: block;
     padding: 6px 34px;
     background: rgb(138, 121, 108);
     border: none;
     color: white;
     font-size: 1rem;
-    cursor: pointer;
+    margin: 20px auto 0;
 }
 
 /*バリデーションメッセージ*/
@@ -87,3 +93,10 @@ input::placeholder {
     text-align: left;
 }
 
+@media (width <= 767px) {}
+
+@media (min-width: 768px) and (max-width: 912px)  and (min-height: 914px) {
+    .app-body {
+        height: 80%;
+    }
+}

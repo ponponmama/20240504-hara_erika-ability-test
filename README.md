@@ -1,3 +1,5 @@
+<p align="center"><img src="https://img.shields.io/badge/-Laravel-black.svg?logo=laravel&style=plastic"> <img src="https://img.shields.io/badge/-Html5-pink.svg?logo=html5&style=plastic"> <img src="https://img.shields.io/badge/-CSS3-blue.svg?logo=css3&style=plastic"></p>
+
 ###お問い合わせフォーム
 ###お問い合わせフォーム管理システムアプリ
 

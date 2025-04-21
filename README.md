@@ -1,8 +1,17 @@
-### お問い合わせフォーム＆お問い合わせフォーム管理システムアプリ
+###お問い合わせフォーム
+###お問い合わせフォーム管理システムアプリ
 
-![お問い合わせform登録画面](register.png)
-![お問い合わせform画面2](login.png)
-![お問い合わせform画面3](modal.png)
+<p align="center">
+  <img src="register.png" alt="お問い合わせform登録画面">
+</p>
+
+<p align="center">
+  <img src="login.png" alt="お問い合わせformログイン画面">
+</p>
+
+<p align="center">
+  <img src="modal.png" alt="お問い合わせform削除モーダル画面">
+</p>
 
 ### 機能要件
 

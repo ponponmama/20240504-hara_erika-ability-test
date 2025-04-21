@@ -55,7 +55,7 @@
 
 ### 使用技術
 
-- **フロントエンド**: HTML, CSS, JavaScript
+- **フロントエンド**: HTML, CSS
 - **バックエンド**: PHP, Laravel
 - **データベース**: MySQL
 - **バージョン管理**: Git, GitHub

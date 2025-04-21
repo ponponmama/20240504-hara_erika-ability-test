@@ -79,7 +79,7 @@
 #### 環境構築
 
 - **PHP**: 8.3.6
-- **MySQL**: 10.3.39-MariaDB
+- **MySQL**: 10.3.39
 - **Composer**: 2.7.7
 - **Docker**: 27.4.0
 - **Laravel Framework**: 8.83.27

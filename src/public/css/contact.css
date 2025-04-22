@@ -4,11 +4,15 @@
     font-size: 1rem;
 }
 
+.page-main-form {
+    font-family: 'Franklin Gothic Medium';
+}
+
 .form-group {
-    display: grid;
-    align-items: center;
-    margin-top: 30px;
-    grid-template-columns: 1fr 2fr;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 15px;
 }
 
 .form-group:first-of-type {
@@ -19,40 +23,52 @@
     align-items: flex-start;
 }
 
+.form-label-item {
+    width: 35%;
+    text-align: left;
+}
+
 .form-label-required {
     color: red;
+    margin-left: 10px;
 }
 
 .contact-item {
+    width: 65%;
     padding: 6px 14px;
     color: rgb(202, 189, 178);
     background-color: rgb(247, 243, 243);
 }
 
-.name-inputs,
-.tell-inputs {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
+.input-name {
+    width: 48%;
 }
 
-.name-inputs {
-    width: 100%;
+.input-name:first-of-type {
+    margin-right: 2%;
 }
 
-.contact-item,
-.contact-item-name {
-    width: 100%;
+.input-name:last-of-type {
+    margin-left: 2%;
 }
 
-.gender-options {
+.gender-group {
+    justify-content: left;
+}
+
+.input-container {
+    width: 65%;
     display: flex;
     justify-content: left;
 }
 
-.form-radio-option {
-    margin-right: 65px;
+.gender-radio-label {
+    width: 18%;
+    margin-right: 1%;
+}
+
+.gender-radio-label:last-of-type {
+    margin-right: 0;
 }
 
 .gender-radio {
@@ -65,6 +81,7 @@
 .gender-text{
     display: flex;
     align-items: center;
+    justify-content: left;
 }
 
 .gender-text::before {
@@ -81,19 +98,23 @@
     background: rgb(134, 116, 100);
 }
 
-.contact-item-tell {
-    width: calc(100%/3);
+.input-tell {
+    width: 30%;
     text-align: center;
 }
 
-.form-group-content-select {
+.tel {
+    margin: 0 2%;
+}
+
+.select-group {
     position: relative;
 }
 
-.form-group-content-select::after {
+.select-group::after {
     position: absolute;
-    top: 30%;
-    left: 42%;
+    top: 50%;
+    right: 37%;
     width: 0;
     height: 0;
     border-top: 12px solid rgb(202, 189, 178);
@@ -101,16 +122,18 @@
     border-left: 8px solid transparent;
     content: "";
     transform: translateY(-50%);
+    pointer-events: none;
 }
 
 .create-form-item-select {
-    padding: 6px 14px;
-    width: 50%;
-    background-color: rgb(247, 243, 243);
-    color: rgb(202, 189, 178);
+    width: 30%;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 
 .contact-item-detail {
+    width: 65%;
     padding: 6px 14px;
     height: 150px;
     background-color: rgb(247, 243, 243);
@@ -124,20 +147,62 @@
 
 /* エラーメッセージ */
 .form-error {
-    margin-top: 8px;
-    color: red;
-    grid-column: 2;
+    text-align: center;
+    margin: 8px 0 0 10%;
 }
 
-.form-group-name .form-error {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
+.error-message {
+    margin-right: 5%;
 }
 
-.error-message-first-name,
-.error-message-last-name {
-    width: 100%;
+@media (width <=767px) {
+    .page-section {
+        width: 100%;
+        padding: 4px;
+        margin: 0;
+    }
+
+    .form-group {
+        width: 100%;
+        flex-direction: column;
+        margin: 4px;
+    }
+
+    .form-label-item {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .contact-item,
+    .input-container {
+        width: 100%;
+    }
+
+    .form-error {
+        text-align: left;
+        margin: 10px;
+    }
+
+    .select-group::after {
+        top: 76%;
+        right: 5%;
+    }
+
+    .contact-item-detail {
+        width: 100%;
+    }
+
+    .contact-button {
+        margin:10px auto 0;
+    }
 }
 
+@media (min-width: 768px) and (max-width: 912px) {
+    .page-section {
+        width: 90%;
+    }
+
+    .gender-radio-label {
+        width: 20%;
+    }
+}

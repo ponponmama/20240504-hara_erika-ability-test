@@ -18,7 +18,7 @@
 <div class="page-section">
     <form class="page-main-form" action="/register" method="post">
         @csrf
-        <div class="form-group">
+        <div class="form-group form-group-name">
             <p class="form-label-item">
                 お名前
             </p>

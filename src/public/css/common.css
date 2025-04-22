@@ -93,10 +93,10 @@ input::placeholder {
     text-align: left;
 }
 
-@media (width <= 767px) {}
+@media (width <= 767px) {
+
+}
 
 @media (min-width: 768px) and (max-width: 912px)  and (min-height: 914px) {
-    .app-body {
-        height: 90%;
-    }
+
 }

@@ -11,4 +11,18 @@ js:
   finder:
     not-name:
       - webpack.mix.js
-css: true
+css:
+  preset: "styleci"
+  enabled:
+    - colors
+    - display_property
+    - font_family
+    - font_size
+    - font_weight
+    - line_height
+    - margin
+    - padding
+    - text_align
+    - text_decoration
+    - text_transform
+    - whitespace

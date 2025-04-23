@@ -156,9 +156,7 @@
                     ※
                 </span>
             </label>
-            <textarea class="contact-item-detail" name="detail" id="detail" cols="30" rows="10" placeholder="お問い合わせの内容をご記載ください">
-                {{ old('detail',$contact['detail'] ?? null) }}
-            </textarea>
+            <textarea class="contact-item-detail" name="detail" id="detail" cols="30" rows="10" placeholder="お問い合わせの内容をご記載ください">{{ old('detail', $contact['detail'] ?? '') }}</textarea>
         </div>
         <p class="form-error">
             @error('detail')

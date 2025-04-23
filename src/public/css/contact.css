@@ -12,7 +12,7 @@
     width: 100%;
     display: flex;
     align-items: flex-start;
-    margin-top: 15px;
+    margin-top: 8px;
 }
 
 .form-group:first-of-type {
@@ -36,8 +36,6 @@
 .contact-item {
     width: 65%;
     padding: 6px 14px;
-    color: rgb(202, 189, 178);
-    background-color: rgb(247, 243, 243);
 }
 
 .input-name {
@@ -136,8 +134,6 @@
     width: 65%;
     padding: 6px 14px;
     height: 150px;
-    background-color: rgb(247, 243, 243);
-    color: rgb(202, 189, 178);
 }
 
 /* 送信ボタン */
@@ -147,19 +143,20 @@
 
 /* エラーメッセージ */
 .form-error {
-    text-align: center;
-    margin: 8px 0 0 10%;
+    width: 65%;
+    text-align: left;
+    margin: 8px 0 0 35%;
 }
 
 .error-message {
-    margin-right: 5%;
+    margin-right: 10%;
 }
 
 @media (width <=767px) {
     .page-section {
-        width: 100%;
+        width: 90%;
         padding: 4px;
-        margin: 0;
+        margin: 0 5%;
     }
 
     .form-group {
@@ -199,7 +196,7 @@
 
 @media (min-width: 768px) and (max-width: 912px) {
     .page-section {
-        width: 90%;
+        width: 80%;
     }
 
     .gender-radio-label {

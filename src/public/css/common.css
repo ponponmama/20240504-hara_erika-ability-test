@@ -1,16 +1,24 @@
 html,
 body {
     height: 90%;
-    font-family: serif;
 }
 
-body,textarea,input {
-    color: rgb(138, 121, 108);
+body,textarea,input,select {
+    color: rgb(202, 189, 178);
+}
+
+textarea,input,select {
+    background-color: rgb(247, 243, 243);
 }
 
 textarea::placeholder,
 input::placeholder {
     color: rgb(194, 178, 167);
+}
+
+.header-logo,
+.page-logo {
+    font-family: serif;
 }
 
 .link
@@ -98,5 +106,7 @@ input::placeholder {
 }
 
 @media (min-width: 768px) and (max-width: 912px)  and (min-height: 914px) {
-
+    html,body {
+    height: 100%;
+}
 }

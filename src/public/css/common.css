@@ -9,11 +9,11 @@ body,textarea,input,label {
 }
 
 select {
-    color: rgb(202, 189, 178);
+    color: rgb(194, 178, 167);
 }
 
 textarea,input,select {
-    background-color: rgb(247, 243, 243);
+    background-color: rgb(252, 251, 241);
 }
 
 label {

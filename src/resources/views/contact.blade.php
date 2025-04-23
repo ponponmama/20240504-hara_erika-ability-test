@@ -124,7 +124,7 @@
             <label class="form-label-item" for="building">
                 建物名
             </label>
-            <input  class="contact-item" id="building" type="text" name="building" value="{{ old('building',$contact['building'] ?? null)}}" placeholder="千駄ヶ谷マンション101" >
+            <input  class="contact-item" id="building" type="text" name="building" value="{{ old('building',$contact['building'] ?? null)}}" placeholder="千駄ヶ谷マンション101">
         </div>
         <div class="form-group select-group">
             <label class="form-label-item">

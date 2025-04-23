@@ -141,8 +141,8 @@
 }
 
 /* 送信ボタン */
-.form-button-submit {
-    margin: 30px auto 0;
+.contact-button {
+    margin: 20px auto;
 }
 
 /* エラーメッセージ */

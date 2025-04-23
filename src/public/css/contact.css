@@ -58,7 +58,7 @@
 }
 
 .gender-radio-label {
-    width: 18%;
+    width: 24%;
     margin-right: 1%;
 }
 
@@ -180,6 +180,11 @@
         width: 100%;
     }
 
+    .gender-radio-label {
+        width: 35%;
+        font-size: 0.8rem;
+    }
+
     .form-error {
         width: 90%;
         text-align: left;
@@ -206,6 +211,6 @@
     }
 
     .gender-radio-label {
-        width: 22%;
+        width: 28%;
     }
 }

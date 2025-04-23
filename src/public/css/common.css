@@ -1,6 +1,5 @@
 /*画面全体のstyle*/
 .app-body {
-    /*height: 100vh;*/
     display: flex;
     flex-direction: column;
     color: rgb(134, 116, 100);
@@ -19,12 +18,12 @@ select {
 textarea,input,select {
     background-color: rgb(252, 251, 241);
     border: 1px solid rgb(252, 251, 241);
-    line-height: 2.5rem;
+    line-height: 2rem;
     padding: 4px 14px;
 }
 
 label {
-    line-height: 2.5rem;
+    line-height: 2rem;
     padding: 4px 14px;
 }
 
@@ -60,7 +59,7 @@ input::placeholder {
 
 /*headerのstyle*/
 .header-section {
-    margin-top: 5%;
+    margin-top: 2%;
     background: white;
     text-align: center;
     border-bottom: 1px solid rgb(236, 234, 234);
@@ -102,7 +101,7 @@ input::placeholder {
 .page-logo {
     text-align: center;
     font-size: 1.7rem;
-    margin: 2%;
+    margin: 1%;
 }
 
 /*ボタンのstyle*/

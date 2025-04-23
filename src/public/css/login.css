@@ -1,5 +1,5 @@
 .main-section {
-    background-color: #F1ECE7;
+    background-color: rgb(252, 251, 241);
 }
 
 .page-section {
@@ -9,66 +9,44 @@
 }
 
 .page-main-form {
-    display: block;
-    width: 40vw;
-    padding: 60px 90px;
-    color: rgb(138, 121, 108);
+    width: 50vw;
+    padding: 40px 80px;
     background-color: white;
     border-radius: 6px;
-    border: 1px solid rgb(231, 226, 222);
+    border: 1px solid rgb(236, 234, 234);
+    margin: 3% auto;
 }
 
 .form-group {
-    margin-top: 34px;
+    margin-top: 3%;
 }
 
 .form-group:first-of-type {
     margin-top: 0;
 }
 
-.form-group-title {
-    width: 100%;
-    text-align: left;
-    padding-left: 10px;
-}
-
 .form-label-item {
-    color: rgb(138, 121, 108);
-}
-
-.form-group-content {
-    padding: 4px;
-    margin-bottom: 5px;
-}
-
-.contact-item {
-    color: rgb(138, 121, 108);
-}
-
-.form-error {
     width: 100%;
-    height: 20px;
-    color: #ff0000;
     text-align: left;
+    margin-bottom: 10%;
 }
 
 .contact-item {
-    padding-left: 10px;
     width: 100%;
-    height: 30px;
-    color: rgb(138, 121, 108);
-    border: 1px solid rgb(245, 241, 239);
     border-radius: 3px;
-    background-color: rgb(245, 241, 239);
     appearance: none;
+    margin-bottom: 3%;
 }
 
-.form-button {
-    margin: 58px auto 0;
+@media (width <=767px) {
+    .page-main-form {
+        width: 90vw;
+        padding: 20px;
+    }
 }
 
-@media screen and (max-width: 1200px) {
-    .page-main-form{
+@media (min-width: 768px) and (max-width: 912px) {
+    .page-main-form {
         width: 60vw;
     }
 }

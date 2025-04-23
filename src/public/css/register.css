@@ -5,6 +5,7 @@
 .page-section {
     display: flex;
     justify-content: center;
+    margin: 40px 0 70px 0;
 }
 
 .page-main-form {

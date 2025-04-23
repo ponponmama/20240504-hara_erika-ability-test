@@ -74,6 +74,7 @@ input::placeholder {
 .header-logo {
     font-size: 2rem;
     grid-column: 2;
+    margin: 1% auto;
 }
 
 /*headerボタンのstyle*/

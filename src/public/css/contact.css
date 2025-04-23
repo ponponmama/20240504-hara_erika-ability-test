@@ -1,5 +1,5 @@
 .page-section {
-    margin: 20px auto 0;
+    margin: 2% auto 0;
     width: 70%;
     font-size: 1rem;
     font-family: 'Franklin Gothic Medium';
@@ -9,7 +9,7 @@
     width: 100%;
     display: flex;
     align-items: flex-start;
-    margin-top: 8px;
+    margin-top: 1%;
 }
 
 .form-group:first-of-type {
@@ -32,7 +32,7 @@
 
 .contact-item {
     width: 65%;
-    padding: 6px 14px;
+    /*padding: 6px 14px;*/
 }
 
 .input-name {
@@ -71,6 +71,7 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    padding: 0;
 }
 
 .gender-text{
@@ -81,7 +82,7 @@
 
 .gender-text::before {
     display: block;
-    margin-right: 8px;
+    margin-right: 2%;
     width: 24px;
     height: 24px;
     border: 1px solid rgb(134, 116, 100);
@@ -103,7 +104,7 @@
 }
 
 .building-section {
-    margin-bottom: 33px;
+    margin-bottom: 6%;
 }
 
 .select-group {
@@ -133,19 +134,19 @@
 
 .contact-item-detail {
     width: 65%;
-    padding: 6px 14px;
+    /*padding: 6px 14px;*/
     height: 150px;
 }
 
 /* 送信ボタン */
 .contact-button {
-    margin: 15px auto;
+    margin: 4% auto;
 }
 
 /* エラーメッセージ */
 .form-error {
     width: 65%;
-    margin: 8px 0 0 35%;
+    margin: 1% 0 0 35%;
 }
 
 .error-message {
@@ -162,7 +163,7 @@
     .form-group {
         width: 100%;
         flex-direction: column;
-        margin: 4px;
+        margin: 1%;
     }
 
     .building-section{

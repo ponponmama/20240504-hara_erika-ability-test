@@ -5,19 +5,20 @@
 .page-section {
     display: flex;
     justify-content: center;
-    margin: 40px 0;
+    margin: 2% 0;
 }
 
 .page-main-form {
-    width: 40vw;
-    padding: 64px 96px;
+    width: 50vw;
+    padding: 40px 80px;
     background-color: white;
     border-radius: 6px;
     border: 1px solid rgb(236, 234, 234);
+    margin: 3% auto;
 }
 
 .form-group {
-    margin-top: 15px;
+    margin-top: 3%;
 }
 
 .form-group:first-of-type {
@@ -28,6 +29,7 @@
     width: 100%;
     text-align: left;
     padding-left: 10px;
+    margin-bottom: 10%;
 }
 
 .contact-item {
@@ -37,18 +39,17 @@
     border-radius: 3px;
     appearance: none;
     padding: 4px;
-    margin-bottom: 5px;
+    margin-bottom: 3%;
 }
 
-@media (width <=767px) {}
-
-@media (min-width: 768px) and (max-width: 912px) {
+@media (width <=767px) {
     .page-main-form {
-        width: 60vw;
+        width: 90%;
+        padding: 20px;
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media (min-width: 768px) and (max-width: 912px) {
     .page-main-form {
         width: 60vw;
     }

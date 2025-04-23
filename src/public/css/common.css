@@ -102,6 +102,9 @@ input::placeholder {
 }
 
 @media (width <= 767px) {
+    .form-error {
+        font-size: 0.7rem;
+    }
 
 }
 

@@ -120,7 +120,7 @@
                 {{ $message }}
             @enderror
         </p>
-        <div class="form-group">
+        <div class="form-group building-section">
             <label class="form-label-item" for="building">
                 建物名
             </label>

@@ -22,8 +22,8 @@
                 </span>
             </label>
             <div class="input-container">
-                <input class="contact-item input-name" type="text" name="first_name" placeholder="例）山田" value="{{ old('first_name',$contact['first_name'] ?? null) }}" >
-                <input class="contact-item input-name" type="text" name="last_name" placeholder="例）太郎" value="{{ old('last_name',$contact['last_name'] ?? null) }}" >
+                <input class="contact-item input-name" type="text" id="name" name="first_name" placeholder="例）山田" value="{{ old('first_name',$contact['first_name'] ?? null) }}" >
+                <input class="contact-item input-name" type="text" id="name" name="last_name" placeholder="例）太郎" value="{{ old('last_name',$contact['last_name'] ?? null) }}" >
             </div>
         </div>
         <p class="form-error">
@@ -156,7 +156,7 @@
                     ※
                 </span>
             </label>
-            <textarea class="contact-item-detail" name="detail" id="detail" cols="30" rows="10" placeholder="お問い合わせの内容をご記載ください">{{ old('detail', $contact['detail'] ?? '') }}</textarea>
+            <textarea class="contact-item contact-item-detail" name="detail" id="detail" cols="30" rows="10" placeholder="お問い合わせの内容をご記載ください">{{ old('detail', $contact['detail'] ?? '') }}</textarea>
         </div>
         <p class="form-error">
             @error('detail')

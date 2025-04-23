@@ -20,13 +20,13 @@
         @csrf
         <div class="form-group">
             <div class="form-group-title">
-                <span class="form-label--item">
+                <label class="form-label-item form-label--item" for="email">
                     メールアドレス
-                </span>
+                </label>
             </div>
             <div class="form-group-content">
                 <div class="form-input-text">
-                    <input class="contact-item" type="email" name="email" placeholder="test@example.com" value="{{ old('email') }}" >
+                    <input class="contact-item" type="email" id="email" name="email" placeholder="test@example.com" value="{{ old('email') }}" >
                 </div>
                 <div class="form-error">
                     @error('email')
@@ -37,13 +37,13 @@
         </div>
         <div class="form-group">
             <div class="form-group-title">
-                <span class="form-label-item">
+                <label class="form-label-item" for="password">
                     パスワード
-                </span>
+                </label>
             </div>
             <div class="form-group-content">
                 <div class="form-input-text">
-                    <input class="contact-item" type="password" name="password" placeholder="coachtech1106" >
+                    <input class="contact-item" type="password" id="password"  name="password" placeholder="coachtech1106" >
                 </div>
                 <div class="form-error">
                     @error('password')
@@ -52,7 +52,7 @@
                 </div>
             </div>
         </div>
-        <button class="button login-btn" type="submit">
+        <button class="button login-btn login-button" type="submit">
             ログイン
         </button>
     </form>

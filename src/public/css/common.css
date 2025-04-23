@@ -14,6 +14,8 @@ select {
 
 textarea,input,select {
     background-color: rgb(252, 251, 241);
+    border: 1px solid rgb(252, 251, 241);
+
 }
 
 label {
@@ -23,6 +25,10 @@ label {
 textarea::placeholder,
 input::placeholder {
     color: rgb(194, 178, 167);
+}
+
+.page-section {
+    font-family: 'Franklin Gothic Medium';
 }
 
 .header-logo,
@@ -49,11 +55,12 @@ input::placeholder {
     background: white;
     font-family:serif;
     text-align: center;
-    border-bottom: 1px solid rgb(252, 251, 241);
+    border-bottom: 1px solid rgb(236, 234, 234);
     padding: 10px;
     display: grid;
     grid-template-columns:  repeat(3,1fr);
     grid-template-rows: 1fr;
+    font-family: serif;
 }
 
 /*FashionablyLateのロゴのstyle*/
@@ -66,12 +73,11 @@ input::placeholder {
 .header-nav-link {
     width: auto;
     padding: 4px 20px;
-    border: 1px solid rgb(214, 191, 175);
-    background-color: rgb(236, 234, 234);
-    color: rgb(214, 191, 175);
+    border: 1px solid rgb(194, 178, 167);
+    color: rgb(194, 178, 167);
+    background-color: rgb(252, 251, 241);
     text-decoration: none;
     margin: 10px auto;
-    font-family: serif;
     grid-column: 3;
 }
 

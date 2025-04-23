@@ -18,11 +18,11 @@
 <div class="page-section">
     <form class="page-main-form" action="/register" method="post">
         @csrf
-        <div class="form-group form-group-name">
-            <p class="form-label-item">
+        <div class="form-group name-group">
+            <label class="form-label-item name-label" for="name">
                 お名前
-            </p>
-            <input class="contact-item" type="text" name="name" placeholder="例）山田&ensp;太郎" value="{{ old('name') }}" >
+            </label>
+            <input class="contact-item" type="text" id="name" name="name" placeholder="例）山田&ensp;太郎" value="{{ old('name') }}" >
             <p class="form-error">
                 @error('name')
                     {{ $message }}
@@ -30,10 +30,10 @@
             </p>
         </div>
         <div class="form-group">
-            <p class="form-label-item">
+            <label class="form-label-item" for="email">
                 メールアドレス
-            </p>
-            <input class="contact-item" type="email" name="email" placeholder="test@example.com" value="{{ old('email') }}" >
+            </label>
+            <input class="contact-item" type="email" id="email" name="email" placeholder="test@example.com" value="{{ old('email') }}" >
             <p class="form-error">
                 @error('email')
                     {{ $message }}
@@ -41,10 +41,10 @@
             </p>
         </div>
         <div class="form-group">
-            <p class="form-label-item">
+            <label class="form-label-item"  for="password">
                 パスワード
-            </p>
-            <input class="contact-item"  type="password" name="password" placeholder="coachtech1106" >
+            </label>
+            <input class="contact-item"  type="password" id="password" name="password" placeholder="coachtech1106" >
             <p class="form-error">
                 @error('password')
                     {{ $message }}

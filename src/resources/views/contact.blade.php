@@ -22,8 +22,8 @@
                 </span>
             </label>
             <div class="input-container">
-                <input class="contact-item input-name" type="text" id="name" name="first_name" placeholder="例）山田" value="{{ old('first_name',$contact['first_name'] ?? null) }}" >
-                <input class="contact-item input-name" type="text" id="name" name="last_name" placeholder="例）太郎" value="{{ old('last_name',$contact['last_name'] ?? null) }}" >
+                <input class="contact-item input-name" type="text" id="name" name="first_name" placeholder="例:&nbsp;山田" value="{{ old('first_name',$contact['first_name'] ?? null) }}" >
+                <input class="contact-item input-name" type="text" id="name" name="last_name" placeholder="例:&nbsp;太郎" value="{{ old('last_name',$contact['last_name'] ?? null) }}" >
             </div>
         </div>
         <p class="form-error">
@@ -75,7 +75,7 @@
                     ※
                 </span>
             </label>
-            <input class="contact-item" id="email" type="email" name="email" value="{{ old('email', $contact['email'] ?? null)}}" placeholder="test@example.com" >
+            <input class="contact-item" id="email" type="email" name="email" value="{{ old('email', $contact['email'] ?? null)}}" placeholder="例:&nbsp;test@example.com" >
         </div>
         <p class="form-error">
             @error('email')
@@ -113,7 +113,7 @@
                     ※
                 </span>
             </label>
-            <input class="contact-item" id="address" type="text" name="address" value="{{ old('address',$contact['address'] ?? null)}}" placeholder="東京都渋谷区千駄ヶ谷1-2-3" >
+            <input class="contact-item" id="address" type="text" name="address" value="{{ old('address',$contact['address'] ?? null)}}" placeholder="例:&nbsp;東京都渋谷区千駄ヶ谷1-2-3" >
         </div>
         <p class="form-error">
             @error('address')
@@ -124,7 +124,7 @@
             <label class="form-label-item" for="building">
                 建物名
             </label>
-            <input  class="contact-item" id="building" type="text" name="building" value="{{ old('building',$contact['building'] ?? null)}}" placeholder="千駄ヶ谷マンション101">
+            <input  class="contact-item" id="building" type="text" name="building" value="{{ old('building',$contact['building'] ?? null)}}" placeholder="例:&nbsp;千駄ヶ谷マンション101">
         </div>
         <div class="form-group select-group">
             <label class="form-label-item">

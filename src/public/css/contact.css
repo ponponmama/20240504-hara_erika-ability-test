@@ -2,7 +2,6 @@
     margin: 2% auto 0;
     width: 70%;
     font-size: 1rem;
-    font-family: 'Franklin Gothic Medium';
 }
 
 .form-group {
@@ -30,9 +29,13 @@
     margin-left: 10px;
 }
 
-.contact-item {
-    width: 65%;
+.page-section .form-group .contact-item {
+    width: 50% !important;
     /*padding: 6px 14px;*/
+}
+
+.page-section .form-group .input-name {
+    width: 35% !important;
 }
 
 .input-name {
@@ -58,8 +61,9 @@
 }
 
 .gender-radio-label {
-    width: 24%;
-    margin-right: 1%;
+    width: 20%;
+    margin-right: 0.5%;
+    padding: 0 2px;
 }
 
 .gender-radio-label:last-of-type {
@@ -82,16 +86,16 @@
 
 .gender-text::before {
     display: block;
-    margin-right: 2%;
+    margin-right: 10%;
     width: 24px;
     height: 24px;
-    border: 1px solid rgb(134, 116, 100);
+    border: 1px solid rgb(151, 132, 91);
     border-radius: 50%;
     content: '';
 }
 
 .gender-radio:checked+.gender-text::before {
-    background: rgb(134, 116, 100);
+    background: rgb(151, 132, 91);
 }
 
 .input-tell {
@@ -117,7 +121,7 @@
     right: 37%;
     width: 0;
     height: 0;
-    border-top: 12px solid rgb(194, 178, 167);
+    border-top: 12px solid rgb(187, 158, 104);
     border-right: 8px solid transparent;
     border-left: 8px solid transparent;
     content: "";
@@ -134,7 +138,6 @@
 
 .contact-item-detail {
     width: 65%;
-    /*padding: 6px 14px;*/
     height: 150px;
 }
 
@@ -205,12 +208,29 @@
     }
 }
 
-@media (min-width: 768px) and (max-width: 912px) {
-    .page-section {
-        width: 80%;
+@media (min-width: 768px) and (max-width: 1024px) {
+    .app-body {
+        height: 100vh;
     }
 
-    .gender-radio-label {
-        width: 28%;
+    .header-section {
+        margin-top: 10%;
+    }
+
+    .page-logo {
+        margin: 5% auto;
+    }
+
+    .page-section {
+        width: 80%;
+        margin: 4% auto;
+    }
+
+    .form-group {
+        margin: 2% 0;
+    }
+
+    .contact-button {
+        margin: 8% auto;
     }
 }

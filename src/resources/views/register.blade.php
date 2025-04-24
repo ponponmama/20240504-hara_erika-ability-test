@@ -22,7 +22,7 @@
             <label class="form-label-item name-label" for="name">
                 お名前
             </label>
-            <input class="contact-item" type="text" id="name" name="name" placeholder="例）山田&ensp;太郎" value="{{ old('name') }}" >
+            <input class="contact-item" type="text" id="name" name="name" placeholder="例:&ensp;山田&ensp;太郎" value="{{ old('name') }}" >
             <p class="form-error">
                 @error('name')
                     {{ $message }}
@@ -33,7 +33,7 @@
             <label class="form-label-item" for="email">
                 メールアドレス
             </label>
-            <input class="contact-item" type="email" id="email" name="email" placeholder="test@example.com" value="{{ old('email') }}" >
+            <input class="contact-item" type="email" id="email" name="email" placeholder="例:&nbsp;test@example.com" value="{{ old('email') }}" >
             <p class="form-error">
                 @error('email')
                     {{ $message }}
@@ -44,7 +44,7 @@
             <label class="form-label-item"  for="password">
                 パスワード
             </label>
-            <input class="contact-item"  type="password" id="password" name="password" placeholder="coachtech1106" >
+            <input class="contact-item"  type="password" id="password" name="password" placeholder="例:&nbsp;coachtech1106" >
             <p class="form-error">
                 @error('password')
                     {{ $message }}

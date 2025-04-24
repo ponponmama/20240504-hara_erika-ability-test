@@ -5,7 +5,7 @@
 @endsection
 
 @section('heading__link')
-    <a class="header-nav-link" href="{{ route('logout') }}">logout</a>
+    <a class="link header-nav-link" href="{{ route('logout') }}">logout</a>
 @endsection
 
 @section('content')
@@ -59,12 +59,12 @@
             </a>
         </form>
         <div class="middle__admin">
-            <div class="button__export">
+            <div class="link button__export">
                 <a href="{{ route('admin.contacts.export_csv') }}" class="contact__export">
                     エクスポート
                 </a>
             </div>
-            <div class="admin__pagination">
+            <div class="link admin__pagination">
                 {{$contacts->links()}}
             </div>
         </div>

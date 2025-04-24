@@ -2,24 +2,24 @@
 .app-body {
     display: flex;
     flex-direction: column;
-    color: rgb(134, 116, 100);
 }
 
 body,textarea,input,label {
-    color: rgb(134, 116, 100);
+    color: rgb(151, 132, 91);
 }
 
 select {
-    color: rgb(194, 178, 167);
+    color: rgb(187, 158, 104);
     line-height: 2.5rem;
-    padding: 3px 14px;
+    padding: 2px 14px;
+    font-size: 0.8rem;
 }
 
 textarea,input,select {
-    background-color: rgb(252, 251, 241);
-    border: 1px solid rgb(252, 251, 241);
+    background-color: rgb(253, 252, 242);
+    border: 1px solid rgb(253, 252, 242);
     line-height: 2rem;
-    padding: 3px 14px;
+    padding: 2px 14px;
 }
 
 label {
@@ -29,12 +29,13 @@ label {
 
 textarea::placeholder,
 input::placeholder {
-    color: rgb(194, 178, 167);
+    color: rgb(187, 158, 104);
+    font-family: "Rasa", serif;
+    font-size: 0.8rem;
 }
 
 .page-section {
     margin: 1% auto;
-    font-family: 'Franklin Gothic Medium';
 }
 
 .main-section {
@@ -49,7 +50,11 @@ input::placeholder {
 .header-nav-link,
 .page-logo {
     font-family: serif;
-    color: rgb(134, 116, 100);
+    color: rgb(151, 132, 91);
+}
+
+select {
+    cursor: pointer;
 }
 
 .link
@@ -62,7 +67,7 @@ input::placeholder {
     margin-top: 2%;
     background: white;
     text-align: center;
-    border-bottom: 1px solid rgb(236, 234, 234);
+    border-bottom: 1px solid rgb(253, 252, 242);
     padding: 6px;
     display: grid;
     grid-template-columns:  repeat(3,1fr);
@@ -79,13 +84,18 @@ input::placeholder {
 /*headerボタンのstyle*/
 .header-nav-link {
     width: auto;
-    padding: 3px 20px;
-    border: 1px solid rgb(194, 178, 167);
-    color: rgb(194, 178, 167);
-    background-color: rgb(252, 251, 241);
+    padding: 2px 20px;
+    border: 1px solid rgb(187, 158, 104);
+    color: rgb(187, 158, 104);
+    background-color: rgb(253, 252, 242);
     text-decoration: none;
-    margin: 4% auto 0.5%;
+    margin: 7% auto 0.5%;
     grid-column: 3;
+}
+
+.header-nav-link:hover {
+    color: rgb(253, 252, 242);
+    background-color: rgb(221, 186, 122);
 }
 
 /*header以下の画面のstyle*/
@@ -107,12 +117,18 @@ input::placeholder {
 /*ボタンのstyle*/
 .button {
     display: block;
-    padding: 6px 34px;
-    background: rgb(134, 116, 100);
-    border: none;
+    padding: 5px 34px;
+    background: rgb(83, 71, 40);
+    border: 1px solid rgb(83, 71, 40);
     color: white;
     font-size: 1rem;
     margin: 2.5% auto;
+}
+
+.button:hover {
+    color: rgb(83, 71, 40);
+    background-color: white;
+
 }
 
 /*バリデーションメッセージ*/
@@ -141,8 +157,6 @@ input::placeholder {
     }
 }
 
-@media (min-width: 768px) and (max-width: 912px) {
-    .main-section {
-        padding: 10px;
-    }
+@media (min-width: 768px) and (max-width: 1024px) {
+    
 }

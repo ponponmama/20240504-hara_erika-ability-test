@@ -12,19 +12,19 @@ body,textarea,input,label {
 select {
     color: rgb(194, 178, 167);
     line-height: 2.5rem;
-    padding: 4px 14px;
+    padding: 3px 14px;
 }
 
 textarea,input,select {
     background-color: rgb(252, 251, 241);
     border: 1px solid rgb(252, 251, 241);
     line-height: 2rem;
-    padding: 4px 14px;
+    padding: 3px 14px;
 }
 
 label {
     line-height: 2rem;
-    padding: 4px 14px;
+    padding: 3px 14px;
 }
 
 textarea::placeholder,
@@ -42,7 +42,7 @@ input::placeholder {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 .header-logo,
@@ -63,7 +63,7 @@ input::placeholder {
     background: white;
     text-align: center;
     border-bottom: 1px solid rgb(236, 234, 234);
-    padding: 10px;
+    padding: 6px;
     display: grid;
     grid-template-columns:  repeat(3,1fr);
     grid-template-rows: 1fr;
@@ -79,12 +79,12 @@ input::placeholder {
 /*headerボタンのstyle*/
 .header-nav-link {
     width: auto;
-    padding: 6px 20px;
+    padding: 3px 20px;
     border: 1px solid rgb(194, 178, 167);
     color: rgb(194, 178, 167);
     background-color: rgb(252, 251, 241);
     text-decoration: none;
-    margin: 3% auto;
+    margin: 4% auto 0.5%;
     grid-column: 3;
 }
 
@@ -94,7 +94,7 @@ input::placeholder {
     flex-direction: column;
     flex-grow: 1;
     justify-content: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 /*各共通部分のlogo*/

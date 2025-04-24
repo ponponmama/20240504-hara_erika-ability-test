@@ -12,12 +12,17 @@
     width: 100%;
 }
 
+textarea,
+input,
+select {
+    border: 1px solid rgb(236, 234, 234);
+    color: rgb(134, 116, 100);
+}
+
 .keyword-search {
     flex-grow: 1;
-    min-width: 150px;
+    min-width: 160px;
     padding: 3px 14px;
-    border: 1px solid rgb(170, 167, 165);
-    background-color: white;
 }
 
 .gender-select,
@@ -38,26 +43,34 @@
 }
 
 .arrow-gender-section::after,
-.arrow-enquiry-section::after {
+.arrow-enquiry-section::after,
+.input__date::after {
     content: '';
     position: absolute;
-    top: 50%;
-    right: 7%;
     width: 0;
     height: 0;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-top: 12px solid rgb(170, 167, 165);
+    border-top: 12px solid rgb(194, 178, 167);
     content: "";
     transform: translateY(-50%);
+}
+
+.arrow-gender-section::after,
+.arrow-enquiry-section::after {
+    top: 50%;
+    right: 7%;
+}
+
+.input__date::after {
+    top: 50%;
+    right: 12px;
 }
 
 .gender-select,
 .category-select {
     padding: 4px 15px;
     height: 100%;
-    background-color: rgb(231, 226, 222);
-    color: rgb(138, 121, 108);
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -76,9 +89,8 @@
     position: relative;
     padding: 3px 14px;
     min-width: 100px;
-    border: 1px solid rgb(170, 167, 165);
-    background-color: rgb(231, 226, 222);
-    color: rgb(138, 121, 108);
+    /*border: 1px solid rgb(170, 167, 165);
+    color: rgb(138, 121, 108);*/
 }
 
 .input__date::-webkit-calendar-picker-indicator {
@@ -95,26 +107,12 @@
     cursor: pointer;
 }
 
-.input__date::after {
-    content: '';
-        position: absolute;
-        top: 50%;
-        right: 12px;
-        width: 0;
-        height: 0;
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        border-top: 12px solid rgb(170, 167, 165);
-        content: "";
-        transform: translateY(-50%);
-}
 
 .search__button {
-    padding: 10px 20px;
+    padding: 10px 33px;
     border: 1px solid rgb(170, 167, 165);
     background-color: rgb(138, 121, 108);
     color: white;
-    cursor: pointer;
     text-align: center;
 }
 
@@ -128,7 +126,6 @@
     border: 1px solid rgb(170, 167, 165);
     background-color: rgb(199, 175, 156);
     color: white;
-    cursor: pointer;
     text-align: center;
     text-decoration: none;
 }

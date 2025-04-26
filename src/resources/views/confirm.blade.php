@@ -8,8 +8,7 @@
 <h2 class="page-logo">Confirm</h2>
 <form class="page-main-form" action="{{ route('contact.submit') }}" method="post">
     @csrf
-    <div class="confirm-table">
-        <table class="confirm-table-inner">
+        <table class="confirm-table">
             <tr class="confirm-table-row">
                 <th class="confirm-table-header">お名前</th>
                 <td class="confirm-table-text">
@@ -67,9 +66,9 @@
                 </th>
                 <td class="confirm-table-text">
                     @foreach($categories as $category)
-                    @if ($contact['category_id'] == $category->id){{ $category->content }}
-                    <input type="hidden" name="selected_category_id" value="{{ $category->id }}" class="input-hidden" />
-                    @endif
+                        @if ($contact['category_id'] == $category->id){{ $category->content }}
+                            <input type="hidden" name="selected_category_id" value="{{ $category->id }}" class="input-hidden" />
+                        @endif
                     @endforeach
                 </td>
             </tr>
@@ -81,12 +80,11 @@
                 </td>
             </tr>
         </table>
-    </div>
     <div class="form-button">
-        <button type="submit" class="form-button-submit confirm-button" name="submit_action" value="submit">
+        <button type="submit" class="button confirm-button" name="submit_action" value="submit">
             送信
         </button>
-        <button type="submit" class="form-button-submit edit-button" name="submit_action" value="edit">
+        <button type="submit" class="button edit-button" name="submit_action" value="edit">
             修正
         </button>
     </div>

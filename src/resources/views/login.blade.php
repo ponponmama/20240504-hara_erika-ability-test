@@ -18,7 +18,7 @@
 <div class="page-section">
     <form class="page-main-form" action="/login" method="post">
         @csrf
-        <div class="form-group">
+        <div class="form-group email-group">
             <label class="form-label-item form-label--item" for="email">
                 メールアドレス
             </label>

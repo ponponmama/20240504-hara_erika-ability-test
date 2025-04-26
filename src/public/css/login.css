@@ -13,16 +13,12 @@
     padding: 40px 80px;
     background-color: white;
     border-radius: 6px;
-    border: 1px solid rgb(221, 186, 122);
+    border: 1px solid rgb(209, 183, 134);
     margin: 3% auto;
 }
 
 .form-group {
-    margin-top: 3%;
-}
-
-.form-group:first-of-type {
-    margin-top: 0;
+    margin: 3% 0;
 }
 
 .form-label-item {
@@ -36,7 +32,7 @@
     width: 100%;
     border-radius: 3px;
     appearance: none;
-    margin-bottom: 3%;
+    margin: 3% 0;
 }
 
 @media (width <=767px) {
@@ -46,8 +42,30 @@
     }
 }
 
-@media (min-width: 768px) and (max-width: 912px) {
+@media (width <=768px) and (width <=1024px) {
+    .page-main-form {
+        width: 70vw;
+    }
+}
+
+@media (height >=1025px) and (width <=1025px) {
+    .header-section {
+        margin: 5% auto 2%;
+    }
+
     .page-main-form {
         width: 60vw;
+    }
+
+    .form-group {
+        margin: 5% 0;
+    }
+
+    .email-group {
+        margin: 5% 0;
+    }
+
+    .contact-item {
+        margin: 5% 0;
     }
 }

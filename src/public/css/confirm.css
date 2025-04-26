@@ -1,93 +1,68 @@
-/*confirm文字style*/
-.page-logo {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: bold;
-    padding: 2px;
-    text-align: center;
-    color: rgba(116, 104, 80, 0.863);
-    font-size: 1.5rem;
-    margin: 2%;
-}
 /*confirmフォームのstyle*/
 .page-main-form {
     width: 70%;
     text-align: center;
-    color: rgba(116, 104, 80, 0.863);
+    font-family: "Rasa", serif;
     font-size: 1rem;
-    margin: 1% auto;
+    margin: 3% auto;
     padding: 3px;
 
 }
-/*テーブル全体のstyle*/
-.confirm-table {
-    width: 100%;
-    margin: 1%;
-    font-size: 0.8rem;
-}
+
 /*テーブルのstyle*/
-.confirm-table-inner {
+.confirm-table {
+    display: block;
     width: 100%;
     text-align: left;
     border-collapse: collapse;
+    margin: 2% 0;
+    font-size: 0.8rem;
 }
 
 .confirm-table-row {
     width: 100%;
-    height: 40px;
+    height: 46px;
 }
 
 .confirm-table-header {
-    width: 25%;
+    width: 30%;
     padding: 3px 20px;
-    border: 1px solid rgba(46, 34, 9, 0.863);
-    background-color: rgba(116, 104, 80, 0.863);
+    border: 1px solid rgb(253, 252, 242);
+    background-color: rgb(175, 150, 102);
     color: white;
 }
 
 .confirm-table-text {
     padding: 3px 20px;
-    border: 1px solid rgba(224,224,222,0.904);
+    border: 1px solid rgb(253, 252, 242);
     border-radius: 3px;
-    background-color: white(248, 248, 205);
-}
-
-.input-hidden {
-    background-color: white(248, 248, 205);
-    padding: 2px;
-    width: 94%;
-    color: rgba(116, 104, 80, 0.863);
-    font-size: 0.8rem;
-    outline: none;
-    border: none;
-}
-
-.input-detail-hidden {
-    background-color: white(248, 248, 205);
-    padding: 3px;
-    width: 94%;
-    color: rgba(116, 104, 80, 0.863);
-    font-size: 0.8rem;
+    background-color: white;
+    color: rgb(151, 132, 91);
 }
 
 .confirm-table-row-detail {
     width: 100%;
-    height: 100px;
+    height: 200px;
 }
 
 .form-button {
-    width: 70%;
     display: flex;
-    justify-content: space-evenly;
-    text-decoration: none;
+    justify-content: center;
     text-align: center;
-    margin: 5% auto;
+}
+
+.confirm-button {
+    width: auto;
+    text-decoration: none;
+    font-size: 1rem;
+    margin:10% 2%;
 }
 
 .edit-button {
-    padding: 6px 32px;
     background: white;
-    border: 3px solid white;
-    color: rgba(116, 104, 80, 0.863);
-    cursor: pointer;
+    border: 1px solid white;
+    color: rgb(151, 132, 91);
     font-size: 1rem;
+    text-decoration: underline;
+    margin: 10% 2%;
 }

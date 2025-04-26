@@ -22,8 +22,8 @@
                 </span>
             </label>
             <div class="input-container">
-                <input class="contact-item input-name" type="text" id="name" name="first_name" placeholder="例:&nbsp;山田" value="{{ old('first_name',$contact['first_name'] ?? null) }}" >
-                <input class="contact-item input-name" type="text" id="name" name="last_name" placeholder="例:&nbsp;太郎" value="{{ old('last_name',$contact['last_name'] ?? null) }}" >
+                <input class="contact-item input-name-first" type="text" id="name" name="first_name" placeholder="例:&nbsp;山田" value="{{ old('first_name',$contact['first_name'] ?? null) }}" >
+                <input class="contact-item input-name-last" type="text" id="name" name="last_name" placeholder="例:&nbsp;太郎" value="{{ old('last_name',$contact['last_name'] ?? null) }}" >
             </div>
         </div>
         <p class="form-error">
@@ -149,7 +149,7 @@
                 {{ $message }}
             @enderror
         </p>
-        <div class="form-group">
+        <div class="form-group detail-group">
             <label class="form-label-item" for="detail">
                 お問い合わせ内容
                 <span class="form-label-required">

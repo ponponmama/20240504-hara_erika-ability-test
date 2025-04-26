@@ -13,7 +13,7 @@
         <h2 class="thanks">
                 Thank you
         </h2>
-        <a href="{{ $url }}" class="thanks__link">HOME</a>
+        <a href="{{ $url }}" class="link thanks__link">HOME</a>
     </div>
 </div>
 @endsection

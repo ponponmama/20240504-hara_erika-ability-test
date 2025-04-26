@@ -35,6 +35,7 @@
                         その他
                     </option>
                 </select>
+                <span class="arrow-down"></span>
             </div>
             <div class="arrow-enquiry-section">
                 <select class="category-select" name="category_id">
@@ -48,9 +49,13 @@
                     </option>
                     @endforeach
                 </select>
+                <span class="arrow-down"></span>
             </div>
-            <input class="input__date" name="date" type="date" value="{{ $searchConditions['date'] ?? '' }}"
-                placeholder="年/月/日" />
+            <div class="arrow-date-section">
+                <input class="input__date" name="date" type="date" value="{{ $searchConditions['date'] ?? '' }}"
+                    placeholder="年/月/日" />
+                <span class="arrow-down"></span>
+            </div>
             <button class="link search__button" type="submit">
                 検索
             </button>

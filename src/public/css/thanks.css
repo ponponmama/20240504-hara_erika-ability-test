@@ -23,7 +23,7 @@
 .thanks__front {
     width: 100%;
     text-align: center;
-    color: rgb(138, 121, 108);
+    color: rgb(83, 71, 40);
     font-weight: bold;
     font-size: 1.2rem;
     position: absolute;
@@ -36,10 +36,9 @@
 
 .thanks__link {
     padding: 6px 34px;
-    background: rgb(138, 121, 108);
+    background: rgb(83, 71, 40);
     border: none;
     color: white;
     text-decoration: none;
-    cursor: pointer;
     font-size: 1rem;
 }

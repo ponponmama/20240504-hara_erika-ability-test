@@ -3,3 +3,6 @@
 /vendor
 .env
 .vscode
+src/.styleci.yml
+cspell.json
+.styleci.yml

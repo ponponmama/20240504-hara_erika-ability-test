@@ -18,8 +18,8 @@
             @php
             $searchConditions = session('search_conditions');
             @endphp
-            <input class="keyword-search" type="text" name="keyword" value="{{ $searchConditions['keyword'] ?? '' }}"
-                placeholder="名前やメールアドレスを入力してください" />
+            <input class="keyword-search" type="text" id="keyword" name="keyword" value="{{ $searchConditions['keyword'] ?? '' }}"
+                placeholder="名前やメールアドレスを入力してください" autocomplete="keyword" />
             <div class="arrow-gender-section">
                 <select class="gender-select" name="gender-select">
                     <option value="">
@@ -35,7 +35,6 @@
                         その他
                     </option>
                 </select>
-                <span class="arrow-down"></span>
             </div>
             <div class="arrow-enquiry-section">
                 <select class="category-select" name="category_id">
@@ -49,11 +48,10 @@
                     </option>
                     @endforeach
                 </select>
-                <span class="arrow-down"></span>
             </div>
             <div class="arrow-date-section">
-                <input class="input__date" name="date" type="date" value="{{ $searchConditions['date'] ?? '' }}"
-                    placeholder="年/月/日" />
+                <input class="input__date" id="date" name="date" type="date" value="{{ $searchConditions['date'] ?? '' }}"
+                    placeholder="年/月/日" autocomplete="date" />
                 <span class="arrow-down"></span>
             </div>
             <button class="link search__button" type="submit">
@@ -69,7 +67,7 @@
                     エクスポート
                 </a>
             </div>
-            <div class="link admin__pagination">
+            <div class="link pagination">
                 {{$contacts->links()}}
             </div>
         </div>

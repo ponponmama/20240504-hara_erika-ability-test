@@ -5,44 +5,43 @@
 @endsection
 
 @section('heading__link')
-<a class="header-nav-link" href="/register">
-    register
-</a>
-</div>
+    <a class="header-nav-link" href="/register">
+        register
+    </a>
 @endsection
 
 @section('content')
-<h2 class="page-logo">
-    Login
-</h2>
-<div class="page-section">
-    <form class="page-main-form" action="/login" method="post">
-        @csrf
-        <div class="form-group email-group">
-            <label class="form-label-item form-label--item" for="email">
-                メールアドレス
-            </label>
-            <input class="contact-item" type="email" id="email" name="email" placeholder="例:&nbsp;test@example.com" value="{{ old('email') }}" >
-            <p class="form-error">
-                    @error('email')
+    <h2 class="page-logo">
+        Login
+    </h2>
+    <div class="page-section">
+        <form class="page-main-form" action="/login" method="post">
+            @csrf
+            <div class="form-group email-group">
+                <label class="form-label-item form-label--item" for="email">
+                    メールアドレス
+                </label>
+                <input class="contact-item" type="email" id="email" name="email" placeholder="例:&nbsp;test@example.com" value="{{ old('email') }}" autocomplete="email">
+                <p class="form-error">
+                        @error('email')
+                            {{ $message }}
+                        @enderror
+                </p>
+            </div>
+            <div class="form-group">
+                <label class="form-label-item" for="password">
+                    パスワード
+                </label>
+                <input class="contact-item" type="password" id="password"  name="password" placeholder="例:&nbsp;coachtech1106" autocomplete="current-password">
+                <p class="form-error">
+                    @error('password')
                         {{ $message }}
                     @enderror
-            </p>
-        </div>
-        <div class="form-group">
-            <label class="form-label-item" for="password">
-                パスワード
-            </label>
-            <input class="contact-item" type="password" id="password"  name="password" placeholder="例:&nbsp;coachtech1106" >
-            <p class="form-error">
-                @error('password')
-                    {{ $message }}
-                @enderror
-            </p>
-        </div>
-        <button class="button login-btn login-button" type="submit">
-            ログイン
-        </button>
-    </form>
-</div>
+                </p>
+            </div>
+            <button class="button login-btn login-button" type="submit">
+                ログイン
+            </button>
+        </form>
+    </div>
 @endsection

@@ -3,69 +3,72 @@
 }
 
 .page-section {
-    display: flex;
-    justify-content: center;
-    margin: 2% 0 7% 0;
+    width: 50vw;
 }
 
 .page-main-form {
-    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 40px 80px;
     background-color: white;
     border-radius: 6px;
     border: 1px solid rgb(209, 183, 134);
-    margin: 3% auto;
+    margin: 3% auto 10%;
 }
 
 .form-group {
-    margin: 3% 0;
+    width: 100%;
+    margin: 1% 0;
 }
 
 .form-label-item {
     width: 100%;
     text-align: left;
-    margin-bottom: 10%;
+    line-height: 3rem;
     font-size: 1.2rem;
+    margin-bottom: 0.5rem;
 }
 
 .contact-item {
     width: 100%;
-    border-radius: 3px;
+    line-height: 3rem;
     appearance: none;
     margin: 3% 0;
 }
 
-@media (width <=767px) {
-    .page-main-form {
+@media screen and (max-width: 767px) {
+    .page-section {
         width: 90vw;
         padding: 20px;
     }
+
+    .page-main-form {
+        padding: 20px;
+        margin-bottom: 10%;
+    }
 }
 
-@media (width <=768px) and (width <=1024px) {
-    .page-main-form {
+@media screen and (min-width: 768px) {
+    .page-section {
         width: 70vw;
     }
+
+    .page-main-form {
+        margin-bottom: 30%;
+    }
 }
 
-@media (height >=1025px) and (width <=1025px) {
-    .header-section {
-        margin: 5% auto 2%;
+@media screen and (min-height: 1024px) and (min-width: 1024px) {
+    .page-section {
+        width: 70vw;
     }
 
     .page-main-form {
-        width: 60vw;
+        margin-bottom: 10%;
     }
 
     .form-group {
-        margin: 5% 0;
-    }
-
-    .email-group {
-        margin: 5% 0;
-    }
-
-    .contact-item {
-        margin: 5% 0;
+        margin: 10% 0;
     }
 }

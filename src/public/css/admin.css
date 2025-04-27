@@ -163,29 +163,6 @@ select {
     background-color: rgb(151, 132, 91);
 }
 
-.admin__pagination {
-    margin-right: 10px;
-    display: flex;
-    list-style-type: none;
-    cursor: pointer;
-}
-
-.admin__pagination li {
-    display: inline-block;
-    border: 1px solid rgb(230, 227, 204);
-    padding: 2px 6px;
-    text-align: center;
-}
-
-.admin__pagination a {
-    text-decoration: none;
-    color: rgb(151, 132, 91);
-}
-
-.admin__pagination .active {
-    background-color: rgb(83, 71, 40);
-    color: white;
-}
 
 .contact-table-inner {
     width: 100%;

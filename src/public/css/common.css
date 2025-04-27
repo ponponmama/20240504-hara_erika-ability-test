@@ -1,8 +1,6 @@
-/*全viewファイルの共通画面style*/
-.app-body {
+html,
+body {
     height: 100vh;
-    display: flex;
-    flex-direction: column;
 }
 
 /*テキストのstyle*/
@@ -13,23 +11,19 @@ body,textarea,input,label {
 /*selectのstyle*/
 select {
     color: rgb(187, 158, 104);
-    line-height: 2.5rem;
-    padding: 2px 14px;
-    font-size: 0.8rem;
+    padding: 4px 15px;
 }
 
 /*textarea,input,selectのstyle*/
 textarea,input,select {
     background-color: rgb(250, 250, 243);
     border: 1px solid rgb(250, 250, 243);
-    line-height: 2rem;
-    padding: 2px 14px;
+    padding: 4px 15px;
 }
 
 /*labelのstyle*/
 label {
-    line-height: 2rem;
-    padding: 3px 14px;
+    padding: 5px 15px;
 }
 
 /*placeholderのstyle*/
@@ -37,22 +31,79 @@ textarea::placeholder,
 input::placeholder {
     color: rgb(209, 183, 134);
     font-family: "Rasa", serif;
-    font-size: 0.8rem;
+    font-size: 1em;
 }
 
-/*page-sectionのstyle*/
-.page-section {
-    margin: 1% auto;
+select,
+.button {
+    cursor: pointer;
+}
+
+/*全viewファイルの共通画面style*/
+.app-body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /*main-sectionのstyle*/
 .main-section {
-    flex: 1;
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+/*headerのstyle*/
+.header-section {
+    display: grid;
+    grid-template-columns:  repeat(3,1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid rgb(230, 227, 204);
+    padding: 10px 60px;
+}
+
+/*FashionablyLateのロゴのstyle*/
+.header-logo {
+    grid-column: 2;
+    font-weight: lighter;
+    font-size: 2rem;
+    margin-top: 1%;
+}
+
+/*headerボタンのstyle*/
+.header-nav-link {
+    grid-column: 3;
+    justify-self: end;
+    width: 80px;
+    border: 1px solid rgb(209, 183, 134);
+    color: rgb(209, 183, 134);
+    background-color: rgb(250, 250, 243);
+    text-decoration: none;
+}
+
+.header-nav-link:hover {
+    color: rgb(250, 250, 243);
+    background-color: rgb(209, 183, 134);
+}
+
+/*page-sectionのstyle*/
+.page-section {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     justify-content: center;
-    padding: 10px;
+}
+
+/*各共通部分のlogo*/
+.page-logo {
+    text-align: center;
+    font-weight: 100;
+    font-size: 2rem;
 }
 
 /*header-logo,header-nav-link,page-logoのstyle*/
@@ -63,73 +114,43 @@ input::placeholder {
     color: rgb(151, 132, 91);
 }
 
-/*selectのstyle*/
-select {
-    cursor: pointer;
-}
-
-/*buttonのstyle*/
-.button {
-    cursor: pointer;
-}
-
-/*headerのstyle*/
-.header-section {
-    margin-top: 3%;
-    background: white;
-    text-align: center;
-    border-bottom: 1px solid rgb(230, 227, 204);
-    padding: 6px;
-    display: grid;
-    grid-template-columns:  repeat(3,1fr);
-    grid-template-rows: 1fr;
-}
-
-/*FashionablyLateのロゴのstyle*/
-.header-logo {
-    font-size: 2rem;
-    grid-column: 2;
-    margin: 1% auto;
-}
-
-/*headerボタンのstyle*/
-.header-nav-link {
-    width: auto;
-    padding: 2px 20px;
-    border: 1px solid rgb(209, 183, 134);
-    color: rgb(209, 183, 134);
-    background-color: rgb(250, 250, 243);
-    text-decoration: none;
-    margin: 7% 10% 3% 63%;
-    grid-column: 3;
-}
-
-.header-nav-link:hover {
-    color: rgb(250, 250, 243);
-    background-color: rgb(209, 183, 134);
-}
-
-/*各共通部分のlogo*/
-.page-logo {
-    text-align: center;
-    font-size: 1.7rem;
-    margin: 1%;
-}
-
 /*ボタンのstyle*/
 .button {
     display: block;
-    padding: 5px 34px;
+    padding: 8px 32px;
     background: rgb(83, 71, 40);
-    border: 1px solid rgb(83, 71, 40);
+    border: none;
     color: white;
     font-size: 1rem;
-    margin: 3% auto;
 }
 
 .button:hover {
     color: rgb(83, 71, 40);
     background-color: white;
+}
+
+.pagination {
+    margin-right: 10px;
+    display: flex;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.pagination li {
+    display: inline-block;
+    border: 1px solid rgb(230, 227, 204);
+    padding: 2px 6px;
+    text-align: center;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: rgb(151, 132, 91);
+}
+
+.pagination .active {
+    background-color: rgb(83, 71, 40);
+    color: white;
 }
 
 /*バリデーションメッセージ*/
@@ -141,31 +162,48 @@ select {
     font-size: 0.8rem;
 }
 
-@media (width <= 767px) {
+@media screen and (max-width: 767px) {
     .header-section {
         display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
     }
 
     .form-error {
         font-size: 0.7rem;
     }
 
-    .header-nav-link {
-        margin: 2% auto;
+    .header-nav-link {        margin: 3%;
     }
 
-    .header-logo {
+    .header-logo,
+    .page-logo {
         font-size: 1.8rem;
     }
 
     .page-logo {
         margin: 1%;
     }
+
+    .button {
+        margin: 10% auto;
+    }
 }
 
-@media (height >=1024px) and (width <=1024px) {
+@media screen and (min-width: 768px) {
+    .main-section {
+        padding-top: 50px;
+    }
+}
+
+@media screen and (min-height: 1024px) and (max-width: 1024px) {
+    .header-section {
+        margin: 4% 0 0;
+    }
+
     .header-nav-link {
-        margin: 4% auto;
+        margin: 5% 0;
     }
 
     .button {

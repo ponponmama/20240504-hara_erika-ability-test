@@ -22,8 +22,8 @@
                 </span>
             </label>
             <div class="input-container">
-                <input class="contact-item input-name-first" type="text" id="name" name="first_name" placeholder="例:&nbsp;山田" value="{{ old('first_name',$contact['first_name'] ?? null) }}" >
-                <input class="contact-item input-name-last" type="text" id="name" name="last_name" placeholder="例:&nbsp;太郎" value="{{ old('last_name',$contact['last_name'] ?? null) }}" >
+                <input class="contact-item input-name-first" type="text" id="name" name="first_name" placeholder="例:&nbsp;山田" value="{{ old('first_name',$contact['first_name'] ?? null) }}" autocomplete="family-name">
+                <input class="contact-item input-name-last" type="text" id="name" name="last_name" placeholder="例:&nbsp;太郎" value="{{ old('last_name',$contact['last_name'] ?? null) }}" autocomplete="given-name">
             </div>
         </div>
         <p class="form-error">
@@ -35,13 +35,13 @@
             @endif
         </p>
         <div class="form-group gender-group">
-            <label class="form-label-item gender-label">
+            <label class="form-label-item gender-label" for="gender">
                 性別
                 <span class="form-label-required">
                     ※
                 </span>
             </label>
-            <div class="input-container">
+            <div class="input-container" autocomplete="sex">
                 <label class="form-label-item gender-radio-label" for="male">
                     <input id="male" class="gender-radio" type="radio" name="gender" value="1" {{ old('gender', $contact['gender'] ??
                         null)==1 ? 'checked' : '' }}>
@@ -75,7 +75,7 @@
                     ※
                 </span>
             </label>
-            <input class="contact-item" id="email" type="email" name="email" value="{{ old('email', $contact['email'] ?? null)}}" placeholder="例:&nbsp;test@example.com" >
+            <input class="contact-item" id="email" type="email" name="email" value="{{ old('email', $contact['email'] ?? null)}}" placeholder="例:&nbsp;test@example.com" autocomplete="email">
         </div>
         <p class="form-error">
             @error('email')
@@ -83,18 +83,18 @@
             @enderror
         </p>
         <div class="form-group">
-            <label class="form-label-item label-tell" for="tel">
+            <label class="form-label-item label-tell" for="tell1">
                 電話番号
                 <span class="form-label-required">
                     ※
                 </span>
             </label>
             <div class="input-container">
-                <input class="contact-item input-tell" id="tel" type="tel" name="tell1" value="{{ old('tell1',$contact['tell1'] ?? null) }}" placeholder="090" >
+                <input class="contact-item input-tell" id="tell1" type="tel" name="tell1" value="{{ old('tell1',$contact['tell1'] ?? null) }}" placeholder="090" autocomplete="tel-area-code">
                 <span class="tel">-</span>
-                <input class="contact-item input-tell" id="tel" type="tel" name="tell2" value="{{ old('tell2',$contact['tell2'] ?? null) }}" placeholder="1234" >
+                <input class="contact-item input-tell" id="tell2" type="tel" name="tell2" value="{{ old('tell2',$contact['tell2'] ?? null) }}" placeholder="1234" autocomplete="tel-local-prefix">
                 <span class="tel">-</span>
-                <input class="contact-item input-tell" id="tel" type="tel" name="tell3" value="{{ old('tell3',$contact['tell3'] ?? null) }}" placeholder="5678" >
+                <input class="contact-item input-tell" id="tell3" type="tel" name="tell3" value="{{ old('tell3',$contact['tell3'] ?? null) }}" placeholder="5678" autocomplete="tel-local-suffix">
             </div>
         </div>
         <p class="form-error">
@@ -113,7 +113,7 @@
                     ※
                 </span>
             </label>
-            <input class="contact-item" id="address" type="text" name="address" value="{{ old('address',$contact['address'] ?? null)}}" placeholder="例:&nbsp;東京都渋谷区千駄ヶ谷1-2-3" >
+            <input class="contact-item" id="address" type="text" name="address" value="{{ old('address',$contact['address'] ?? null)}}" placeholder="例:&nbsp;東京都渋谷区千駄ヶ谷1-2-3" autocomplete="address-level1">
         </div>
         <p class="form-error">
             @error('address')
@@ -124,16 +124,16 @@
             <label class="form-label-item" for="building">
                 建物名
             </label>
-            <input  class="contact-item" id="building" type="text" name="building" value="{{ old('building',$contact['building'] ?? null)}}" placeholder="例:&nbsp;千駄ヶ谷マンション101">
+            <input  class="contact-item" id="building" type="text" name="building" value="{{ old('building',$contact['building'] ?? null)}}" placeholder="例:&nbsp;千駄ヶ谷マンション101" autocomplete="address-level2">
         </div>
-        <div class="form-group select-group">
-            <label class="form-label-item">
+        <div class="form-group select-group" id="category_id" autocomplete="off">
+            <label class="form-label-item" for="category_id">
                 お問い合わせの種類
                 <span class="form-label-required">
                     ※
                 </span>
             </label>
-            <select class="contact-item create-form-item-select" name="category_id">
+            <select class="contact-item create-form-item-select" name="category_id" id="category_id">
                 <option disabled selected>
                     選択してください
                 </option>
@@ -149,7 +149,7 @@
                 {{ $message }}
             @enderror
         </p>
-        <div class="form-group detail-group">
+        <div class="form-group detail-group" id="detail" autocomplete="off">
             <label class="form-label-item" for="detail">
                 お問い合わせ内容
                 <span class="form-label-required">

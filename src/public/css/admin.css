@@ -335,3 +335,12 @@ select {
     background-color: rgb(138, 121, 108);
     color: white;
 }
+
+@media screen and (max-width: 767px) {
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-height: 1024px) and (max-width: 1024px) {
+}

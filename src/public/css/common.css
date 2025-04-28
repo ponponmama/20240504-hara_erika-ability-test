@@ -8,30 +8,35 @@ body,textarea,input,label {
     color: rgb(151, 132, 91);
 }
 
-/*selectのstyle*/
-select {
-    color: rgb(187, 158, 104);
-    padding: 4px 15px;
-}
-
 /*textarea,input,selectのstyle*/
 textarea,input,select {
     background-color: rgb(250, 250, 243);
     border: 1px solid rgb(250, 250, 243);
-    padding: 4px 15px;
+    padding: 8px 15px;
+    font-size: 1rem;
 }
 
 /*labelのstyle*/
-label {
-    padding: 5px 15px;
+label,
+legend {
+    padding: 9px 15px;
+    font-size: 1rem;
 }
 
-/*placeholderのstyle*/
+/*placeholderとselectのstyle*/
+select,
 textarea::placeholder,
 input::placeholder {
     color: rgb(209, 183, 134);
-    font-family: "Rasa", serif;
-    font-size: 1em;
+    font-family: "Rasa", sans-serif;
+    font-size: 0.9em;
+    font-weight: 300;
+}
+
+/* fieldsetのデフォルトスタイルのみリセット */
+fieldset {
+    border: none;
+    display: contents;
 }
 
 select,
@@ -53,7 +58,7 @@ select,
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 20px;
+    padding-top: 15px;
 }
 
 /*headerのstyle*/
@@ -163,11 +168,14 @@ select,
 }
 
 @media screen and (max-width: 767px) {
+    .main-section {
+        padding-top: 4px;
+    }
     .header-section {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 10px;
+        padding: 4px;
     }
 
     .form-error {
@@ -182,10 +190,6 @@ select,
         font-size: 1.8rem;
     }
 
-    .page-logo {
-        margin: 1%;
-    }
-
     .button {
         margin: 10% auto;
     }
@@ -193,11 +197,11 @@ select,
 
 @media screen and (min-width: 768px) {
     .main-section {
-        padding-top: 50px;
+        padding-top: 20px;
     }
 }
 
-@media screen and (min-height: 1024px) and (max-width: 1024px) {
+@media screen and (min-height: 1181px) and (max-width: 1024px) {
     .header-section {
         margin: 4% 0 0;
     }

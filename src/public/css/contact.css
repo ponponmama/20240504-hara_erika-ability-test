@@ -1,13 +1,11 @@
 .page-section {
     margin: 1% auto 0;
     width: 70%;
-    font-size: 1rem;
 }
 
 .form-group {
     width: 100%;
     display: flex;
-    align-items: flex-start;
     margin: 1.8% 0;
 }
 
@@ -18,7 +16,6 @@
 .form-label-item {
     width: 35%;
     text-align: left;
-    padding: 3px;
 }
 
 .form-label-required {
@@ -42,20 +39,20 @@
     margin-left: 2%;
 }
 
-.gender-group {
-    justify-content: left;
-}
-
 .input-container {
     width: 65%;
     display: flex;
-    justify-content: left;
 }
 
 .gender-radio-label {
     width: 25%;
     margin-right: 0.5%;
     padding: 0 2px;
+    cursor: pointer;
+}
+
+.input-container-gender {
+    padding: 8px 15px;
 }
 
 .gender-radio-label:last-of-type {
@@ -74,6 +71,7 @@
     display: flex;
     align-items: center;
     justify-content: left;
+    font-size: 1rem;
 }
 
 .gender-text::before {
@@ -93,14 +91,16 @@
 .input-tell {
     width: 30%;
     text-align: center;
+    padding: 8px;
 }
 
 .tel {
+    padding: 8px 0;
     margin: 0 2%;
 }
 
 .building-section {
-    margin-bottom: 6%;
+    margin-bottom: 5.64%;
 }
 
 .select-group {
@@ -141,6 +141,7 @@
 /* エラーメッセージ */
 .form-error {
     width: 65%;
+    padding-left: 14px;
     margin: 0.5% 0.5% 1% 35%;
 }
 
@@ -148,26 +149,30 @@
     margin-right: 24%;
 }
 
-@media (width <=767px) {
+.error-message:last-of-type {
+    margin-right: 0;
+    padding-left: 18px;
+}
+
+@media screen and (max-width: 767px) {
     .page-section {
         width: 90%;
-        padding: 4px;
-        margin: 0 5%;
+        padding: 10px;
+        margin: 0;
     }
 
     .form-group {
         width: 100%;
         flex-direction: column;
-        margin: 1%;
+        margin: 0.8%;
     }
 
     .building-section{
-        margin-bottom: 33px;
+        margin-bottom: 5.64%;
     }
 
     .form-label-item {
         width: 100%;
-        margin-bottom: 10px;
     }
 
     .contact-item,
@@ -176,14 +181,14 @@
     }
 
     .gender-radio-label {
-        width: 30%;
+        width: 33%;
         font-size: 0.8rem;
     }
 
     .form-error {
-        width: 90%;
+        width: 100%;
         text-align: left;
-        margin: 2px;
+        margin: 0.8%;
     }
 
     .select-group::after {
@@ -196,22 +201,51 @@
     }
 
     .contact-button {
-        margin: 8px auto;
+        margin: 8% auto;
+    }
+
+    .error-message {
+        margin-right: 12%
     }
 }
 
-@media (height >=1024px) and (width <= 1024px) {
-    .page-logo {
-        margin: 1% auto;
+@media screen and (min-width: 768px) {
+    .page-section {
+        width: 80%;
+        padding: 10px;
+        margin: 0;
     }
 
+    .form-group {
+        margin: 1% 0;
+    }
+
+    .gender-radio-label {
+        width: 33%;
+    }
+
+    .building-section {
+        margin-bottom: 5.64%;
+    }
+
+    .contact-button {
+        margin: 5% auto;
+    }
+
+}
+
+@media screen and (min-height: 1181px) and (max-width: 1024px) {
     .form-group {
         margin: 2% 0;
     }
 
     .gender-radio-label {
-        width: 30%;
+        width: 28%;
         font-size: 0.8rem;
+    }
+
+    .building-section {
+        margin-bottom: 5.64%;
     }
 
     .contact-button {
@@ -228,13 +262,13 @@
         margin: 1% auto;
     }
 
-    .form-group {
-        margin: 4% 0;
-    }
-
     .gender-radio-label {
         width: 30%;
         font-size: 0.8rem;
+    }
+
+    .building-section {
+        margin-bottom: 7.64%;
     }
 
     .contact-button {

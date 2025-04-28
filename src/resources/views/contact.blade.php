@@ -15,15 +15,15 @@
             $contact = session('contact');
         @endphp
         <div class="form-group name-group">
-            <label class="form-label-item name-label" for="name">
+            <label class="form-label-item name-label" for="first_name">
                 お名前
                 <span class="form-label-required">
                     ※
                 </span>
             </label>
             <div class="input-container">
-                <input class="contact-item input-name-first" type="text" id="name" name="first_name" placeholder="例:&nbsp;山田" value="{{ old('first_name',$contact['first_name'] ?? null) }}" autocomplete="family-name">
-                <input class="contact-item input-name-last" type="text" id="name" name="last_name" placeholder="例:&nbsp;太郎" value="{{ old('last_name',$contact['last_name'] ?? null) }}" autocomplete="given-name">
+                <input class="contact-item input-name-first" type="text" id="first_name" name="first_name" placeholder="例:&nbsp;山田" value="{{ old('first_name',$contact['first_name'] ?? null) }}" autocomplete="family-name">
+                <input class="contact-item input-name-last" type="text" id="last_name" name="last_name" placeholder="例:&nbsp;太郎" value="{{ old('last_name',$contact['last_name'] ?? null) }}" autocomplete="given-name">
             </div>
         </div>
         <p class="form-error">
@@ -31,37 +31,41 @@
                 <span class="error-message">{{ $errors->first('first_name') }}</span>
             @endif
             @if($errors->has('last_name'))
-                <span>{{ $errors->first('last_name') }}</span>
+                <span class="error-message">{{ $errors->first('last_name') }}</span>
             @endif
         </p>
         <div class="form-group gender-group">
-            <label class="form-label-item gender-label" for="gender">
-                性別
-                <span class="form-label-required">
-                    ※
-                </span>
-            </label>
-            <div class="input-container" autocomplete="sex">
-                <label class="form-label-item gender-radio-label" for="male">
-                    <input id="male" class="gender-radio" type="radio" name="gender" value="1" {{ old('gender', $contact['gender'] ??
-                        null)==1 ? 'checked' : '' }}>
-                    <span class="gender-text">
-                        男性
+            <fieldset>
+                <legend class="form-label-item gender-label">
+                    性別
+                    <span class="form-label-required">
+                        ※
                     </span>
-                </label>
-                <label class="form-label-item gender-radio-label" for="female">
-                    <input id="female" class="gender-radio" type="radio" name="gender" value="2" {{ old('gender', $contact['gender'] ?? null)=='2' ? 'checked' : '' }} >
-                    <span class="gender-text">
-                        女性
-                    </span>
-                </label>
-                <label class="form-label-item gender-radio-label" for="other">
-                    <input id="other" class="gender-radio" type="radio" name="gender" value="3" {{ old('gender', $contact['gender'] ?? null)=='3' ? 'checked' : '' }} >
-                    <span class="gender-text">
-                        その他
-                    </span>
-                </label>
-            </div>
+                </legend>
+                <div class="input-container input-container-gender" autocomplete="sex">
+                    <label class="form-label-item gender-radio-label" for="male">
+                        <input id="male" class="gender-radio" type="radio" name="gender" value="1" {{ old('gender',
+                            $contact['gender'] ?? null)==1 ? 'checked' : '' }}>
+                        <span class="gender-text">
+                            男性
+                        </span>
+                    </label>
+                    <label class="form-label-item gender-radio-label" for="female">
+                        <input id="female" class="gender-radio" type="radio" name="gender" value="2" {{ old('gender',
+                            $contact['gender'] ?? null)=='2' ? 'checked' : '' }}>
+                        <span class="gender-text">
+                            女性
+                        </span>
+                    </label>
+                    <label class="form-label-item gender-radio-label" for="other">
+                        <input id="other" class="gender-radio" type="radio" name="gender" value="3" {{ old('gender',
+                            $contact['gender'] ?? null)=='3' ? 'checked' : '' }}>
+                        <span class="gender-text">
+                            その他
+                        </span>
+                    </label>
+                </div>
+            </fieldset>
         </div>
         <p class="form-error">
             @error('gender')
@@ -126,7 +130,7 @@
             </label>
             <input  class="contact-item" id="building" type="text" name="building" value="{{ old('building',$contact['building'] ?? null)}}" placeholder="例:&nbsp;千駄ヶ谷マンション101" autocomplete="address-level2">
         </div>
-        <div class="form-group select-group" id="category_id" autocomplete="off">
+        <div class="form-group select-group" autocomplete="off">
             <label class="form-label-item" for="category_id">
                 お問い合わせの種類
                 <span class="form-label-required">
@@ -149,7 +153,7 @@
                 {{ $message }}
             @enderror
         </p>
-        <div class="form-group detail-group" id="detail" autocomplete="off">
+        <div class="form-group detail-group" autocomplete="off">
             <label class="form-label-item" for="detail">
                 お問い合わせ内容
                 <span class="form-label-required">

@@ -3,14 +3,15 @@
 }
 
 .page-section {
-    width: 50vw;
+    width: 40%;
+    max-width: 546px; /* 1366pxの40% */
 }
 
 .page-main-form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px 80px;
+    padding: 3% 6%;
     background-color: white;
     border-radius: 6px;
     border: 1px solid rgb(209, 183, 134);
@@ -39,29 +40,34 @@
 
 @media screen and (max-width: 767px) {
     .page-section {
-        width: 90vw;
+        width: 90%;
         padding: 20px;
+        margin-bottom: 10%;
     }
 
     .page-main-form {
         padding: 20px;
         margin-bottom: 10%;
     }
+
+    .contact-item {
+        line-height: 2rem;
+    }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1365px) {
     .page-section {
-        width: 70vw;
+        width: 50%;
     }
 
     .page-main-form {
-        margin-bottom: 30%;
+        margin-bottom: 15%;
     }
 }
 
-@media screen and (min-height: 1024px) and (min-width: 1024px) {
+@media screen and (min-width: 1366px) {
     .page-section {
-        width: 70vw;
+        width: 40%;
     }
 
     .page-main-form {
@@ -69,6 +75,6 @@
     }
 
     .form-group {
-        margin: 10% 0;
+        margin: 5% 0;
     }
 }

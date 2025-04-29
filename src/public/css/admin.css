@@ -1,20 +1,23 @@
 .page-section {
-    width: 85%;
+    width: 80vw;
     margin: 1% auto;
     font-size: 0.8rem;
 }
 
 .page-main-form {
     display: flex;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 14px;
+    gap: 1.6%;
     width: 100%;
 }
 
 input,
 select {
     border: 1px solid rgb(230, 227, 204);
+    padding: 3px 15px;
+    line-height: 2rem;
     font-size: 0.8rem;
     color: rgb(151, 132, 91);
 }
@@ -22,9 +25,8 @@ select {
 .keyword-search {
     flex-grow: 1;
     min-width: 230px;
-    padding: 2px 12px;
     color: rgb(209, 183, 134);
-    border: 1px solid rgb(230, 227, 204);
+    margin-bottom: 1.6%;
 }
 
 .keyword-search::placeholder {
@@ -37,9 +39,14 @@ select {
     flex-grow: 1;
 }
 
+.arrow-date-section {
+    margin-bottom: 1.6%;
+}
+
 .arrow-gender-section,
 .arrow-enquiry-section {
     position: relative;
+    margin-bottom: 1.6%;
 }
 
 .arrow-gender-section::after,
@@ -69,7 +76,6 @@ select {
 
 .gender-select,
 .category-select {
-    padding: 2px 8px;
     height: 100%;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -86,7 +92,6 @@ select {
 
 .input__date {
     position: relative;
-    padding: 2px 8px;
     min-width: 40px;
 }
 
@@ -107,11 +112,13 @@ select {
 .search__button,
 .reset__button {
     flex: 1 1 auto;
-    max-width: 90px;
+    line-height: 2rem;
+    max-width: 100px;
+    padding: 3px 15px;
+    margin-bottom: 1.6%;
 }
 
 .search__button {
-    padding: 8px 25px;
     border: 1px solid rgb(83, 71, 40);
     background-color: rgb(83, 71, 40);
     color: white;
@@ -124,7 +131,6 @@ select {
 }
 
 .reset__button {
-    padding: 8px 12px;
     border: 1px solid rgb(233, 204, 150);
     background-color: rgb(233, 204, 150);
     color: white;
@@ -138,22 +144,20 @@ select {
 }
 
 .middle__admin {
-    margin-top: 30px;
+    margin-top: 2%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 0.8rem;
 }
 
-.listing__hail {
-    margin: 18px 0;
-}
-
 .contact__export {
+    max-width: 100px;
     border: 1px solid rgb(241, 230, 197);
     background-color: rgb(241, 230, 197);
     color: rgb(151, 132, 91);
-    padding: 5px 15px;
+    padding: 3px 15px;
+    line-height: 2rem;
     text-decoration: none;
     font-weight: bold;
 }
@@ -163,31 +167,44 @@ select {
     background-color: rgb(151, 132, 91);
 }
 
+.listing__hail {
+    margin: 2% 0 10% 0;
+}
 
 .contact-table-inner {
     width: 100%;
-    margin-top: 2%;
     border-collapse: collapse;
-    border: 1px solid rgb(170, 167, 165);
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 .contact-table-header {
     color: white;
-    background-color: rgb(138, 121, 108);
-    padding: 10px 16px;
-}
-
-.contact-cell {
-    height: 40px;
-    padding: 8px;
-    text-align: center;
+    background-color: rgb(151, 132, 91);
+    line-height: 3rem;
+    text-align: left;
+    padding-left: 10px;
 }
 
 .contact-table-header,
+.contact-table-row {
+    border: none;
+}
+
+.contact-cell-id {
+    display: none;
+}
+
 .contact-cell {
-    border-top: 1px rgb(170, 167, 165);
-    border-bottom: 1px solid rgb(170, 167, 165);
+    border-top: 1px solid rgb(230, 227, 204);
+    border-bottom: 1px solid rgb(230, 227, 204);
+    border-left: none;
+    border-right: none;
+    padding: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 3rem;
+    text-align: left;
 }
 
 .contact-cell+.contact-cell {
@@ -196,151 +213,71 @@ select {
 
 .modal_admin {
     display: inline-block;
-    width: 40%;
-    height: 22px;
+    max-width: 80px;
+    line-height: 1.5rem;
     font-size: 0.8rem;
-    border: 1px solid rgb(170, 167, 165);
-    background-color: rgb(231, 226, 222);
-    color: rgb(138, 121, 108);
-    padding: 1px 2px;
+    border: 1px solid rgb(209, 183, 134);
+    background-color: rgb(250, 250, 243);
+    color: rgb(209, 183, 134);
+    padding: 2px 20px;
     cursor: pointer;
     text-decoration: none;
 }
 
 .modal_admin:hover {
-    color: rgb(138, 121, 108);
-    background-color: rgb(138, 121, 108);
+    color: rgb(250, 250, 243);
+    background-color: rgb(209, 183, 134);
     transition: .6s;
 }
 
-/*ここからモーダル*/
-.modal-wrapper {
-    z-index: 999;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 40px 10px;
-    text-align: center
-}
-
-.modal-wrapper:not(:target) {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity .3s, visibility .3s;
-}
-
-.modal-wrapper:target {
-    opacity: 1;
-    visibility: visible;
-    transition: opacity .4s, visibility .4s;
-}
-
-.modal-wrapper::after {
-    display: inline-block;
-    height: 100%;
-    margin-left: -.05em;
-    vertical-align: middle;
-    content: ""
-}
-
-.modal-wrapper .modal-window {
-    box-sizing: border-box;
-    display: inline-block;
-    z-index: 20;
-    position: relative;
-    width: 80%;
-    max-width: 600px;
-    padding: 20px;
-    border-radius: 1px;
-    background: white;
-    box-shadow: 0 0 10px rgb(138, 121, 108);
-    vertical-align: middle
-}
-
-.modal-wrapper .modal-window .modal-content {
-    max-height: 90%;
-    overflow-y: auto;
-    text-align: left
-}
-
-.modal-overlay {
-    z-index: 10;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(209, 208, 208, 0)
-}
-
-.modal-wrapper .modal-close {
-    z-index: 20;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 20px;
-    color: rgb(138, 121, 108);
-    font-weight: 700;
-    line-height: 20px;
-    text-align: center;
-    text-decoration: none;
-    text-indent: 0;
-    font-size: 0.6rem;
-    border: 1px solid rgb(138, 121, 108);
-    border-radius: 50%;
-    margin: 7px;
-}
-
-.modal-wrapper .modal-close:hover {
-    color: rgb(138, 121, 108);
-}
-
-.delete-btn {
-    display: inline-block;
-    width: 18%;
-    height: 24px;
-    font-weight: bold;
-    font-size: 0.8rem;
-    border: 1px solid red;
-    padding: 1px 1px;
-    cursor: pointer;
-    text-decoration: none;
-    background-color: red;
-    color: white;
-    margin: 5%;
-}
-
-.modal_table {
-    border: none;
-    border-collapse: collapse;
-    margin: 20px auto;
-}
-
-.modal_table tr {
-    height: 30px;
-}
-
-.modal_table tr td,
-.modal_table tr th {
-    border: none;
-    text-align: left;
-    font-size: 0.8rem;
-    padding: 4px;
-    height: 45px;
-}
-
-.modal_table th {
-    background-color: rgb(138, 121, 108);
-    color: white;
-}
 
 @media screen and (max-width: 767px) {
+    .contact-table-inner {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        display: block;
+    }
 }
 
 @media screen and (min-width: 768px) {
+    .page-section {
+        width: 90vw;
+    }
+
+    .listing__hail {
+        margin: 1% 0 5% 0;
+    }
+
+    .contact-table-inner {
+        font-size: 0.8rem;
+    }
+
+    .contact-table-row {
+        line-height: 1.5rem;
+    }
+    .contact-cell {
+        line-height: 2rem;
+    }
+
+
 }
 
 @media screen and (min-height: 1024px) and (max-width: 1024px) {
+    /*.contact-table {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        display: block;
+    }
+
+    table {
+        min-width: 800px;
+        white-space: nowrap;
+    }*/
+
+    /*.contact-cell {
+        padding: 8px;
+        font-size: 0.8rem;
+    }*/
 }

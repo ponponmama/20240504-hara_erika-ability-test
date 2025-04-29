@@ -1,0 +1,122 @@
+/*ここからモーダル*/
+.modal-wrapper {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 40px 10px;
+    text-align: center
+}
+
+.modal-wrapper:not(:target) {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s, visibility .3s;
+}
+
+.modal-wrapper:target {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .4s, visibility .4s;
+}
+
+.modal-wrapper::after {
+    display: inline-block;
+    height: 100%;
+    margin-left: -.05em;
+    vertical-align: middle;
+    content: ""
+}
+
+.modal-wrapper .modal-window {
+    box-sizing: border-box;
+    display: inline-block;
+    z-index: 20;
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 1px;
+    background: white;
+    box-shadow: 0 0 10px rgb(138, 121, 108);
+    vertical-align: middle
+}
+
+.modal-wrapper .modal-window .modal-content {
+    max-height: 90%;
+    overflow-y: auto;
+    text-align: left
+}
+
+.modal-overlay {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(209, 208, 208, 0)
+}
+
+.modal-wrapper .modal-close {
+    z-index: 20;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    color: rgb(138, 121, 108);
+    font-weight: 700;
+    line-height: 20px;
+    text-align: center;
+    text-decoration: none;
+    text-indent: 0;
+    font-size: 0.6rem;
+    border: 1px solid rgb(138, 121, 108);
+    border-radius: 50%;
+    margin: 7px;
+}
+
+.modal-wrapper .modal-close:hover {
+    color: rgb(138, 121, 108);
+}
+
+.delete-btn {
+    display: inline-block;
+    width: 18%;
+    height: 24px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    border: 1px solid red;
+    padding: 1px 1px;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: red;
+    color: white;
+    margin: 5%;
+}
+
+.modal_table {
+    border: none;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+.modal_table tr {
+    height: 30px;
+}
+
+.modal_table tr td,
+.modal_table tr th {
+    border: none;
+    text-align: left;
+    font-size: 0.8rem;
+    padding: 4px;
+    height: 45px;
+}
+
+.modal_table th {
+    background-color: rgb(138, 121, 108);
+    color: white;
+}

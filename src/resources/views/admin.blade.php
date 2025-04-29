@@ -2,6 +2,7 @@
 
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
+<link rel="stylesheet" href="{{ asset('css/admin_modal.css') }}">
 @endsection
 
 @section('heading__link')
@@ -94,7 +95,7 @@
                 </tr>
                 @foreach($contacts as $contact)
                 <tr class="contact-row">
-                    <td class="contact-cell" style="display:none;">
+                    <td class="contact-cell contact-cell-id">
                         {{ $contact->id }}
                     </td>
                     <td class="contact-cell">

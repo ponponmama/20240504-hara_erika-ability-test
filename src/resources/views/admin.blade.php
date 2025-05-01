@@ -19,7 +19,7 @@
             @php
             $searchConditions = session('search_conditions');
             @endphp
-            <input class="keyword-search" type="text" id="keyword" name="keyword" value="{{ $searchConditions['keyword'] ?? '' }}"
+            <input class="keyword-search setting-content" type="text" id="keyword" name="keyword" value="{{ $searchConditions['keyword'] ?? '' }}"
                 placeholder="名前やメールアドレスを入力してください" autocomplete="keyword" />
             <div class="arrow-gender-section">
                 <select class="gender-select" name="gender-select">
@@ -37,7 +37,7 @@
                     </option>
                 </select>
             </div>
-            <div class="arrow-enquiry-section">
+            <div class="arrow-enquiry-section setting-content">
                 <select class="category-select" name="category_id">
                     <option value="" placeholder="お問い合わせの種類">
                         お問い合わせの種類
@@ -50,15 +50,15 @@
                     @endforeach
                 </select>
             </div>
-            <div class="arrow-date-section">
+            <div class="arrow-date-section setting-content">
                 <input class="input__date" id="date" name="date" type="date" value="{{ $searchConditions['date'] ?? '' }}"
                     placeholder="年/月/日" autocomplete="date" />
                 <span class="arrow-down"></span>
             </div>
-            <button class="link search__button" type="submit">
+            <button class="link search__button setting-content" type="submit">
                 検索
             </button>
-            <a href="{{ route('admin.reset_search') }}" class="link reset__button">
+            <a href="{{ route('admin.reset_search') }}" class="link reset__button setting-content">
                 リセット
             </a>
         </form>
@@ -90,7 +90,7 @@
                     <th class="contact-table-header">性別</th>
                     <th class="contact-table-header">メールアドレス</th>
                     <th class="contact-table-header">お問い合わせの種類</th>
-                    <th class="contact-table-header">お問い合わせの内容</th>
+                    <th class="contact-table-header detail-header">お問い合わせの内容</th>
                     <th></th>
                 </tr>
                 @foreach($contacts as $contact)
@@ -98,10 +98,10 @@
                     <td class="contact-cell contact-cell-id">
                         {{ $contact->id }}
                     </td>
-                    <td class="contact-cell">
+                    <td class="contact-cell contact-cell-name">
                         {{ $contact->first_name }} {{ $contact->last_name }}
                     </td>
-                    <td class="contact-cell">
+                    <td class="contact-cell contact-cell-gender">
                         @if ($contact->gender == 1)
                         男性
                         @elseif ($contact->gender == 2)
@@ -110,14 +110,14 @@
                         その他
                         @endif
                     </td>
-                    <td class="contact-cell">
+                    <td class="contact-cell contact-cell-email">
                         {{ $contact->email }}
                     </td>
-                    <td class="contact-cell">
+                    <td class="contact-cell contact-cell-category">
                         {{ $contact->category->content }}
                     </td>
-                    <td class="contact-cell">
-                        <a href="#modal-{{ $contact->id }}" class="modal_admin" id="modal-link-{{ $contact->id }}">
+                    <td class="contact-cell detail-cell">
+                        <a href="#modal-{{ $contact->id }}" class="link modal_admin" id="modal-link-{{ $contact->id }}">
                             詳細
                         </a>
                     </td>

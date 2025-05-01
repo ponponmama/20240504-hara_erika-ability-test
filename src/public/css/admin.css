@@ -24,7 +24,8 @@ select {
 
 .keyword-search {
     flex-grow: 1;
-    min-width: 230px;
+    min-width: 246px;
+    max-width: 336px;
     color: rgb(209, 183, 134);
     margin-bottom: 1.6%;
 }
@@ -83,16 +84,19 @@ select {
 }
 
 .gender-select {
-    min-width: 80px;
+    min-width: 86px;
+    max-width: 130px;
 }
 
 .category-select {
-    min-width: 80px;
+    min-width: 180px;
+    max-width: 240px;
 }
 
 .input__date {
     position: relative;
-    min-width: 40px;
+    min-width: 110px;
+    max-width: 140px;
 }
 
 .input__date::-webkit-calendar-picker-indicator {
@@ -113,8 +117,9 @@ select {
 .reset__button {
     flex: 1 1 auto;
     line-height: 2rem;
-    max-width: 100px;
-    padding: 3px 15px;
+    min-width: 100px;
+    max-width: 120px;
+    padding: 4px 15px;
     margin-bottom: 1.6%;
 }
 
@@ -168,13 +173,15 @@ select {
 }
 
 .listing__hail {
-    margin: 2% 0 10% 0;
+    margin: 2% 0 15% 0;
+    width: 100%;
 }
 
 .contact-table-inner {
     width: 100%;
     border-collapse: collapse;
     font-size: 1rem;
+    border: 1px solid rgb(230, 227, 204);
 }
 
 .contact-table-header {
@@ -190,29 +197,51 @@ select {
     border: none;
 }
 
+.detail-header {
+    text-align: center;
+}
+
+.contact-row {
+    line-height: 3rem;
+}
+
 .contact-cell-id {
     display: none;
 }
 
 .contact-cell {
+    min-width: 154px;
     border-top: 1px solid rgb(230, 227, 204);
     border-bottom: 1px solid rgb(230, 227, 204);
     border-left: none;
     border-right: none;
-    padding: 10px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    line-height: 3rem;
     text-align: left;
+    padding-left: 15px;
 }
 
 .contact-cell+.contact-cell {
     border-left: none;
 }
 
+.contact-cell-name {
+    min-width: 140px;
+}
+
+.contact-cell-gender {
+    min-width: 80px;
+}
+
+.detail-cell {
+    width: 176px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+    max-width: 176px;
+}
+
+
 .modal_admin {
-    display: inline-block;
+    display: block;
     max-width: 80px;
     line-height: 1.5rem;
     font-size: 0.8rem;
@@ -220,8 +249,10 @@ select {
     background-color: rgb(250, 250, 243);
     color: rgb(209, 183, 134);
     padding: 2px 20px;
-    cursor: pointer;
     text-decoration: none;
+    margin: 0 auto;
+    width: 80px;
+    text-align: center;
 }
 
 .modal_admin:hover {
@@ -230,13 +261,40 @@ select {
     transition: .6s;
 }
 
-
 @media screen and (max-width: 767px) {
+    .page-main-form {
+        justify-self: left;
+        gap: 4%;
+    }
+
     .contact-table-inner {
         width: 100%;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
         display: block;
+        min-width: 100%;
+    }
+
+    .contact-cell {
+        min-width: 200px;
+    }
+
+    .contact-cell-category {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        text-align: left;
+        padding-left: 15px;
+        max-width: 0;
+    }
+
+    .contact-cell-email {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        text-align: left;
+        padding-left: 15px;
+        max-width: 0;
     }
 }
 
@@ -245,39 +303,75 @@ select {
         width: 90vw;
     }
 
+    .page-main-form {
+        margin: 1% 0;
+    }
+
+    .middle__admin {
+        margin: 1% 0;
+    }
+
     .listing__hail {
-        margin: 1% 0 5% 0;
+        margin: 1% 0 10% 0;
     }
 
     .contact-table-inner {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        display: block;
         font-size: 0.8rem;
     }
 
     .contact-table-row {
-        line-height: 1.5rem;
-    }
-    .contact-cell {
-        line-height: 2rem;
+        line-height: 2.5rem;
     }
 
+    .contact-row {
+        line-height: 3.5rem;
+    }
 
+    .contact-cell-category {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        text-align: left;
+        padding-left: 15px;
+        max-width: 0;
+    }
+
+    .contact-cell-email {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        text-align: left;
+        padding-left: 15px;
+        max-width: 0;
+    }
 }
 
-@media screen and (min-height: 1024px) and (max-width: 1024px) {
-    /*.contact-table {
-        width: 100%;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        display: block;
+@media screen and (min-height: 1180px) and (max-width: 1024px) {
+    .page-main-form {
+        margin: 3% 0 2% 0 ;
     }
 
-    table {
-        min-width: 800px;
-        white-space: nowrap;
-    }*/
+    .listing__hail {
+        margin: 2% 0 15% 0;
+    }
 
-    /*.contact-cell {
-        padding: 8px;
-        font-size: 0.8rem;
-    }*/
+    .contact-table-inner {
+        margin: 1% 0 5% 0;
+        font-size: 1rem;
+    }
+
+    .contact-table-row {
+        line-height: 3.5rem;
+    }
+
+    .contact-row {
+        line-height: 4.5rem;
+    }
+
+    .contact-cell {
+        min-width: 184px;
+    }
 }

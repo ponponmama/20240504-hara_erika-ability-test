@@ -19,7 +19,7 @@
             @php
             $searchConditions = session('search_conditions');
             @endphp
-            <input class="keyword-search setting-content" type="text" id="keyword" name="keyword" value="{{ $searchConditions['keyword'] ?? '' }}"
+            <input class="keyword-search" type="text" id="keyword" name="keyword" value="{{ $searchConditions['keyword'] ?? '' }}"
                 placeholder="名前やメールアドレスを入力してください" autocomplete="keyword" />
             <div class="arrow-gender-section">
                 <select class="gender-select" name="gender-select">
@@ -37,7 +37,7 @@
                     </option>
                 </select>
             </div>
-            <div class="arrow-enquiry-section setting-content">
+            <div class="arrow-enquiry-section">
                 <select class="category-select" name="category_id">
                     <option value="" placeholder="お問い合わせの種類">
                         お問い合わせの種類
@@ -50,17 +50,19 @@
                     @endforeach
                 </select>
             </div>
-            <div class="arrow-date-section setting-content">
+            <div class="arrow-date-section">
                 <input class="input__date" id="date" name="date" type="date" value="{{ $searchConditions['date'] ?? '' }}"
                     placeholder="年/月/日" autocomplete="date" />
                 <span class="arrow-down"></span>
             </div>
-            <button class="link search__button setting-content" type="submit">
-                検索
-            </button>
-            <a href="{{ route('admin.reset_search') }}" class="link reset__button setting-content">
-                リセット
-            </a>
+            <div class="button-section">
+                <button class="link search__button" type="submit">
+                    検索
+                </button>
+                <a href="{{ route('admin.reset_search') }}" class="link reset__button">
+                    リセット
+                </a>
+            </div>
         </form>
         <div class="middle__admin">
             <div class="link button__export">

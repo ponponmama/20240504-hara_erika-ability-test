@@ -84,19 +84,19 @@ select {
 }
 
 .gender-select {
-    min-width: 86px;
+    min-width: 76px;
     max-width: 130px;
 }
 
 .category-select {
-    min-width: 180px;
+    min-width: 150px;
     max-width: 240px;
 }
 
 .input__date {
     position: relative;
     min-width: 110px;
-    max-width: 140px;
+    max-width: 158px;
 }
 
 .input__date::-webkit-calendar-picker-indicator {
@@ -262,9 +262,60 @@ select {
 }
 
 @media screen and (max-width: 767px) {
+    .page-section {
+        width: 90%;
+        margin: 1% auto;
+    }
+
     .page-main-form {
-        justify-self: left;
-        gap: 4%;
+        width: 90%;
+        flex-direction: column;
+        gap: 1%;
+        margin: 1% auto;
+    }
+
+    .keyword-search {
+        width: 100%;
+    }
+
+    .arrow-gender-section {
+        width: 100%;
+    }
+
+    .arrow-enquiry-section {
+        width: 100%;
+    }
+
+    .arrow-date-section {
+        width: 100%;
+    }
+
+    .arrow-gender-section::after,
+    .arrow-enquiry-section::after,
+    .input__date::after {
+        right: 10%;
+    }
+
+    .button-section {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin: 2% auto;
+    }
+
+    .search__button {
+        width: 45%;
+    }
+
+    .reset__button {
+        width: 45%;
+    }
+
+    .gender-select,
+    .category-select,
+    .input__date {
+        width: 100%;
+        max-width: none
     }
 
     .contact-table-inner {
@@ -288,90 +339,90 @@ select {
         max-width: 0;
     }
 
-    .contact-cell-email {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        text-align: left;
-        padding-left: 15px;
-        max-width: 0;
-    }
+.contact-cell-email {
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+text-align: left;
+padding-left: 15px;
+max-width: 0;
+}
 }
 
 @media screen and (min-width: 768px) {
-    .page-section {
-        width: 90vw;
-    }
+.page-section {
+width: 90vw;
+}
 
-    .page-main-form {
-        margin: 1% 0;
-    }
+.page-main-form {
+margin: 1% 0;
+}
 
-    .middle__admin {
-        margin: 1% 0;
-    }
+.middle__admin {
+margin: 1% 0;
+}
 
-    .listing__hail {
-        margin: 1% 0 10% 0;
-    }
+.listing__hail {
+margin: 1% 0 10% 0;
+}
 
-    .contact-table-inner {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        display: block;
-        font-size: 0.8rem;
-    }
+.contact-table-inner {
+overflow-x: auto;
+-webkit-overflow-scrolling: touch;
+display: block;
+font-size: 0.8rem;
+}
 
-    .contact-table-row {
-        line-height: 2.5rem;
-    }
+.contact-table-row {
+line-height: 2.5rem;
+}
 
-    .contact-row {
-        line-height: 3.5rem;
-    }
+.contact-row {
+line-height: 3.5rem;
+}
 
-    .contact-cell-category {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        text-align: left;
-        padding-left: 15px;
-        max-width: 0;
-    }
+.contact-cell-category {
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+text-align: left;
+padding-left: 15px;
+max-width: 0;
+}
 
-    .contact-cell-email {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        text-align: left;
-        padding-left: 15px;
-        max-width: 0;
-    }
+.contact-cell-email {
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+text-align: left;
+padding-left: 15px;
+max-width: 0;
+}
 }
 
 @media screen and (min-height: 1180px) and (max-width: 1024px) {
-    .page-main-form {
-        margin: 3% 0 2% 0 ;
-    }
+.page-main-form {
+margin: 3% 0 2% 0 ;
+}
 
-    .listing__hail {
-        margin: 2% 0 15% 0;
-    }
+.listing__hail {
+margin: 2% 0 15% 0;
+}
 
-    .contact-table-inner {
-        margin: 1% 0 5% 0;
-        font-size: 1rem;
-    }
+.contact-table-inner {
+margin: 1% 0 5% 0;
+font-size: 1rem;
+}
 
-    .contact-table-row {
-        line-height: 3.5rem;
-    }
+.contact-table-row {
+line-height: 3.5rem;
+}
 
-    .contact-row {
-        line-height: 4.5rem;
-    }
+.contact-row {
+line-height: 4.5rem;
+}
 
-    .contact-cell {
-        min-width: 184px;
-    }
+.contact-cell {
+min-width: 184px;
+}
 }

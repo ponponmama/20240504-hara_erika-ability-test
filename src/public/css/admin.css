@@ -322,7 +322,7 @@ select {
         width: 100%;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
-        display: table;
+        display: block;
         min-width: 100%;
     }
 

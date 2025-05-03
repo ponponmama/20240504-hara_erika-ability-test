@@ -322,7 +322,7 @@ select {
         width: 100%;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
-        display: block;
+        display: table;
         min-width: 100%;
     }
 
@@ -370,7 +370,7 @@ select {
     .contact-table-inner {
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
-        display: block;
+        display: table;
         font-size: 0.8rem;
     }
 
@@ -402,28 +402,24 @@ select {
 }
 
 @media screen and (min-height: 1180px) and (max-width: 1024px) {
-.page-main-form {
-margin: 3% 0 2% 0 ;
-}
+    .page-main-form {
+        margin: 3% 0 2% 0 ;
+    }
 
-.listing__hail {
-margin: 2% 0 15% 0;
-}
+    .listing__hail {
+        margin: 2% 0 15% 0;
+    }
 
-.contact-table-inner {
-margin: 1% 0 5% 0;
-font-size: 1rem;
-}
+    .contact-table-inner {
+        margin: 1% 0 5% 0;
+        font-size: 1rem;
+    }
 
-.contact-table-row {
-line-height: 3.5rem;
-}
+    .contact-table-row {
+        line-height: 3.5rem;
+    }
 
-.contact-row {
-line-height: 4.5rem;
-}
-
-.contact-cell {
-min-width: 184px;
-}
+    .contact-row {
+        line-height: 4.5rem;
+    }
 }

@@ -62,6 +62,7 @@ select {
     border-top: 12px solid rgb(230, 227, 204);
     content: "";
     transform: translateY(-50%);
+    pointer-events: none;
 }
 
 .arrow-gender-section::after,
@@ -238,7 +239,6 @@ select {
     padding: 10px;
     max-width: 176px;
 }
-
 
 .modal_admin {
     display: block;

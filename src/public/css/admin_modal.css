@@ -65,17 +65,17 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 20px;
+    width: 22px;
     color: rgb(151, 132, 91);
     font-weight: 700;
-    line-height: 20px;
+    line-height: 22px;
     text-align: center;
     text-decoration: none;
     text-indent: 0;
     font-size: 0.6rem;
     border: 1px solid rgb(151, 132, 91);
     border-radius: 50%;
-    margin: 7px;
+    margin:10px;
 }
 
 .modal-wrapper .modal-close:hover {
@@ -106,7 +106,7 @@
 .modal_table {
     border: none;
     border-collapse: collapse;
-    margin: 20px auto;
+    margin: 20px 10px;
 }
 
 .modal_table tr {
@@ -125,4 +125,16 @@
 .modal_table th {
     background-color: rgb(138, 121, 108);
     color: white;
+}
+
+@media screen and (max-width: 767px) {
+    .modal-wrapper .modal-window {
+        width: 94%;
+    }
+
+    .modal-wrapper .modal-close {
+        width: 24px;
+        line-height: 24px;
+        margin: 20px;
+    }
 }

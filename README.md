@@ -175,16 +175,28 @@ chown -R www-data:www-data /var/www/storage
 6. アプリケーションキーの生成
 
 ```bash
+docker-compose exec php bash
+```
+
+```bash
 php artisan key:generate
 ```
 
 6.データベースのマイグレーション
 
 ```bash
+docker-compose exec php bash
+```
+
+```bash
 php artisan migrate
 ```
 
 7.データベースシーダーの実行
+
+```bash
+docker-compose exec php bash
+```
 
 ```bash
 php artisan db:seed

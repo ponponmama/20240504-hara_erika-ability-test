@@ -4,6 +4,10 @@
 ###お問い合わせフォーム管理システムアプリ
 
 <p align="center">
+  <img src="contact.png" alt="お問い合わせform登録画面">
+</p>
+
+<p align="center">
   <img src="register.png" alt="お問い合わせform登録画面">
 </p>
 
@@ -80,9 +84,9 @@
 #### 環境構築
 
 - **PHP**: 8.3.6
-- **MySQL**: 10.3.39
-- **Composer**: 2.7.7
-- **Docker**: 27.4.0
+- **MySQL**: 8.0.26
+- **Composer**: 2.8.5
+- **Docker**: 28.0.4
 - **Laravel Framework**: 8.83.27
 
 - ＊ご使用の PC に合わせて各種必要なファイル(.env や docker-compose.yml 等)は作成、編集してください。

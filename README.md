@@ -1,12 +1,12 @@
 <p align="center"><img src="https://img.shields.io/badge/-Laravel-black.svg?logo=laravel&style=plastic"> <img src="https://img.shields.io/badge/-Html5-pink.svg?logo=html5&style=plastic"> <img src="https://img.shields.io/badge/-CSS3-blue.svg?logo=css3&style=plastic"> <img src="https://img.shields.io/badge/-Php-orange.svg?logo=php&style=plastic"> <img src="https://img.shields.io/badge/-Mysql-green.svg?logo=mysql&style=plastic"> <img src="https://img.shields.io/badge/-Windows-0078D6.svg?logo=windows&style=plastic"> <img src="https://img.shields.io/badge/-Docker-1488C6.svg?logo=docker&style=plastic"> <img src="https://img.shields.io/badge/-Nginx-red.svg?logo=nginx&style=plastic"> <img src="https://img.shields.io/badge/-Github-181717.svg?logo=github&style=plastic"></p>
 
-### お問い合わせフォーム
+<h3 align="center"> お問い合わせフォーム </h3>
 
 <p align="center">
   <img src="contact.png" alt="お問い合わせform登録画面">
 </p>
 
-### お問い合わせフォーム管理システムアプリ
+<h3 align="center"> お問い合わせフォーム管理システムアプリ</h3>
 
 <p align="center">
   <img src="register.png" alt="お問い合わせform登録画面">

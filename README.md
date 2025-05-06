@@ -2,11 +2,11 @@
 
 ### お問い合わせフォーム
 
-### お問い合わせフォーム管理システムアプリ
-
 <p align="center">
   <img src="contact.png" alt="お問い合わせform登録画面">
 </p>
+
+### お問い合わせフォーム管理システムアプリ
 
 <p align="center">
   <img src="register.png" alt="お問い合わせform登録画面">

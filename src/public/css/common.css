@@ -212,7 +212,7 @@ select,
     }
 }
 
-@media screen and (min-height: 1181px) and (max-width: 1024px) {
+@media screen and (min-height: 1181px) and (min-width: 1024px) {
     .header-section {
         margin: 4% 0 0;
     }

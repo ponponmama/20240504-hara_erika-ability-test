@@ -38,7 +38,7 @@
     margin: 3% 0;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .page-section {
         width: 90%;
         padding: 20px;
@@ -55,7 +55,7 @@
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1365px) {
+@media screen and (min-width: 768px) {
     .page-section {
         width: 50%;
     }
@@ -65,7 +65,7 @@
     }
 }
 
-@media screen and (min-width: 1366px) {
+@media screen and (min-height: 1181px) and (min-width: 1024px) {
     .page-section {
         width: 40%;
     }

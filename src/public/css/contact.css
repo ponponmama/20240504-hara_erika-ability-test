@@ -4,9 +4,10 @@
 }
 
 .form-group {
-    width: 100%;
+    width: 967.39px;
+    height: 38px;
     display: flex;
-    margin: 1.8% 0;
+    margin: 6px 0;
 }
 
 .detail-group {
@@ -15,6 +16,10 @@
 
 .form-label-item {
     width: 35%;
+    height: 26px;
+    line-height: 26px;
+    font-size: 20px;
+    font-weight: 400;
     text-align: left;
 }
 
@@ -25,18 +30,17 @@
 
 .contact-item {
     width: 65%;
+    color: #BEB1A6;
 }
 
-.input-name {
-    width: 48%;
-}
-
-.input-name-first {
-    margin-right: 2%;
+.input-name-first,
+.input-name-last {
+    width: 287.15px;
+    margin-right: 44.52px;
 }
 
 .input-name-last {
-    margin-left: 2%;
+    margin: 0;
 }
 
 .input-container {
@@ -45,10 +49,10 @@
 }
 
 .gender-radio-label {
-    width: 25%;
-    margin-right: 0.5%;
-    padding: 0 2px;
+    height: 23px;
+    line-height: 23px;
     cursor: pointer;
+    margin-right: 28px;
 }
 
 .input-container-gender {
@@ -68,30 +72,37 @@
 }
 
 .gender-text{
+    height: 23px;
+    line-height: 23px;
     display: flex;
     align-items: center;
     justify-content: left;
-    font-size: 1rem;
+    font-size: 18px;
+    font-weight: 400;
 }
 
 .gender-text::before {
+    width: 55.28px;
+    line-height: 23px;
     display: block;
-    margin-right: 10%;
-    width: 24px;
-    height: 24px;
-    border: 1px solid rgb(83, 71, 40);
+    margin-right: 28px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #8B7969;
     border-radius: 50%;
     content: '';
 }
 
 .gender-radio:checked+.gender-text::before {
-    background: rgb(83, 71, 40);
+    background: #8B7969;
 }
 
 .input-tell {
-    width: 30%;
+    width: 178.12px;
+    height: 38px;
+    line-height: 38px;
     text-align: center;
-    padding: 8px;
+    padding-left: 0;
 }
 
 .tel {
@@ -209,7 +220,7 @@
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1280px) {
     .page-section {
         width: 80%;
         padding: 10px;

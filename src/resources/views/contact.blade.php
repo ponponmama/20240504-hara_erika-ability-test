@@ -14,7 +14,7 @@
         @php
             $contact = session('contact');
         @endphp
-        <div class="form-group name-group">
+        <div class="form-group">
             <label class="form-label-item name-label" for="first_name">
                 お名前
                 <span class="form-label-required">
@@ -43,21 +43,21 @@
                     </span>
                 </legend>
                 <div class="input-container input-container-gender" autocomplete="sex">
-                    <label class="form-label-item gender-radio-label" for="male">
+                    <label class="gender-radio-label" for="male">
                         <input id="male" class="gender-radio" type="radio" name="gender" value="1" {{ old('gender',
                             $contact['gender'] ?? null)==1 ? 'checked' : '' }}>
                         <span class="gender-text">
                             男性
                         </span>
                     </label>
-                    <label class="form-label-item gender-radio-label" for="female">
+                    <label class="gender-radio-label" for="female">
                         <input id="female" class="gender-radio" type="radio" name="gender" value="2" {{ old('gender',
                             $contact['gender'] ?? null)=='2' ? 'checked' : '' }}>
                         <span class="gender-text">
                             女性
                         </span>
                     </label>
-                    <label class="form-label-item gender-radio-label" for="other">
+                    <label class="gender-radio-label" for="other">
                         <input id="other" class="gender-radio" type="radio" name="gender" value="3" {{ old('gender',
                             $contact['gender'] ?? null)=='3' ? 'checked' : '' }}>
                         <span class="gender-text">

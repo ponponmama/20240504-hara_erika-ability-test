@@ -1,36 +1,39 @@
 html,
 body {
-    height: 100vh;
+    width: 100%;
+    max-height: 100vh;
+    font-family: "Rasa", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 /*テキストのstyle*/
 body,textarea,input,label {
-    color: rgb(151, 132, 91);
+    color: #8B7969;
 }
 
 /*textarea,input,selectのstyle*/
 textarea,input,select {
-    background-color: rgb(250, 250, 243);
-    border: 1px solid rgb(250, 250, 243);
-    padding: 8px 15px;
-    font-size: 1rem;
+    background-color: #F4F4F4;
 }
 
 /*labelのstyle*/
 label,
 legend {
-    padding: 9px 15px;
-    font-size: 1rem;
+    font-size: 16px;
 }
 
 /*placeholderとselectのstyle*/
 select,
 textarea::placeholder,
 input::placeholder {
-    color: rgb(209, 183, 134);
+    color: #BEB1A6;
+    background-color: #F4F4F4;
     font-family: "Rasa", sans-serif;
-    font-size: 0.9em;
-    font-weight: 300;
+    font-size: 14px;
+    font-weight: 400;
+    padding-left: 33.78px;
 }
 
 /* fieldsetのデフォルトスタイルのみリセット */
@@ -58,18 +61,20 @@ select,
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 15px;
+    padding-top: 50px;
 }
 
 /*headerのstyle*/
 .header-section {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
     display: grid;
     grid-template-columns:  repeat(3,1fr);
     grid-template-rows: 1fr;
     align-items: center;
     text-align: center;
-    border-bottom: 1px solid rgb(230, 227, 204);
-    padding: 30px 60px 10px 60px;
+    border-bottom: 1px solid #E0DFDE;
 }
 
 /*header-logo,header-nav-link,page-logoのstyle*/
@@ -77,16 +82,16 @@ select,
 .header-nav-link,
 .page-logo {
     font-family: serif;
-    color: rgb(151, 132, 91);
+    color: #8B7969;
 }
 
 
 /*FashionablyLateのロゴのstyle*/
 .header-logo {
     grid-column: 2;
-    font-weight: lighter;
-    font-size: 2rem;
-    margin-top: 1%;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 100px;
 }
 
 /*headerボタンのstyle*/
@@ -98,16 +103,16 @@ select,
     max-width: 100px;
     width: 30%;
     padding: 2px 15px;
-    border: 1px solid rgb(209, 183, 134);
-    color: rgb(209, 183, 134);
-    background-color: rgb(250, 250, 243);
+    border: 1px solid #D9C6B5;
+    color: #D9C6B5;
+    background-color: #E0DFDE;
     text-decoration: none;
     margin: 0 5%;
 }
 
 .header-nav-link:hover {
-    color: rgb(250, 250, 243);
-    background-color: rgb(209, 183, 134);
+    color: #E0DFDE;
+    background-color: #D9C6B5;
 }
 
 /*page-sectionのstyle*/
@@ -121,8 +126,10 @@ select,
 /*各共通部分のlogo*/
 .page-logo {
     text-align: center;
-    font-weight: 100;
-    font-size: 2rem;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 46px;
+    margin-bottom: 46px;
 }
 
 
@@ -130,14 +137,14 @@ select,
 .button {
     display: block;
     padding: 8px 32px;
-    background: rgb(83, 71, 40);
+    background: #82756A;
     border: none;
     color: white;
     font-size: 1rem;
 }
 
 .button:hover {
-    color: rgb(83, 71, 40);
+    color: #82756A;
     background-color: white;
 }
 
@@ -150,18 +157,18 @@ select,
 
 .pagination li {
     display: inline-block;
-    border: 1px solid rgb(230, 227, 204);
+    border: 1px solid #E0DFDE;
     padding: 2px 6px;
     text-align: center;
 }
 
 .pagination a {
     text-decoration: none;
-    color: rgb(151, 132, 91);
+    color: #8B7969;
 }
 
 .pagination .active {
-    background-color: rgb(83, 71, 40);
+    background-color: #8B7969;
     color: white;
 }
 
@@ -202,7 +209,7 @@ select,
     }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1280px) {
     .header-section {
         padding: 10px 30px;
     }

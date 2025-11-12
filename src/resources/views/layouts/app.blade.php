@@ -14,17 +14,15 @@
         @yield('css')
     </head>
 
-    <body>
-        <div class="app-body">
-            <header class="header-section">
-                <h1 class="header-logo">
-                    FashionablyLate
-                </h1>
-                @yield('heading__link')
-            </header>
-            <main class="main-section">
-                @yield('content')
-            </main>
-        </div>
+    <body class="app-body">
+        <header class="header-section">
+            <h1 class="header-logo">
+                FashionablyLate
+            </h1>
+            @yield('heading__link')
+        </header>
+        <main class="main-section">
+            @yield('content')
+        </main>
     </body>
 </html>

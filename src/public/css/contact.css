@@ -1,13 +1,25 @@
 .page-section {
-    margin: 1% auto 0;
-    width: 70%;
+    width: 972px;
+    margin: 0 auto;
+    justify-content: start;
 }
 
 .form-group {
-    width: 967.39px;
+    width: 100%;
     height: 38px;
     display: flex;
-    margin: 6px 0;
+    align-items: center;
+    justify-content: left;
+    margin-bottom: 5px;
+}
+
+.form-label-item {
+    height: 26px;
+    line-height: 26px;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: left;
+    color: rgba(139, 121, 105, 1);
 }
 
 .detail-group {
@@ -23,29 +35,32 @@
     text-align: left;
 }
 
+.contact-item {
+    width: 618.82px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    color: #BEB1A6;
+}
+
 .form-label-required {
     color: red;
     margin-left: 10px;
 }
 
-.contact-item {
-    width: 65%;
-    color: #BEB1A6;
+.contact-item-name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .input-name-first,
 .input-name-last {
     width: 287.15px;
-    margin-right: 44.52px;
-}
-
-.input-name-last {
-    margin: 0;
-}
-
-.input-container {
-    width: 65%;
-    display: flex;
+    height: 38px;
+    line-height: 38px;
+    text-align: left;
 }
 
 .gender-radio-label {
@@ -97,11 +112,17 @@
     background: #8B7969;
 }
 
+.contact-item-tell {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .input-tell {
     width: 178.12px;
     height: 38px;
     line-height: 38px;
-    text-align: center;
+    text-align: left;
     padding-left: 0;
 }
 
@@ -110,8 +131,8 @@
     margin: 0 2%;
 }
 
-.building-section {
-    margin-bottom: 5.64%;
+.building-group {
+    margin-bottom: 33px;
 }
 
 .select-group {
@@ -139,21 +160,20 @@
     -moz-appearance: none;
 }
 
+.detail-group {
+    height: 129px;
+}
+
 .contact-item-detail {
-    width: 65%;
-    height: 150px;
+    height: 100%;
 }
 
 /* 送信ボタン */
 .contact-button {
-    margin: 5% auto;
-}
-
-/* エラーメッセージ */
-.form-error {
-    width: 65%;
-    padding-left: 14px;
-    margin: 0.5% 0.5% 1% 35%;
+    width: 160px;
+    height: 46px;
+    margin: 22px auto;
+    padding: 10px 40px;
 }
 
 .error-message {
@@ -186,8 +206,7 @@
         width: 100%;
     }
 
-    .contact-item,
-    .input-container {
+    .contact-item {
         width: 100%;
     }
 

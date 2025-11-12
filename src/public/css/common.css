@@ -1,9 +1,40 @@
 html,
-body {
-    width: 100%;
-    max-height: 100vh;
+body * {
     font-family: "Rasa", sans-serif;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+.button,
+.link {
+    cursor: pointer;
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+.app-body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     margin: 0;
     padding: 0;
 }
@@ -47,19 +78,12 @@ select,
     cursor: pointer;
 }
 
-/*全viewファイルの共通画面style*/
-.app-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
 
 /*main-sectionのstyle*/
 .main-section {
-    flex:1;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     padding-top: 50px;
 }
@@ -74,7 +98,7 @@ select,
     grid-template-rows: 1fr;
     align-items: center;
     text-align: center;
-    border-bottom: 1px solid #E0DFDE;
+    border-bottom: 1px solid rgba(224, 223, 222, 1);
 }
 
 /*header-logo,header-nav-link,page-logoのstyle*/
@@ -82,7 +106,7 @@ select,
 .header-nav-link,
 .page-logo {
     font-family: serif;
-    color: #8B7969;
+    color: rgba(139, 121, 105, 1);
 }
 
 
@@ -119,8 +143,7 @@ select,
 .page-section {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
-    justify-content: center;
+    /*justify-content: center;*/
 }
 
 /*各共通部分のlogo*/
@@ -129,23 +152,23 @@ select,
     font-weight: 400;
     font-size: 35px;
     line-height: 46px;
-    margin-bottom: 46px;
+    margin-bottom: 51px;
+    color: rgba(139, 121, 105, 1);
 }
 
 
 /*ボタンのstyle*/
 .button {
     display: block;
-    padding: 8px 32px;
-    background: #82756A;
+    background: rgba(130, 117, 106, 1);
     border: none;
-    color: white;
-    font-size: 1rem;
+    color: rgba(255, 255, 255, 1);
+    font-size: 20px;
 }
 
 .button:hover {
-    color: #82756A;
-    background-color: white;
+    color: rgba(130, 117, 106, 1);
+    background-color: rgba(255, 255, 255, 1);
 }
 
 .pagination {
@@ -175,10 +198,11 @@ select,
 /*バリデーションメッセージ*/
 .form-error {
     height: 20px;
+    line-height: 20px;
     color: #ff0000;
     text-align: left;
-    margin: 1%;
-    font-size: 0.8rem;
+    margin: 4px;
+    font-size: 16px;
 }
 
 @media screen and (max-width: 767px) {
@@ -196,7 +220,8 @@ select,
         font-size: 0.7rem;
     }
 
-    .header-nav-link {        margin: 3%;
+    .header-nav-link {
+        margin: 3%;
     }
 
     .header-logo,
@@ -219,16 +244,3 @@ select,
     }
 }
 
-@media screen and (min-height: 1181px) and (min-width: 1024px) {
-    .header-section {
-        margin: 4% 0 0;
-    }
-
-    .header-nav-link {
-        margin: 5% 0;
-    }
-
-    .button {
-        margin: 15% auto;
-    }
-}

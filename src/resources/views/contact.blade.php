@@ -30,12 +30,12 @@
                         autocomplete="given-name">
                 </div>
             </div>
-            <p class="form-error">
+            <p class="form-error name-error">
                 @if ($errors->has('first_name'))
-                    <span class="error-message">{{ $errors->first('first_name') }}</span>
+                    <span class="error-message-first">{{ $errors->first('first_name') }}</span>
                 @endif
                 @if ($errors->has('last_name'))
-                    <span class="error-message">{{ $errors->first('last_name') }}</span>
+                    <span class="error-message-last">{{ $errors->first('last_name') }}</span>
                 @endif
             </p>
             <div class="form-group gender-group">
@@ -50,23 +50,20 @@
                         <label class="gender-radio-label" for="male">
                             <input id="male" class="gender-radio" type="radio" name="gender" value="1"
                                 {{ old('gender', $contact['gender'] ?? null) == 1 ? 'checked' : '' }}>
-                            <span class="gender-text">
-                                男性
-                            </span>
+                            <span class="gender-radio-icon"></span>
+                            <span class="gender-text">男性</span>
                         </label>
                         <label class="gender-radio-label" for="female">
                             <input id="female" class="gender-radio" type="radio" name="gender" value="2"
                                 {{ old('gender', $contact['gender'] ?? null) == '2' ? 'checked' : '' }}>
-                            <span class="gender-text">
-                                女性
-                            </span>
+                            <span class="gender-radio-icon"></span>
+                            <span class="gender-text">女性</span>
                         </label>
                         <label class="gender-radio-label" for="other">
                             <input id="other" class="gender-radio" type="radio" name="gender" value="3"
                                 {{ old('gender', $contact['gender'] ?? null) == '3' ? 'checked' : '' }}>
-                            <span class="gender-text">
-                                その他
-                            </span>
+                            <span class="gender-radio-icon"></span>
+                            <span class="gender-text">その他</span>
                         </label>
                     </div>
                 </fieldset>
@@ -100,15 +97,15 @@
                     </span>
                 </label>
                 <div class="contact-item contact-item-tell">
-                    <input class="input-split input-tell" id="tell1" type="tel" name="tell1"
+                    <input class="contact-item input-split" id="tell1" type="tel" name="tell1"
                         value="{{ old('tell1', $contact['tell1'] ?? null) }}" placeholder="090"
                         autocomplete="tel-area-code">
                     <span class="tel">-</span>
-                    <input class="contact-item input-tell" id="tell2" type="tel" name="tell2"
+                    <input class="contact-item input-split" id="tell2" type="tel" name="tell2"
                         value="{{ old('tell2', $contact['tell2'] ?? null) }}" placeholder="1234"
                         autocomplete="tel-local-prefix">
                     <span class="tel">-</span>
-                    <input class="contact-item input-tell" id="tell3" type="tel" name="tell3"
+                    <input class="contact-item input-split" id="tell3" type="tel" name="tell3"
                         value="{{ old('tell3', $contact['tell3'] ?? null) }}" placeholder="5678"
                         autocomplete="tel-local-suffix">
                 </div>
@@ -129,7 +126,7 @@
                         ※
                     </span>
                 </label>
-                <input class="contact-item" id="address" type="text" name="address"
+                <input class="contact-item contact-item-address" id="address" type="text" name="address"
                     value="{{ old('address', $contact['address'] ?? null) }}" placeholder="例:&nbsp;東京都渋谷区千駄ヶ谷1-2-3"
                     autocomplete="address-level1">
             </div>
@@ -142,7 +139,7 @@
                 <label class="form-label-item" for="building">
                     建物名
                 </label>
-                <input class="contact-item" id="building" type="text" name="building"
+                <input class="contact-item contact-item-building" id="building" type="text" name="building"
                     value="{{ old('building', $contact['building'] ?? null) }}" placeholder="例:&nbsp;千駄ヶ谷マンション101"
                     autocomplete="address-level2">
             </div>

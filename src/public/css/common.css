@@ -41,7 +41,7 @@ li {
 
 /*テキストのstyle*/
 body,textarea,input,label {
-    color: #8B7969;
+    color: rgba(139, 121, 105, 1);
 }
 
 /*textarea,input,selectのstyle*/
@@ -59,10 +59,11 @@ legend {
 select,
 textarea::placeholder,
 input::placeholder {
-    color: #BEB1A6;
-    background-color: #F4F4F4;
+    color: rgba(190, 177, 166, 1);
+    background-color: rgba(244, 244, 244, 1);
     font-family: "Rasa", sans-serif;
     font-size: 14px;
+    line-height: 18px;
     font-weight: 400;
     padding-left: 33.78px;
 }
@@ -74,6 +75,7 @@ fieldset {
 }
 
 select,
+.link,
 .button {
     cursor: pointer;
 }
@@ -206,32 +208,38 @@ select,
 }
 
 @media screen and (max-width: 767px) {
-    .main-section {
-        padding-top: 4px;
+    select,
+    textarea::placeholder,
+    input::placeholder {
+        padding-left: 15px;
     }
+
+    .main-section {
+        padding-top: 0;
+    }
+
     .header-section {
         display: flex;
+        height: 80px;
         flex-direction: column;
         align-items: center;
-        padding: 4px;
+    }
+
+    .header-logo {
+        font-size: 30px;
+        line-height: 80px;
+    }
+
+    .page-logo {
+        font-size: 25px;
+        line-height: 40px;
+        margin-bottom: 25px;
     }
 
     .form-error {
-        font-size: 0.7rem;
+        font-size: 12px;
     }
 
-    .header-nav-link {
-        margin: 3%;
-    }
-
-    .header-logo,
-    .page-logo {
-        font-size: 1.8rem;
-    }
-
-    .button {
-        margin: 10% auto;
-    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1280px) {

@@ -41,7 +41,6 @@
     display: flex;
     align-items: center;
     justify-content: left;
-    color: #BEB1A6;
 }
 
 .form-label-required {
@@ -63,15 +62,16 @@
     text-align: left;
 }
 
-.gender-radio-label {
-    height: 23px;
-    line-height: 23px;
-    cursor: pointer;
-    margin-right: 28px;
+.input-container-gender {
+    height: 26px;
+    padding-left: 13.46px;
 }
 
-.input-container-gender {
-    padding: 8px 15px;
+.gender-radio-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 51.28px;
 }
 
 .gender-radio-label:last-of-type {
@@ -86,30 +86,24 @@
     padding: 0;
 }
 
-.gender-text{
-    height: 23px;
-    line-height: 23px;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    font-size: 18px;
-    font-weight: 400;
-}
-
-.gender-text::before {
-    width: 55.28px;
-    line-height: 23px;
+.gender-radio-icon {
     display: block;
-    margin-right: 28px;
+    margin-right: 8px;
     width: 20px;
     height: 20px;
-    border: 1px solid #8B7969;
+    border: 1px solid rgba(139, 121, 105, 1);
     border-radius: 50%;
-    content: '';
 }
 
-.gender-radio:checked+.gender-text::before {
-    background: #8B7969;
+.gender-radio:checked~.gender-radio-icon {
+    background: rgba(139, 121, 105, 1);
+}
+
+.gender-text {
+    width: 55.28px;
+    height: auto;
+    font-size: 18px;
+    font-weight: 400;
 }
 
 .contact-item-tell {
@@ -118,7 +112,7 @@
     justify-content: space-between;
 }
 
-.input-tell {
+.input-split {
     width: 178.12px;
     height: 38px;
     line-height: 38px;
@@ -142,19 +136,19 @@
 .select-group::after {
     position: absolute;
     top: 50%;
-    right: 37%;
+    right: 33%;
     width: 0;
     height: 0;
-    border-top: 12px solid rgb(209, 183, 134);
-    border-right: 8px solid transparent;
-    border-left: 8px solid transparent;
+    border-top: 20px solid rgba(190, 177, 166, 1);
+    border-right: 15.35px solid transparent;
+    border-left: 15.35px solid transparent;
     content: "";
     transform: translateY(-50%);
     pointer-events: none;
 }
 
 .create-form-item-select {
-    width: 30%;
+    width: 331.68px;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -164,62 +158,97 @@
     height: 129px;
 }
 
+.contact-item-address::placeholder,
+.contact-item-building::placeholder
+.contact-item-select::placeholder {
+    padding: 0 23.03px;
+}
+
 .contact-item-detail {
     height: 100%;
+}
+
+.contact-item-detail::placeholder {
+    padding: 16px 23.03px;
 }
 
 /* 送信ボタン */
 .contact-button {
     width: 160px;
     height: 46px;
+    line-height: 46px;
     margin: 22px auto;
-    padding: 10px 40px;
 }
 
-.error-message {
-    margin-right: 24%;
+.name-error {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
-.error-message:last-of-type {
-    margin-right: 0;
-    padding-left: 18px;
+.error-message-first,
+.error-message-last {
+    width: 45%;
 }
 
 @media screen and (max-width: 767px) {
     .page-section {
-        width: 90%;
-        padding: 10px;
+        width: 80%;
         margin: 0;
     }
 
     .form-group {
-        width: 100%;
+        height: auto;
         flex-direction: column;
-        margin: 0.8%;
-    }
-
-    .building-section{
-        margin-bottom: 5.64%;
     }
 
     .form-label-item {
         width: 100%;
+        margin-bottom: 10px;
     }
 
     .contact-item {
         width: 100%;
     }
 
-    .gender-radio-label {
+    .input-split {
         width: 33%;
-        font-size: 0.8rem;
     }
 
-    .form-error {
-        width: 100%;
-        text-align: left;
-        margin: 0.8%;
+    .input-name-first,
+    .input-name-last {
+        width: 45%;
     }
+
+    .input-container-gender {
+        height: auto;
+        padding: 0;
+
+    }
+
+    .gender-radio-label {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 33%;
+        height: auto;
+        margin-right: 10px;
+    }
+
+    .gender-radio-icon {
+        margin-right: 0;
+        margin-bottom: 8px;
+    }
+
+    .gender-text {
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+
+
 
     .select-group::after {
         top: 76%;
@@ -229,9 +258,36 @@
     .contact-item-detail {
         width: 100%;
     }
+}
 
-    .contact-button {
-        margin: 8% auto;
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+    .page-section {
+        width: 80%;
+        margin: 0;
+    }
+
+    .form-group {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .form-label-item {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .contact-item {
+        width: 100%;
+    }
+
+    .input-name-first,
+    .input-name-last {
+        width: 45%;
+    }
+
+    .select-group::after {
+        top: 76%;
+        right: 5%;
     }
 
     .error-message {
@@ -239,49 +295,6 @@
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1280px) {
-    .page-section {
-        width: 80%;
-        padding: 10px;
-        margin: 0;
-    }
-
-    .form-group {
-        margin: 1% 0;
-    }
-
-    .gender-radio-label {
-        width: 33%;
-    }
-
-    .building-section {
-        margin-bottom: 5.64%;
-    }
-
-    .contact-button {
-        margin: 5% auto;
-    }
-
-}
-
-@media screen and (min-height: 1181px) and (min-width: 1024px) {
-    .form-group {
-        margin: 2% 0;
-    }
-
-    .gender-radio-label {
-        width: 28%;
-        font-size: 0.8rem;
-    }
-
-    .building-section {
-        margin-bottom: 5.64%;
-    }
-
-    .contact-button {
-        margin: 7% auto;
-    }
-}
 
 @media (height >= 1366px) {
     .page-section {

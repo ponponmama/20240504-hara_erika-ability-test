@@ -27,12 +27,13 @@
 }
 
 .form-label-item {
-    width: 35%;
+    width: 343.96px;
     height: 26px;
     line-height: 26px;
     font-size: 20px;
     font-weight: 400;
     text-align: left;
+    color: rgba(139, 121, 105, 1);
 }
 
 .contact-item {
@@ -41,6 +42,20 @@
     display: flex;
     align-items: center;
     justify-content: left;
+}
+
+.input-placeholder::placeholder {
+    background-color: rgba(244, 244, 244, 1);
+    color: rgba(190, 177, 166, 1);
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+.contact-item::placeholder,
+.input-name-first::placeholder,
+.input-name-last::placeholder {
+    padding: 0 33.78px;
 }
 
 .form-label-required {
@@ -112,12 +127,11 @@
     justify-content: space-between;
 }
 
-.input-split {
+.input-tell {
     width: 178.12px;
     height: 38px;
     line-height: 38px;
-    text-align: left;
-    padding-left: 0;
+    text-align: center;
 }
 
 .tel {
@@ -140,8 +154,8 @@
     width: 0;
     height: 0;
     border-top: 20px solid rgba(190, 177, 166, 1);
-    border-right: 15.35px solid transparent;
-    border-left: 15.35px solid transparent;
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
     content: "";
     transform: translateY(-50%);
     pointer-events: none;
@@ -152,16 +166,11 @@
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
+    padding: 0 21.5px;
 }
 
 .detail-group {
     height: 129px;
-}
-
-.contact-item-address::placeholder,
-.contact-item-building::placeholder
-.contact-item-select::placeholder {
-    padding: 0 23.03px;
 }
 
 .contact-item-detail {
@@ -178,18 +187,25 @@
     height: 46px;
     line-height: 46px;
     margin: 22px auto;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.form-error {
+    text-align: right;
 }
 
 .name-error {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     width: 100%;
 }
 
 .error-message-first,
 .error-message-last {
     width: 45%;
+    margin-right: 33.78px;
 }
 
 @media screen and (max-width: 767px) {
@@ -210,10 +226,6 @@
 
     .contact-item {
         width: 100%;
-    }
-
-    .input-split {
-        width: 33%;
     }
 
     .input-name-first,
@@ -248,15 +260,13 @@
         text-align: center;
     }
 
-
+    .input-tell {
+        width: 30%;
+    }
 
     .select-group::after {
         top: 76%;
         right: 5%;
-    }
-
-    .contact-item-detail {
-        width: 100%;
     }
 }
 

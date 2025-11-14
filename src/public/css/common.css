@@ -46,7 +46,7 @@ body,textarea,input,label {
 
 /*textarea,input,selectのstyle*/
 textarea,input,select {
-    background-color: #F4F4F4;
+    background-color: rgba(244, 244, 244, 1);
 }
 
 /*labelのstyle*/
@@ -65,7 +65,6 @@ input::placeholder {
     font-size: 14px;
     line-height: 18px;
     font-weight: 400;
-    padding-left: 33.78px;
 }
 
 /* fieldsetのデフォルトスタイルのみリセット */
@@ -158,14 +157,12 @@ select,
     color: rgba(139, 121, 105, 1);
 }
 
-
 /*ボタンのstyle*/
 .button {
     display: block;
     background: rgba(130, 117, 106, 1);
     border: none;
     color: rgba(255, 255, 255, 1);
-    font-size: 20px;
 }
 
 .button:hover {

@@ -1,9 +1,17 @@
+/* お問い合わせフォーム */
 .page-section {
     width: 972px;
     margin: 0 auto;
     justify-content: start;
 }
 
+/* フォーム全体 */
+.page-main-form {
+    width: 967.39px;
+    margin: 0 auto;
+}
+
+/* input&labelグループ */
 .form-group {
     width: 100%;
     height: 38px;
@@ -13,19 +21,7 @@
     margin-bottom: 5px;
 }
 
-.form-label-item {
-    height: 26px;
-    line-height: 26px;
-    font-size: 20px;
-    font-weight: 400;
-    text-align: left;
-    color: rgba(139, 121, 105, 1);
-}
-
-.detail-group {
-    align-items: flex-start;
-}
-
+/* label */
 .form-label-item {
     width: 343.96px;
     height: 26px;
@@ -36,6 +32,13 @@
     color: rgba(139, 121, 105, 1);
 }
 
+/* ※ */
+.form-label-required {
+    color: red;
+    margin-left: 10px;
+}
+
+/* input側のグループ親要素(幅固定用)*/
 .contact-item {
     width: 618.82px;
     height: 38px;
@@ -44,31 +47,22 @@
     justify-content: left;
 }
 
-.input-placeholder::placeholder {
+/* inputの詳細 */
+.contact-item-input {
+    color: rgba(139, 121, 105, 1);
     background-color: rgba(244, 244, 244, 1);
-    color: rgba(190, 177, 166, 1);
-    font-size: 14px;
     line-height: 18px;
     font-weight: 400;
 }
 
-.contact-item::placeholder,
-.input-name-first::placeholder,
-.input-name-last::placeholder {
-    padding: 0 33.78px;
-}
-
-.form-label-required {
-    color: red;
-    margin-left: 10px;
-}
-
+/* お名前の入力フォーム用親要素 */
 .contact-item-name {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+/* お名前 姓と名*/
 .input-name-first,
 .input-name-last {
     width: 287.15px;
@@ -77,11 +71,34 @@
     text-align: left;
 }
 
+/* placeholder 共通 */
+.contact-item-input::placeholder {
+    color: rgba(190, 177, 166, 1);
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+}
+
+/* 共通マージン */
+.input-name-first,
+.input-name-last,
+.contact-item-email {
+    padding: 0 33.78px;
+}
+
+/* 共通マージン */
+.contact-item-address,
+.create-form-item-select {
+    padding: 0 23.03px;
+}
+
+/* 性別 ラジオボタン用親要素*/
 .input-container-gender {
     height: 26px;
     padding-left: 13.46px;
 }
 
+/* 〇＆性別用親要素 ラジオボタン用*/
 .gender-radio-label {
     display: flex;
     align-items: center;
@@ -89,10 +106,12 @@
     margin-right: 51.28px;
 }
 
+/* その他の右マージン削除用*/
 .gender-radio-label:last-of-type {
     margin-right: 0;
 }
 
+/* 〇ラジオボタン用要素*/
 .gender-radio {
     position: absolute;
     -webkit-appearance: none;
@@ -101,6 +120,7 @@
     padding: 0;
 }
 
+/* 〇ラジオボタン 〇*/
 .gender-radio-icon {
     display: block;
     margin-right: 8px;
@@ -110,10 +130,12 @@
     border-radius: 50%;
 }
 
+/* 〇ラジオボタン click用*/
 .gender-radio:checked~.gender-radio-icon {
     background: rgba(139, 121, 105, 1);
 }
 
+/* 性別 テキスト*/
 .gender-text {
     width: 55.28px;
     height: auto;
@@ -121,67 +143,77 @@
     font-weight: 400;
 }
 
+/* 電話番号 入力フォーム用親要素*/
 .contact-item-tell {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+/* 電話番号 入力フォーム詳細*/
 .input-tell {
     width: 178.12px;
     height: 38px;
     line-height: 38px;
+    padding: 0 33.78px;
+}
+
+.input-tell::placeholder {
     text-align: center;
 }
 
+/* 電話番号 ハイフン用要素*/
 .tel {
     padding: 8px 0;
     margin: 0 2%;
 }
 
+/* 建物名 @errorの分のマージン*/
 .building-group {
     margin-bottom: 33px;
 }
 
+/* お問い合わせの種類 セレクトボックス用親要素*/
 .select-group {
     position: relative;
 }
 
+/* セレクトボックス ▼矢印用*/
 .select-group::after {
     position: absolute;
     top: 50%;
     right: 33%;
     width: 0;
     height: 0;
-    border-top: 20px solid rgba(190, 177, 166, 1);
-    border-right: 15px solid transparent;
-    border-left: 15px solid transparent;
+    border-top: 16px solid rgba(190, 177, 166, 1);
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
     content: "";
     transform: translateY(-50%);
     pointer-events: none;
 }
 
+/* セレクトボックス セレクトボックス用要素*/
 .create-form-item-select {
     width: 331.68px;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    padding: 0 21.5px;
 }
 
+/* お問い合わせ内容 入力フォーム用親要素*/
 .detail-group {
+    align-items: flex-start;
     height: 129px;
 }
 
+/* お問い合わせ内容 入力フォーム詳細*/
 .contact-item-detail {
     height: 100%;
-}
-
-.contact-item-detail::placeholder {
     padding: 16px 23.03px;
 }
 
-/* 送信ボタン */
+/* 確認画面 送信ボタン */
 .contact-button {
     width: 160px;
     height: 46px;
@@ -191,27 +223,41 @@
     font-weight: 400;
 }
 
+/* バリデーションmessage */
 .form-error {
-    text-align: right;
+    width: 100%;
+    text-align: left;
+    margin-left: 343.96px;
 }
 
+/* お名前 バリデーションmessage */
 .name-error {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     width: 100%;
+    margin-left: 0;
 }
 
+/* お名前 バリデーションmessage 姓と名*/
 .error-message-first,
 .error-message-last {
-    width: 45%;
-    margin-right: 33.78px;
+    width: 287.15px;
+}
+
+/* お名前 バリデーションmessage 位置調整用*/
+.error-message-first {
+    margin-left: 343.96px;
 }
 
 @media screen and (max-width: 767px) {
     .page-section {
         width: 80%;
-        margin: 0;
+        margin: 0 auto;
+    }
+
+    .page-main-form {
+        width: 100%;
     }
 
     .form-group {
@@ -221,21 +267,26 @@
 
     .form-label-item {
         width: 100%;
-        margin-bottom: 10px;
+        height: auto;
     }
 
     .contact-item {
         width: 100%;
     }
 
+    .contact-item-input {
+        padding: 0 20px;
+    }
+
     .input-name-first,
     .input-name-last {
-        width: 45%;
+        width: 48%;
     }
 
     .input-container-gender {
         height: auto;
         padding: 0;
+        margin: 4px 0;
 
     }
 
@@ -246,7 +297,7 @@
         justify-content: center;
         width: 33%;
         height: auto;
-        margin-right: 10px;
+        margin-right: 0;
     }
 
     .gender-radio-icon {
@@ -264,16 +315,46 @@
         width: 30%;
     }
 
+    .input-tell::placeholder {
+        padding: 0;
+    }
+
     .select-group::after {
-        top: 76%;
-        right: 5%;
+        top: 70%;
+        right: 7%;
+    }
+
+    .contact-item-detail {
+        padding: 16px 20px;
+    }
+
+    .contact-item-detail::placeholder {
+        padding: 0;
+    }
+
+    .form-error {
+        margin-left: 0;
+        margin:  4px 0 ;
+    }
+
+    .error-message-first,
+    .error-message-last {
+        width: 47%;
+    }
+
+    .error-message-first {
+        margin-left: 0;
     }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1280px) {
     .page-section {
         width: 80%;
-        margin: 0;
+        margin: 0 auto;
+    }
+
+    .page-main-form {
+        width: 100%;
     }
 
     .form-group {
@@ -283,7 +364,7 @@
 
     .form-label-item {
         width: 100%;
-        margin-bottom: 10px;
+        margin-bottom: 15px;
     }
 
     .contact-item {
@@ -292,7 +373,22 @@
 
     .input-name-first,
     .input-name-last {
-        width: 45%;
+        width: 47%;
+    }
+
+    .input-container-gender {
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .gender-radio-label {
+        width: 20%;
+        margin-right: 0;
+    }
+
+    .input-tell {
+        width: 30%;
     }
 
     .select-group::after {
@@ -300,31 +396,19 @@
         right: 5%;
     }
 
-    .error-message {
-        margin-right: 12%
+    .form-error {
+        margin-left: 0;
+        margin:  10px 0 ;
+    }
+
+    .error-message-first,
+    .error-message-last {
+        width: 47%;
+    }
+
+    .error-message-first {
+        margin-left: 0;
     }
 }
 
 
-@media (height >= 1366px) {
-    .page-section {
-        margin: 2% auto;
-    }
-
-    .page-logo {
-        margin: 1% auto;
-    }
-
-    .gender-radio-label {
-        width: 30%;
-        font-size: 0.8rem;
-    }
-
-    .building-section {
-        margin-bottom: 7.64%;
-    }
-
-    .contact-button {
-        margin: 8% auto;
-    }
-}

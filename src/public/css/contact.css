@@ -18,7 +18,7 @@
     display: flex;
     align-items: center;
     justify-content: left;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
 
 /* label */
@@ -79,16 +79,17 @@
     font-weight: 400;
 }
 
-/* 共通マージン */
+/* 共通padding */
 .input-name-first,
 .input-name-last,
 .contact-item-email {
     padding: 0 33.78px;
 }
 
-/* 共通マージン */
+/* 共通padding */
 .contact-item-address,
-.create-form-item-select {
+.create-form-item-select,
+.contact-item-building {
     padding: 0 23.03px;
 }
 
@@ -218,14 +219,14 @@
     width: 160px;
     height: 46px;
     line-height: 46px;
-    margin: 22px auto;
+    margin: 17px auto 32px;
     font-size: 20px;
     font-weight: 400;
 }
 
 /* バリデーションmessage */
 .form-error {
-    width: 100%;
+    width: 618.82px;
     text-align: left;
     margin-left: 343.96px;
 }

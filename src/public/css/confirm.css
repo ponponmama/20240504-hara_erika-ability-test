@@ -1,68 +1,116 @@
 /*confirmフォームのstyle*/
 .page-main-form {
-    width: 70%;
+    width: 972px;
+    margin: 0 auto;
     text-align: center;
-    font-family: "Rasa", serif;
-    font-size: 1rem;
-    margin: 3% auto;
-    padding: 3px;
-
 }
 
 /*テーブルのstyle*/
 .confirm-table {
     display: block;
     width: 100%;
+    height: 606px;
     text-align: left;
     border-collapse: collapse;
-    margin: 2% 0;
-    font-size: 0.8rem;
+    font-size: 20px;
 }
 
 .confirm-table-row {
     width: 100%;
-    height: 46px;
+    height: 69.92px;
 }
 
 .confirm-table-header {
-    width: 30%;
-    padding: 3px 20px;
-    border: 1px solid rgb(253, 252, 242);
-    background-color: rgb(175, 150, 102);
-    color: white;
+    width: 305px;
+    line-height: 28.86px;
+    padding: 0 61px;
+    border: 1px solid rgba(224, 223, 222, 1);
+    background-color: rgba(186, 168, 153, 1);
+    color: rgba(255, 255, 255, 1);
 }
 
 .confirm-table-text {
-    padding: 3px 20px;
-    border: 1px solid rgb(253, 252, 242);
-    border-radius: 3px;
-    background-color: white;
-    color: rgb(151, 132, 91);
+    width: 667px;
+    line-height: 24.24px;
+    font-weight: 400;
+    padding: 0 45px;
+    border: 1px solid rgba(224, 223, 222, 1);
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(139, 121, 105, 1);
+}
+
+.confirm-table-text-name {
+    font-size: 20px;
+    line-height: 24.24px;
+    font-weight: 400;
 }
 
 .confirm-table-row-detail {
     width: 100%;
-    height: 200px;
+    height: 116.54px;
 }
 
 .form-button {
     display: flex;
     justify-content: center;
     text-align: center;
+    gap: 52px;
+    margin: 50px auto 37px;
 }
 
 .confirm-button {
-    width: auto;
+    width: 120px;
+    height: 42px;
+    line-height: 42px;
+    background-color: rgba(130, 117, 106, 1);
+    color: rgba(255, 255, 255, 1);
     text-decoration: none;
-    font-size: 1rem;
-    margin:10% 2%;
+    font-size: 20px;
 }
 
 .edit-button {
-    background: white;
-    border: 1px solid white;
-    color: rgb(151, 132, 91);
-    font-size: 1rem;
+    height: 42px;
+    line-height: 24px;
+    background: rgba(255, 255, 255, 1);
+    color: rgba(139, 121, 105, 1);
+    font-size: 20px;
     text-decoration: underline;
-    margin: 10% 2%;
+}
+
+@media screen and (max-width: 768px) {
+    .page-main-form {
+        width: 90%;
+    }
+    .confirm-table {
+        font-size: 14px;
+    }
+    .confirm-table-row {
+        height: 40px;
+    }
+
+    .confirm-table-header {
+        width: 40%;
+        padding: 0 10px;
+    }
+    .confirm-table-text {
+        padding: 0 10px;
+    }
+
+    .confirm-table-text-name {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+    .page-main-form {
+        width: 80%;
+    }
+
+    .confirm-table-header {
+        padding: 0 10px;
+    }
+
+    .confirm-table-text {
+        padding: 0 10px;
+    }
 }

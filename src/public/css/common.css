@@ -144,7 +144,7 @@ select,
 .page-section {
     display: flex;
     flex-direction: column;
-    /*justify-content: center;*/
+    justify-content: center;
 }
 
 /*各共通部分のlogo*/
@@ -233,13 +233,4 @@ select,
 
 }
 
-@media screen and (min-width: 768px) and (max-width: 1280px) {
-    .page-logo {
-        margin-bottom: 25px;
-    }
-
-    .main-section {
-        padding: 20px 0;
-    }
-}
 

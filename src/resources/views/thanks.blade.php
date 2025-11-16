@@ -11,7 +11,7 @@
             お問い合わせありがとうございました
         </h1>
         <h2 class="thanks">
-                Thank you
+            Thank you
         </h2>
         <a href="{{ $url }}" class="link thanks__link">HOME</a>
     </div>

@@ -12,7 +12,7 @@
             <tr class="confirm-table-row">
                 <th class="confirm-table-header">お名前</th>
                 <td class="confirm-table-text">
-                    <span>
+                    <span class="confirm-table-text-name">
                         {{ $contact['first_name']}}&nbsp;{{ $contact['last_name']}}
                     </span>
                     <input type="hidden" name="first_name" value="{{ $contact['first_name']}}" class="input-hidden" />

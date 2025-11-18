@@ -1,41 +1,55 @@
 .main-section {
-    background-color: rgb(247, 246, 199);
+    background-color: rgba(241, 236, 231, 1);
 }
 
+.page-logo{
+    margin-top: 11px;
+}
 .page-section {
-    width: 40%;
-    max-width: 546px; /* 1366pxの40% */
+    width: 736px;
+    margin: 5px auto 139px;
 }
 
 .page-main-form {
+    width: 100%;
+    height: 579px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3% 6%;
-    background-color: white;
-    border-radius: 6px;
-    border: 1px solid rgb(209, 183, 134);
-    margin: 3% auto 10%;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+    border: 1px solid rgba(197, 185, 176, 1);
+    padding: 98px 145.5px 41px;
 }
 
 .form-group {
-    width: 100%;
-    margin: 1% 0;
+    width: 445px;
+    margin-bottom: 27px;
 }
 
 .form-label-item {
     width: 100%;
+    height: 33px;
+    line-height: 33px;
     text-align: left;
-    line-height: 3rem;
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+    font-size: 25px;
+    margin-bottom: 14px;
 }
 
 .contact-item {
     width: 100%;
-    line-height: 3rem;
+    height: 55px;
+    line-height: 55px;
     appearance: none;
-    margin: 3% 0;
+    padding-left: 27px;
+}
+
+.login-button {
+    width: 120px;
+    height: 46px;
+    line-height: 46px;
+    font-size: 20px;
+    margin: 48px auto;
 }
 
 @media screen and (max-width: 768px) {
@@ -52,16 +66,6 @@
 
     .contact-item {
         line-height: 2rem;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .page-section {
-        width: 50%;
-    }
-
-    .page-main-form {
-        margin-bottom: 15%;
     }
 }
 

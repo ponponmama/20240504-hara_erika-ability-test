@@ -1,40 +1,56 @@
 .main-section {
-    background-color: rgb(247, 246, 199);
+    background-color: rgba(241, 236, 231, 1);
 }
 
 .page-section {
-    width: 50vw;
+    width: 736px;
+    margin: 8px auto 74px;
 }
 
 .page-main-form {
+    width: 100%;
+    height: 664px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px 80px;
-    background-color: white;
-    border-radius: 6px;
-    border: 1px solid rgb(209, 183, 134);
-    margin: 3% auto 6%;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+    border: 1px solid rgba(197, 185, 176, 1);
+    padding: 77px 145.5px 17px;
 }
 
     .form-group {
-        width: 100%;
-        margin: 1% 0;
+        width: 445px;
+        margin-bottom: 25px;
     }
 
     .form-label-item {
+        display: block;
         width: 100%;
+        height: 33px;
+        line-height: 33px;
         text-align: left;
-        line-height: 3rem;
-        font-size: 1.2rem;
-        margin-bottom: 0.5rem;
+        font-size: 25px;
+        margin-bottom: 14px;
     }
 
     .contact-item {
         width: 100%;
-        line-height: 3rem;
+        height: 55px;
+        line-height: 55px;
         appearance: none;
-        margin: 1% 0;
+    }
+
+    .contact-item-name {
+        padding-left: 26px;
+    }
+
+    .register-button {
+        width: 120px;
+        height: 46px;
+        line-height: 46px;
+        font-size: 20px;
+        margin: 18px auto 62px;
     }
 
 @media screen and (max-width: 767px) {
@@ -53,11 +69,6 @@
     }
 }
 
-@media screen and (min-width: 768px) {
-    .page-section {
-        width: 70vw;
-    }
-}
 
 @media screen and (min-height: 1024px) and (min-width: 1024px) {
     .page-section {

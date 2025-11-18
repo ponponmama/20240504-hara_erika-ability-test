@@ -7,14 +7,11 @@
     display: none;
 }
 
+/* h1,h2,aの親要素のstyle */
 .thanks__content {
     width: 1381px;
     height: 100%;
-    display: block;
     text-align: center;
-}
-
-.thanks__back {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -22,6 +19,7 @@
     align-items: center;
 }
 
+/* お問い合わせありがとうございましたの文字のstyle */
 .thanks__front {
     width: 510px;
     text-align: center;
@@ -30,15 +28,19 @@
     font-size: 30px;
     line-height: 39px;
     position: absolute;
+    top: 39%;
 }
 
+/* Thank youの文字のstyle */
 .thanks {
+    height: 365px;
     color: rgba(139, 121, 105, 0.05);
-
     font-size: 280px;
+    line-height: 365px;
     font-weight: 400;
 }
 
+/* HOMEボタンのstyle */
 .thanks__link {
     width: 140px;
     height: 46px;
@@ -48,4 +50,7 @@
     color: rgba(255, 255, 255, 1);
     text-decoration: none;
     font-size: 20px;
+    position: absolute;
+    top: 70%;
+    transform: translateY(-50%);
 }

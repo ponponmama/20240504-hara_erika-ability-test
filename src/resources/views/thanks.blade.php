@@ -5,8 +5,7 @@
 @endsection
 
 @section('content')
-<div class="thanks__content">
-    <div class="thanks__back">
+    <div class="thanks__content">
         <h1 class="thanks__front">
             お問い合わせありがとうございました
         </h1>
@@ -15,5 +14,4 @@
         </h2>
         <a href="{{ $url }}" class="link thanks__link">HOME</a>
     </div>
-</div>
 @endsection

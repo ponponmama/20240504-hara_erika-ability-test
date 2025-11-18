@@ -1,6 +1,6 @@
 html,
 body * {
-    font-family: "Rasa", sans-serif;
+    font-family: "Inika";
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -61,7 +61,6 @@ textarea::placeholder,
 input::placeholder {
     color: rgba(190, 177, 166, 1);
     background-color: rgba(244, 244, 244, 1);
-    font-family: "Rasa", sans-serif;
     font-size: 14px;
     line-height: 18px;
     font-weight: 400;
@@ -106,7 +105,6 @@ select,
 .header-logo,
 .header-nav-link,
 .page-logo {
-    font-family: serif;
     color: rgba(139, 121, 105, 1);
 }
 

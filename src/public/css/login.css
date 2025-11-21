@@ -9,6 +9,7 @@
 .page-logo{
     margin-top: 11px;
 }
+
 .page-section {
     width: 736px;
     margin: 5px auto 139px;
@@ -32,6 +33,7 @@
 }
 
 .form-label-item {
+    display: block;
     width: 100%;
     height: 33px;
     line-height: 33px;
@@ -49,40 +51,37 @@
 }
 
 .login-button {
-    width: 120px;
+    width: 160px;
     height: 46px;
     line-height: 46px;
     font-size: 20px;
     margin: 48px auto;
 }
 
-@media screen and (max-width: 768px) {
-    .page-section {
-        width: 90%;
-        padding: 20px;
-        margin-bottom: 10%;
+@media screen and (max-width: 767px) {
+    /*.header-section {
+        height: auto;
+    }*/
+
+    .page-section{
+        width: 80%;
+        margin: 0 auto;
     }
 
     .page-main-form {
-        padding: 20px;
-        margin-bottom: 10%;
-    }
-
-    .contact-item {
-        line-height: 2rem;
-    }
-}
-
-@media screen and (min-height: 1181px) and (min-width: 1024px) {
-    .page-section {
-        width: 40%;
-    }
-
-    .page-main-form {
+        width: 100%;
+        height: auto;
+        padding: 30px;
         margin-bottom: 10%;
     }
 
     .form-group {
-        margin: 5% 0;
+        width: 100%;
     }
+
+    .login-button {
+        margin: 18px auto;
+    }
+
 }
+

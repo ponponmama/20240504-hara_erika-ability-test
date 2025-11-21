@@ -44,6 +44,7 @@
         height: 55px;
         line-height: 55px;
         appearance: none;
+        padding-left: 27px;
     }
 
     .contact-item-name {
@@ -59,32 +60,51 @@
     }
 
 @media screen and (max-width: 767px) {
+    .header-section {
+        height: auto;
+    }
+
+    .main-section {
+        padding: 5% 0 20%;
+    }
+
     .page-section{
-        width: 90vw;
-        padding: 20px;
+        width: 80%;
+        margin: 0 auto;
     }
 
     .page-main-form {
-        padding: 20px;
-        margin-bottom: 10%;
-    }
-
-    .contact-item {
-        line-height: 2rem;
-    }
-}
-
-
-@media screen and (min-height: 1024px) and (min-width: 1024px) {
-    .page-section {
-        width: 70vw;
-    }
-
-    .page-main-form {
-        margin-bottom: 10%;
+        width: 100%;
+        height: auto;
+        padding: 30px;
     }
 
     .form-group {
-        margin: 5% 0;
+        width: 100%;
+    }
+
+    .register-button {
+        margin: 18px auto;
     }
 }
+
+@media screen and (min-width: 768px) {
+    .header-section {
+        height: auto;
+    }
+
+    .main-section {
+        padding: 10% 0 20%;
+    }
+
+
+    .form-group {
+        width: 100%;
+    }
+
+    .register-button {
+        margin: 18px auto;
+    }
+}
+
+

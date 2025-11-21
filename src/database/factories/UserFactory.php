@@ -17,12 +17,12 @@ class UserFactory extends Factory
     {
         return [
             'name' => $this->faker->name(),
-            'email' => $this->faker->unique()->safeEmail(),
-            'password' => Hash::make(Str::random(10)),
+            'email' => 'test@' . str_pad($this->faker->unique()->numberBetween(1, 10), 2, '0', STR_PAD_LEFT) . '.com',
+            'password' => Hash::make('user_pass'),
         ];
     }
 
-    /**
+    /*
      * Indicate that the model's email address should be unverified.
      *
      * @return \Illuminate\Database\Eloquent\Factories\Factory

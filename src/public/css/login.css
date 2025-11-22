@@ -59,13 +59,13 @@
 }
 
 @media screen and (max-width: 767px) {
-    /*.header-section {
+    .header-section {
         height: auto;
-    }*/
+    }
 
     .page-section{
         width: 80%;
-        margin: 0 auto;
+        height: 70vh;        margin: 0 auto;
     }
 
     .page-main-form {

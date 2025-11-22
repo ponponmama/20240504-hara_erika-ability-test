@@ -92,7 +92,7 @@
                     <th class="contact-table-header">性別</th>
                     <th class="contact-table-header">メールアドレス</th>
                     <th class="contact-table-header">お問い合わせの種類</th>
-                    <th class="contact-table-header detail-header">お問い合わせの内容</th>
+                    <th class="contact-table-header detail-header"></th>
                     <th></th>
                 </tr>
                 @foreach($contacts as $contact)

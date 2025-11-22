@@ -51,13 +51,12 @@
 }
 
 .login-button {
-    border: 1px solid rgba(217, 198, 181, 1);
     width: 160px;
     height: 46px;
     line-height: 46px;
     font-size: 20px;
-    color: rgba(217, 198, 181, 1);
-    background-color: rgba(240, 240, 240, 0.6);
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(130, 117, 106, 1);
     margin: 48px auto;
 }
 

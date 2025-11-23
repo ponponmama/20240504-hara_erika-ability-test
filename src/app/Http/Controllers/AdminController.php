@@ -63,8 +63,10 @@ class AdminController extends Controller
     }
 
     public function exportCsv(Request $request) {
-        $searchConditions = session('search_conditions');
-        $request->merge($searchConditions);
+        $searchConditions = session('search_conditions', []);
+        if (!empty($searchConditions)) {
+            $request->merge($searchConditions);
+        }
 
         $query = $this->searchQuery($request);
         $csvData = $query->get()->toArray();

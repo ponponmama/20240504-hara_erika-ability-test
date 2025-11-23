@@ -125,12 +125,65 @@
 
 @media screen and (max-width: 767px) {
     .modal-wrapper .modal-window {
-        width: 94%;
+        width: 90%;
+        height: 70vh;
+        padding: 20px;
+        justify-content: center;
     }
 
     .modal-wrapper .modal-close {
-        width: 24px;
-        line-height: 24px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 25px;
         margin: 20px;
+    }
+
+    .modal-content {
+        width: 100%;
+    }
+
+    .modal_table {
+        width: 100%;
+        margin: 0 auto;
+        font-size: 15px;
+    }
+
+    .modal_table_row {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .modal_table_cell, .modal_table_text {
+        width: 100%;
+        height: 20px;
+        line-height: 20px;
+    }
+
+    .modal_table_text {
+        padding-left: 0;
+    }
+
+    .delete-btn {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1280px) {
+    .modal-wrapper .modal-window {
+        width: 80%;
+        height: 90vh;
+        padding: 30px;
+        justify-content: center;
+    }
+
+    .modal-content {
+        width: 90%;
+        margin: 0 auto;
     }
 }

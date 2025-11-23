@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('css/admin.css') }}">
-<link rel="stylesheet" href="{{ asset('css/admin_modal.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/admin_modal.css') }}">
 @endsection
 
 @section('heading__link')
@@ -17,42 +17,41 @@
         <form class="page-main-form" action="{{ route('admin.search') }}" method="get">
             @csrf
             @php
-            $searchConditions = session('search_conditions');
+                $searchConditions = session('search_conditions');
             @endphp
-            <input class="keyword-search" type="text" id="keyword" name="keyword" value="{{ $searchConditions['keyword'] ?? '' }}"
-                placeholder="名前やメールアドレスを入力してください" autocomplete="keyword" />
-            <div class="arrow-gender-section">
-                <select class="gender-select" name="gender-select">
+            <input class="keyword-search search-item" type="text" id="keyword" name="keyword"
+                value="{{ $searchConditions['keyword'] ?? '' }}" placeholder="名前やメールアドレスを入力してください" autocomplete="keyword" />
+            <div class="arrow-gender-section section-item">
+                <select class="gender-select search-item" name="gender">
                     <option value="">
                         性別
                     </option>
-                    <option value="1" {{ ($searchConditions['gender'] ?? null)==1 ? 'selected' : '' }}>
+                    <option value="1" {{ ($searchConditions['gender'] ?? null) == 1 ? 'selected' : '' }}>
                         男性
                     </option>
-                    <option value="2" {{ ($searchConditions['gender'] ?? null)==2 ? 'selected' : '' }}>
+                    <option value="2" {{ ($searchConditions['gender'] ?? null) == 2 ? 'selected' : '' }}>
                         女性
                     </option>
-                    <option value="3" {{ ($searchConditions['gender'] ?? null)==3 ? 'selected' : '' }}>
+                    <option value="3" {{ ($searchConditions['gender'] ?? null) == 3 ? 'selected' : '' }}>
                         その他
                     </option>
                 </select>
             </div>
-            <div class="arrow-enquiry-section">
-                <select class="category-select" name="category_id">
+            <div class="arrow-enquiry-section section-item">
+                <select class="category-select search-item" name="category_id">
                     <option value="" placeholder="お問い合わせの種類">
                         お問い合わせの種類
                     </option>
-                    @foreach($categories as $category)
-                    <option value="{{ $category->id }}" @if(($searchConditions['category_id'] ?? null)==$category->id)
-                        selected @endif>
-                        {{ $category->content }}
-                    </option>
+                    @foreach ($categories as $category)
+                        <option value="{{ $category->id }}" @if (($searchConditions['category_id'] ?? null) == $category->id) selected @endif>
+                            {{ $category->content }}
+                        </option>
                     @endforeach
                 </select>
             </div>
-            <div class="arrow-date-section">
-                <input class="input__date" id="date" name="date" type="date" value="{{ $searchConditions['date'] ?? '' }}"
-                    placeholder="年/月/日" autocomplete="date" />
+            <div class="arrow-date-section section-item">
+                <input class="input__date search-item" id="date" name="date" type="date"
+                    value="{{ $searchConditions['date'] ?? '' }}" placeholder="年/月/日" autocomplete="date" />
                 <span class="arrow-down"></span>
             </div>
             <div class="button-section">
@@ -71,19 +70,19 @@
                 </a>
             </div>
             <div class="link pagination">
-                {{$contacts->links()}}
+                {{ $contacts->links() }}
             </div>
         </div>
-        @if(session('success'))
-        <div class="alert alert-success">
-            {{ session('success') }}
-        </div>
+        @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
         @endif
-        @if(session('redirect_success'))
-        <meta http-equiv="refresh" content="3;url={{ route('admin.index') }}">
-        @php
-        session()->forget('redirect_success');
-        @endphp
+        @if (session('redirect_success'))
+            <meta http-equiv="refresh" content="3;url={{ route('admin.index') }}">
+            @php
+                session()->forget('redirect_success');
+            @endphp
         @endif
         <div class="listing__hail">
             <table class="contact-table-inner" id="contact__table">
@@ -94,127 +93,129 @@
                     <th class="contact-table-header">お問い合わせの種類</th>
                     <th class="contact-table-header detail-header"></th>
                 </tr>
-                @foreach($contacts as $contact)
-                <tr class="contact-row">
-                    <td class="contact-cell contact-cell-id">
-                        {{ $contact->id }}
-                    </td>
-                    <td class="contact-cell contact-cell-name">
-                        {{ $contact->first_name }} {{ $contact->last_name }}
-                    </td>
-                    <td class="contact-cell contact-cell-gender">
-                        @if ($contact->gender == 1)
-                        男性
-                        @elseif ($contact->gender == 2)
-                        女性
-                        @else
-                        その他
-                        @endif
-                    </td>
-                    <td class="contact-cell contact-cell-email">
-                        {{ $contact->email }}
-                    </td>
-                    <td class="contact-cell contact-cell-category">
-                        {{ $contact->category->content }}
-                    </td>
-                    <td class="contact-cell detail-cell">
-                        <a href="#modal-{{ $contact->id }}" class="link modal_admin" id="modal-link-{{ $contact->id }}">
-                            詳細
-                        </a>
-                    </td>
-                </tr>
+                @foreach ($contacts as $contact)
+                    <tr class="contact-row">
+                        <td class="contact-cell contact-cell-id">
+                            {{ $contact->id }}
+                        </td>
+                        <td class="contact-cell contact-cell-name">
+                            {{ $contact->first_name }} {{ $contact->last_name }}
+                        </td>
+                        <td class="contact-cell contact-cell-gender">
+                            @if ($contact->gender == 1)
+                                男性
+                            @elseif ($contact->gender == 2)
+                                女性
+                            @else
+                                その他
+                            @endif
+                        </td>
+                        <td class="contact-cell contact-cell-email">
+                            {{ $contact->email }}
+                        </td>
+                        <td class="contact-cell contact-cell-category">
+                            {{ $contact->category->content }}
+                        </td>
+                        <td class="contact-cell detail-cell">
+                            <a href="#modal-{{ $contact->id }}" class="link modal_admin"
+                                id="modal-link-{{ $contact->id }}">
+                                詳細
+                            </a>
+                        </td>
+                    </tr>
                 @endforeach
             </table>
         </div>
     </div>
 
-    @foreach($contacts as $contact)
-    <div class="modal-wrapper" id="modal-{{ $contact->id }}">
-        <a href="#!" class="modal-overlay"></a>
-        <div class="modal-window">
-            <div class="modal-content">
-                <table class="modal_table">
-                    <tr class="modal_table_row">
-                        <td class="modal_table_cell">お名前:</td>
-                        <td class="modal_table_text">
-                            {{ $contact->first_name }} {{ $contact->last_name }}
-                        </td>
-                    </tr>
-                    <tr class="modal_table_row">
-                        <td class="modal_table_cell">
-                            性別:
-                        </td>
-                        <td class="modal_table_text">
-                            @if ($contact->gender == 1)
-                            男性
-                            @elseif ($contact->gender == 2)
-                            女性
-                            @else
-                            その他
-                            @endif
-                        </td>
-                    </tr>
-                    <tr class="modal_table_row">
-                        <td class="modal_table_cell">
-                            メールアドレス
-                        </td>
-                        <td class="modal_table_text">
-                            {{ $contact->email }}
-                        </td>
-                    </tr>
-                    <tr class="modal_table_row">
-                        <td class="modal_table_cell">
-                            電話番号
-                        </td>
-                        <td class="modal_table_text">
-                            {{ $contact->tell }}
-                        </td>
-                    </tr>
-                    <tr class="modal_table_row">
-                        <td class="modal_table_cell">
-                            住所
-                        </td>
-                        <td class="modal_table_text">
-                            {{ $contact->address }}
-                        </td>
-                    </tr>
-                    <tr class="modal_table_row">
-                        <td class="modal_table_cell">
-                            建物名:
-                        </td>
-                        <td class="modal_table_text">
-                            {{ $contact->building }}
-                        </td>
-                    </tr>
-                    <tr class="modal_table_row">
-                        <td class="modal_table_cell">
-                            お問い合わせの種類
-                        </td>
-                        <td class="modal_table_text">
-                            {{ $contact->category->content }}
-                        </td>
-                    </tr>
-                    <tr class="modal_table_row">
-                        <td class="modal_table_cell">
-                            お問い合わせの内容
-                        </td>
-                        <td class="modal_table_text">
-                            {{ $contact->detail }}
-                        </td>
-                    </tr>
-                </table>
-            </div>
-            <div class="modal_delete" id="modal-{{ $contact->id }}">
-                <form action="{{ route('admin.destroy', ['id' =>$contact->id]) }}" method="POST">
-                    @csrf
-                    @method('DELETE')
-                    <button type="submit" onclick="return confirm('本当に削除しますか？')" class="delete-btn button">削除</button>
-                </form>
-                <a href="#!" class="modal-close">
-                    ×
-                </a>
+    @foreach ($contacts as $contact)
+        <div class="modal-wrapper" id="modal-{{ $contact->id }}">
+            <a href="#!" class="modal-overlay"></a>
+            <div class="modal-window">
+                <div class="modal-content">
+                    <table class="modal_table">
+                        <tr class="modal_table_row">
+                            <td class="modal_table_cell">お名前:</td>
+                            <td class="modal_table_text">
+                                {{ $contact->first_name }} {{ $contact->last_name }}
+                            </td>
+                        </tr>
+                        <tr class="modal_table_row">
+                            <td class="modal_table_cell">
+                                性別:
+                            </td>
+                            <td class="modal_table_text">
+                                @if ($contact->gender == 1)
+                                    男性
+                                @elseif ($contact->gender == 2)
+                                    女性
+                                @else
+                                    その他
+                                @endif
+                            </td>
+                        </tr>
+                        <tr class="modal_table_row">
+                            <td class="modal_table_cell">
+                                メールアドレス
+                            </td>
+                            <td class="modal_table_text">
+                                {{ $contact->email }}
+                            </td>
+                        </tr>
+                        <tr class="modal_table_row">
+                            <td class="modal_table_cell">
+                                電話番号
+                            </td>
+                            <td class="modal_table_text">
+                                {{ $contact->tell }}
+                            </td>
+                        </tr>
+                        <tr class="modal_table_row">
+                            <td class="modal_table_cell">
+                                住所
+                            </td>
+                            <td class="modal_table_text">
+                                {{ $contact->address }}
+                            </td>
+                        </tr>
+                        <tr class="modal_table_row">
+                            <td class="modal_table_cell">
+                                建物名:
+                            </td>
+                            <td class="modal_table_text">
+                                {{ $contact->building }}
+                            </td>
+                        </tr>
+                        <tr class="modal_table_row">
+                            <td class="modal_table_cell">
+                                お問い合わせの種類
+                            </td>
+                            <td class="modal_table_text">
+                                {{ $contact->category->content }}
+                            </td>
+                        </tr>
+                        <tr class="modal_table_row">
+                            <td class="modal_table_cell">
+                                お問い合わせの内容
+                            </td>
+                            <td class="modal_table_text">
+                                {{ $contact->detail }}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="modal_delete" id="modal-{{ $contact->id }}">
+                    <form action="{{ route('admin.destroy', ['id' => $contact->id]) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" onclick="return confirm('本当に削除しますか？')"
+                            class="delete-btn button">削除</button>
+                    </form>
+                    <a href="#!" class="modal-close">
+                        ×
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
     @endforeach
 @endsection

@@ -206,7 +206,10 @@ select {
     width: 100%;
     border-collapse: collapse;
     font-size: 20px;
-    border: none;
+    border-left: 1px solid rgba(224, 223, 222, 1);
+    border-right: 1px solid rgba(224, 223, 222, 1);
+    border-top: none;
+    border-bottom: none;
 }
 
 .contact-table-header {
@@ -285,35 +288,29 @@ select {
 @media screen and (max-width: 767px) {
     .page-section {
         width: 90%;
-        margin: 1% auto;
     }
 
     .page-main-form {
-        width: 100%;
+        width: auto;
+        height: auto;
         flex-direction: column;
-        gap: 1%;
+        justify-content: center;
+        gap: 10px;
         margin: 0;
     }
 
-    .arrow-gender-section,
-    .arrow-enquiry-section,
-    .arrow-date-section {
+    .section-item{
         width: 100%;
+        height: 40px;
     }
 
-    .keyword-search,
-    .gender-select,
-    .category-select,
-    .input__date {
+    .search-item {
         width: 100%;
-        max-width: none
+        height: 100%;
     }
 
-
-    .arrow-gender-section::after,
-    .arrow-enquiry-section::after,
-    .input__date::after {
-        right: 10%;
+    .keyword-search {
+        height: 40px;
     }
 
     .button-section {
@@ -331,11 +328,20 @@ select {
         width: 45%;
     }
 
-    .contact-table-inner {
+    .middle__admin {
         width: 100%;
+        height: auto;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .listing__hail {
         overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        display: block;
+        width: 100%;
+    }
+
+    .contact-table-inner {
+        width: max-content;
         min-width: 100%;
     }
 
@@ -362,3 +368,78 @@ select {
     }
 }
 
+@media screen and (min-width: 768px) {
+    .page-section {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .page-main-form {
+        width: 100%;
+        height: 100%;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .arrow-gender-section,
+    .arrow-enquiry-section,
+    .arrow-date-section {
+        width: 45%;
+        height: 50px;
+    }
+
+    .search-item {
+        width: 100%;
+        height: 100%;
+    }
+
+    .keyword-search {
+        width: 100%;
+        height: 50px;
+
+    }
+
+    .button-section {
+        width: 45%;
+        height: 50px;
+    }
+
+    .search__button,
+    .reset__button {
+        width: 45%;
+        height: 100%;
+    }
+
+    .listing__hail {
+        overflow-x: auto;
+        width: 100%;
+    }
+
+    .contact-table-inner {
+        width: max-content;
+        min-width: 100%;
+    }
+
+    .contact-cell {
+        min-width: 200px;
+    }
+
+    .contact-cell-category {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        text-align: left;
+        padding-left: 15px;
+        max-width: 0;
+    }
+
+    .contact-cell-email {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        text-align: left;
+        padding-left: 15px;
+        max-width: 0;
+    }
+}

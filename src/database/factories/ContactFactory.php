@@ -55,7 +55,7 @@ class ContactFactory extends Factory
             'gender' => $faker->randomElement([1, 2, 3]),
             'email' => $faker->safeEmail,
             'tell' => $faker->phoneNumber,
-            'address' => $faker->address,
+            'address' => $faker->prefecture() . $faker->city() . $faker->ward() . $faker->streetAddress(),
             'building' => $faker->secondaryAddress(),
             'detail' => $detail,
             'created_at' => $faker->dateTimeBetween('-1 year', 'now'),

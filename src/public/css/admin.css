@@ -1,5 +1,5 @@
 .main-section {
-    padding: 40px 0;
+    padding: 40px 0 48px;
 }
 
 .page-logo {
@@ -173,7 +173,7 @@ select {
 }
 
 .middle__admin {
-    margin-top: 41px;
+    margin-top: 37px;
     width: 100%;
     height: 39px;
     display: flex;
@@ -198,7 +198,7 @@ select {
 }
 
 .listing__hail {
-    margin-top: 27px;
+    margin-top: 23px;
     width: 100%;
 }
 
@@ -220,8 +220,8 @@ select {
 .contact-table-header,
 .contact-table-row {
     border: none;
-    height: 58.5px;
-    line-height: 58.5px;
+    height: 57.5px;
+    line-height: 57.5px;
 }
 
 .detail-header {

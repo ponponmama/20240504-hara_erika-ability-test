@@ -93,7 +93,6 @@
                     <th class="contact-table-header">メールアドレス</th>
                     <th class="contact-table-header">お問い合わせの種類</th>
                     <th class="contact-table-header detail-header"></th>
-                    <th></th>
                 </tr>
                 @foreach($contacts as $contact)
                 <tr class="contact-row">
@@ -135,19 +134,17 @@
         <div class="modal-window">
             <div class="modal-content">
                 <table class="modal_table">
-                    <tr>
-                        <td><strong>お名前:</strong></td>
-                        <td>
+                    <tr class="modal_table_row">
+                        <td class="modal_table_cell">お名前:</td>
+                        <td class="modal_table_text">
                             {{ $contact->first_name }} {{ $contact->last_name }}
                         </td>
                     </tr>
-                    <tr>
-                        <td>
-                            <strong>
-                                性別:
-                            </strong>
+                    <tr class="modal_table_row">
+                        <td class="modal_table_cell">
+                            性別:
                         </td>
-                        <td>
+                        <td class="modal_table_text">
                             @if ($contact->gender == 1)
                             男性
                             @elseif ($contact->gender == 2)
@@ -157,63 +154,51 @@
                             @endif
                         </td>
                     </tr>
-                    <tr>
-                        <td>
-                            <strong>
-                                メールアドレス
-                            </strong>
+                    <tr class="modal_table_row">
+                        <td class="modal_table_cell">
+                            メールアドレス
                         </td>
-                        <td>
+                        <td class="modal_table_text">
                             {{ $contact->email }}
                         </td>
                     </tr>
-                    <tr>
-                        <td>
-                            <strong>
-                                電話番号
-                            </strong>
+                    <tr class="modal_table_row">
+                        <td class="modal_table_cell">
+                            電話番号
                         </td>
-                        <td>
+                        <td class="modal_table_text">
                             {{ $contact->tell }}
                         </td>
                     </tr>
-                    <tr>
-                        <td>
-                            <strong>
-                                住所
-                            </strong>
+                    <tr class="modal_table_row">
+                        <td class="modal_table_cell">
+                            住所
                         </td>
-                        <td>
+                        <td class="modal_table_text">
                             {{ $contact->address }}
                         </td>
                     </tr>
-                    <tr>
-                        <td>
-                            <strong>
-                                建物名:
-                            </strong>
+                    <tr class="modal_table_row">
+                        <td class="modal_table_cell">
+                            建物名:
                         </td>
-                        <td>
+                        <td class="modal_table_text">
                             {{ $contact->building }}
                         </td>
                     </tr>
-                    <tr>
-                        <td>
-                            <strong>
-                                お問い合わせの種類
-                            </strong>
+                    <tr class="modal_table_row">
+                        <td class="modal_table_cell">
+                            お問い合わせの種類
                         </td>
-                        <td>
+                        <td class="modal_table_text">
                             {{ $contact->category->content }}
                         </td>
                     </tr>
-                    <tr>
-                        <td>
-                            <strong>
-                                お問い合わせの内容
-                            </strong>
+                    <tr class="modal_table_row">
+                        <td class="modal_table_cell">
+                            お問い合わせの内容
                         </td>
-                        <td>
+                        <td class="modal_table_text">
                             {{ $contact->detail }}
                         </td>
                     </tr>
@@ -223,7 +208,7 @@
                 <form action="{{ route('admin.destroy', ['id' =>$contact->id]) }}" method="POST">
                     @csrf
                     @method('DELETE')
-                    <button type="submit" onclick="return confirm('本当に削除しますか？')" class="delete-btn">削除</button>
+                    <button type="submit" onclick="return confirm('本当に削除しますか？')" class="delete-btn button">削除</button>
                 </form>
                 <a href="#!" class="modal-close">
                     ×

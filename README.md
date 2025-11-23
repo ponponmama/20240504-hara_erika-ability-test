@@ -3,21 +3,25 @@
 <h3 align="center"> お問い合わせフォーム </h3>
 
 <p align="center">
-  <img src="contact.png" alt="お問い合わせform登録画面">
+  <img src="contact.png" alt="お問い合わせform画面">
 </p>
 
 <h3 align="center"> お問い合わせフォーム管理システムアプリ</h3>
 
 <p align="center">
-  <img src="register.png" alt="お問い合わせform登録画面">
+  <img src="register.png" alt="admin登録画面">
 </p>
 
 <p align="center">
-  <img src="login.png" alt="お問い合わせformログイン画面">
+  <img src="login.png" alt="adminログイン画面">
 </p>
 
 <p align="center">
-  <img src="modal.png" alt="お問い合わせform削除モーダル画面">
+  <img src="admin.png" alt="admin main画面">
+</p>
+
+<p align="center">
+  <img src="modal.png" alt="adminお問い合わせform削除モーダル画面">
 </p>
 
 ### 機能要件

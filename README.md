@@ -199,6 +199,12 @@ docker-compose exec php bash
 php artisan migrate
 ```
 
+＊マイグレーションとシーダーを同時に実行する場合
+
+```bash
+php artisan migrate --seed
+```
+
 7.データベースシーダーの実行
 
 ```bash

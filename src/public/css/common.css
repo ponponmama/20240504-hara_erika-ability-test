@@ -203,14 +203,10 @@ fieldset {
 }
 
 @media screen and (max-width: 767px) {
-    .main-section {
-        padding: 10px 0;
-    }
-
     .header-section {
         display: flex;
-        height: 80px;
-        flex-direction: column;
+        flex-direction:column;
+        height: auto;
         align-items: center;
     }
 

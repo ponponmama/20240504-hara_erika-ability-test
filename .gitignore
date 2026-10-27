@@ -1,6 +1,7 @@
 /docker/mysql/data/
+/docker/mysql/data_backup/
 /public/storage
-/vendor
+/src/vendor
 .env
 .vscode
 src/.styleci.yml

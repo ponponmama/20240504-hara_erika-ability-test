@@ -225,6 +225,14 @@ php artisan db:seed
 php artisan migrate --seed
 ```
 
+＊シーダー実行後、以下の管理者アカウントで管理画面（ http://localhost/login ）にログインできます。
+
+| メールアドレス | パスワード |
+|---|---|
+| test@01.com | user_pass |
+
+- test@01.com 〜 test@10.com の 10 件が作成されます（パスワードは全員 `user_pass` です）。
+
 ### URL
 
 - **開発環境:** [http://localhost/](http://localhost/)

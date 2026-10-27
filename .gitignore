@@ -7,3 +7,4 @@
 src/.styleci.yml
 cspell.json
 .styleci.yml
+/src/.phpunit.cache
